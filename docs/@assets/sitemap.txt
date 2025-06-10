@@ -1,0 +1,23 @@
+introduction
+- creation: create-reactful
+- structure: folders, settings
+- essentials: components, states, props
+
+reference
+- serving: api, assets, routes: html+, md, jsx: ssr, ssg, isr
+- storing: reactive objects | local, global, partial
+- styling: imports, tagCSS, @style | no pseudo-selector
+- binding: [bind], input[data], form[data], form[validation], form[action]
+- routing: static, @route(dynamic), nested, lazy, [outlet], router .routed, fallback
+- syncing: fetch(swr+), event(EventSouce), socket(WebSocket)
+
+architecture
+- dual binding: data flow, property handler
+- hybrid rendering: CSR, SSG, SSR, ISR, RSC
+- reactive objects: flow, debounce, destructuring
+- function decorators: model, example, library, usage
+
+pending
+- architecture
+- handlers details
+- performance

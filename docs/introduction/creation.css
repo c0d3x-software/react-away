@@ -1,0 +1,11 @@
+@import url('../@assets/css/index.css');
+
+h1 {  
+   letter-spacing: 9px;
+}
+
+#cli img {
+   border: solid 9px #272727;
+   border-radius: 7px;
+
+}

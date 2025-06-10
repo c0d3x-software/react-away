@@ -1,0 +1,16 @@
+@import url(../@assets/css/index.css);
+
+#validation-api pre:last-of-type {
+   margin: 0px !important;
+   border-top: dashed 1px grey;
+}
+
+aside[auth] ul {
+   zoom: 1;
+   margin-left: 20px;
+   margin-top: 9px;
+}
+
+[auth] ul li {
+   padding-bottom: 7px; 
+}

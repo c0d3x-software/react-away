@@ -1,0 +1,26 @@
+pre {
+   zoom: 99%;
+   font-size:1rem;
+   font-weight: 100;
+   overflow: hidden !important;
+   background-color: var(--darkest);
+}
+
+p code { 
+   font-family: var(--code-font), monospace;
+   background-color: #292929 !important; 
+   border: solid 5px #292929 !important;
+   border-width: 5px 4px;
+   color: wheat;
+}
+
+pre code {
+   transform: scaleX(0.95) !important;   
+   line-height: 19px;
+}
+
+pre:not(.hljs),
+pre.hljs code>div {
+   padding:13px;
+   border-radius: 7px;
+}

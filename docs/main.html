@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <title>Reactful Framework</title>
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="@assets/css/loading.css" />
+   <link rel="stylesheet" href="@assets/css/index.css">
+   <link rel="stylesheet" href="main.css" />
+   <script src="@assets/js/logo.js"></script>
+   <script src="main.js"></script>
+   <title>reactful.js</title>
+</head>
+
+<body onload="startup()">
+   <section id="fading" class="loading"></section>
+   <section id="loading" class="loading" >
+      <span class="loader"></span>
+   </section>
+   <section id="content">
+      <nav id="menu">    
+         <logo style="zoom:1.7"></logo>
+         <br/><br />
+         <ul id="introduction">
+            <li><label>STARTING</label></li> 
+            <li><a id="creation">Installation</a></li>
+            <li><a id="structure">Structure</a></li>
+            <li><a id="example">Example</a></li>
+         </ul>
+         
+         <ul id="reference">
+            <li><label>REFERENCES</label></li>
+            <li><a id='serving'>serving start</a></li>
+            <li><a id='styling'>styling scopes</a></li>
+            <li><a id='routing'>routing schema</a></li>
+            <li><a id='stateful'>stateful concept</a></li>
+            <li><a id='binding'>binding handlers</a></li>
+            <li><a id='syncing'>syncing models</a></li>
+            <!-- <li><a id='authing'>authing tools</a></li> -->
+         </ul>
+         
+         <ul id="architecture" hidden> 
+            <li><label>ARQUITECTURE</label></li>
+            <li><a id="essentials">core features</a></li>
+            <li><a id='reactive-objects'>reactive objects</li></a>
+            <li><a id='dual-data-binding'>dual data binding</li></a>
+            <li><a id='function-decorators'>function decorators</li></a> 
+            <li><a id='property-handlers'>property handlers</li></a>
+            <li><a id='hybrid-renders'>hybrid renders</li></a>
+         </ul>
+         
+         <ul id="contacts"> 
+            <li><label>COMMUNICATIONS</label></li>
+            <li><a href="https://www.youtube.com/@c0d3x-software"><strong>Youtube</strong> Channel</li></a>
+            <li><a href="mailto: c0d3x-software@gmail.com"><strong>Email</strong> contact</li></a>
+            <li><a href="https://github.com/c0d3x-software/reactful"><strong>Github</strong> repo</li></a>
+         </ul>
+      </nav>
+      
+      <logo style="display: none;"></logo> 
+      
+      <main id="main" style="padding-top:0;">
+         <!-- <header id="header" hidden>
+            <h2 style="text-align: left;">
+               <a hidden id="logo" href="index.html"><img src="@assets/img/reactful.png" /></a>
+            </h2>  
+            <h2 style="letter-spacing: 7px;"><a href="index.html">REACTFUL</a></h2> 
+            <h2>documentation | <a>github</a></h2>
+         </header> -->
+      
+         <iframe scrolling="no" src="default.html">
+         </iframe>
+      </main>      
+   </section>
+</body>
+
+</html>

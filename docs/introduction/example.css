@@ -1,0 +1,26 @@
+@import url(../@assets/css/index.css);
+
+#step-1 {
+   margin-top: -15px;
+}
+
+h5 {
+   z-index: 1;
+   font-family: var(--menu-font);
+   font-weight: normal !important;
+   border-radius: 5px;
+   display: block;
+   text-align: right;
+   color: grey;
+   padding: 5px 10px;
+   margin: 0 0 0 auto;
+   margin-top: 20px;
+   margin-right: 10px;
+   margin-bottom: -37px;
+   /* margin-left: 65%; */
+   width: 150px;
+}
+
+pre:first-of-type {
+   margin-top: -15px;
+}
