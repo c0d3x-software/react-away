@@ -19,7 +19,7 @@ paginate: true
 ![react-away](./img/react-away.png)
 
 
-# REACTFUL
+# REACT AWAY
 
 Fixing React ecosystem with a innovative, minimalist and comprehensive React framework
 

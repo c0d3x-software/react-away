@@ -17,7 +17,7 @@ paginate: true
 
 ![react-away](./img/react-away.png)
 
-# REACTFUL
+# REACT AWAY
 
 Modern fullstack React framework
 
@@ -287,7 +287,7 @@ export default function PostingName() {
 </style>
 
 # Proposal
-## REACTFUL FRAMEWORK
+## REACT AWAY FRAMEWORK
 
 
 <div class='arch' style='margin-top:-50px'>

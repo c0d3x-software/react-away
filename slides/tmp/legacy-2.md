@@ -5,7 +5,7 @@ theme: uncover
 paginate: true
 ---
 
-# REACTFUL
+# REACT AWAY
 
 Minimalist Stateful React framework
 
