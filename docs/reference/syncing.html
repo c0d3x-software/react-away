@@ -265,7 +265,7 @@ body.marp-vscode blockquote {
 </tr>
 </tbody>
 </table>
-<p>Reactful uses <strong>syncher library</strong> (<code>experimental</code>), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs.</p>
+<p>React Away uses <strong>syncher library</strong> (<code>experimental</code>), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs.</p>
 <h2 id="fetch-swr">FETCH+ SWR</h2>
 <p>Fetch API gets a minimalist SWR polyfill extension for SWR, adding cache support to cache keys and timeout by milliseconds number ou time string format. Revalidation is done with fetch.clear.</p>
 <aside cols='2'>
@@ -307,7 +307,7 @@ es.<span class="hljs-property">onopen</span> = <span class="hljs-function">() =&
 es.<span class="hljs-property">onerror</span> = <span class="hljs-function"><span class="hljs-params">ex</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(ex)
 es.<span class="hljs-title function_">close</span>();
 </code></pre>
-<p>Reactful has an event API alterantive that emulates fluent fetch API.</p>
+<p>React Away has an event API alterantive that emulates fluent fetch API.</p>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> es = <span class="hljs-title function_">event</span>(url, { <span class="hljs-attr">withCredentials</span>: <span class="hljs-literal">true</span> })
    .<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Open connection...&#x27;</span>))
    .<span class="hljs-title function_">then</span>(<span class="hljs-string">&#x27;message&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message&#x27;</span>, e.<span class="hljs-property">text</span>))

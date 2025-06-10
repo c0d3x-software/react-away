@@ -10,6 +10,6 @@
 |       [Quotes](/quotes) | Periodic genreation                              |
 |     [Counter](/counter) | Client component                                 |
 |         [Hello](/hello) | Stateful object + data bind props                |
-|         [Forms](/forms) | reactful forms + validation API + RESTful action |
-|         [Login](/login) | reactful forms RESTful action authentication     |
+|         [Forms](/forms) | react-away forms + validation API + RESTful action |
+|         [Login](/login) | react-away forms RESTful action authentication     |
 | [Profile](/profile/123) | Parametric (dynamic) routes with modular CSS     |

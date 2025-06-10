@@ -40,14 +40,14 @@ Considering the index and extension supression, there is some conflict cases lis
 
 ## Cached Routing
 
-As Reactful supports for <a href='structure.html#client-component'>partial hydration</a>, all routes are sent and cached to the browser as a performatic user experience as a client-side app.
+As React Away supports for <a href='structure.html#client-component'>partial hydration</a>, all routes are sent and cached to the browser as a performatic user experience as a client-side app.
 
 ## Dynamic routes
 
 Dynamic routing (aka parametric route) uses functions decorator. It has highets priority, overriding any static routing conflicts.
 
 ```tsx
-import { route } from '@c0d3x/reactful'
+import { route } from 'react-away'
 
 @route('/whatever/profile/:id')
 export default async function Profile(props, { params }) {
@@ -87,10 +87,10 @@ The active routing elements using [link] directives could be easily style with b
 
 ## Imperative routing (draft)
 
-For imperative routing cases, Reactful has a router object.
+For imperative routing cases, React Away has a router object.
 
 ```tsx
-import { router } from '@c0d3x/reactful/kernel'
+import { router } from 'react-away/kernel'
 
 router.history  // all routes
 router.current  // current route

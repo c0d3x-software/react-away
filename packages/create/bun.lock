@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@c0d3x/create-reactful",
+      "name": "@c0d3x/create-react-away",
       "dependencies": {
         "bun-types": "latest",
         "inquirer": "^9.3.7",

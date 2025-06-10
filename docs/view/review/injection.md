@@ -5,10 +5,10 @@
 
 ## IoC Container
 
-The Reactful IoC container handles <a onclick='goto("review/reactive.html")'>global state</a>, <a href='#error-handling'>error components<a> and<a onclick='goto("review/directive.html")'>props handlers</a> dependencies as server argument or inject method. 
+The React Away IoC container handles <a onclick='goto("review/reactive.html")'>global state</a>, <a href='#error-handling'>error components<a> and<a onclick='goto("review/directive.html")'>props handlers</a> dependencies as server argument or inject method. 
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import { directive } from './directives'
 
 const error = (status, errors) => ...
@@ -45,7 +45,7 @@ function Component(props, feeds) {
 interface Feeds {
    param: record    // route params of dynamic routing
    store: record    // custom global store by DI
-   logon: record    // current logged user by Reactful auth
+   logon: record    // current logged user by React Away auth
    await: boolean   // global pending fetch for loading spine
    fails: Invalid[] // current fetch errors
 }
@@ -65,7 +65,7 @@ const errorComponent = (status, errors) => <p>
 </p>
 ```
 
-The error component is injected in Reactful launch function.
+The error component is injected in React Away launch function.
 
 ```tsx
 await launch({ error: errorComponent }).server("#root")
@@ -84,7 +84,7 @@ const specificErrorComponent = (status, errors) => <p>
 
 ## Conflits with React 19
 
-Canary React 19 will is considering use the function second parameter for server component context. So, when if this decision goes to final version,  Reactful will realocate this information to serve field in Feeds.
+Canary React 19 will is considering use the function second parameter for server component context. So, when if this decision goes to final version,  React Away will realocate this information to serve field in Feeds.
 
 ```ts
 interface Feeds {

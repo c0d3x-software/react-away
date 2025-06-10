@@ -10,7 +10,7 @@
 
 ## CSS class
 
-Reactful support the attribute class as alias for CSS className.
+React Away support the attribute class as alias for CSS className.
 
 ```tsx
 export const Hello = () => <h1 class='hello'>Hello World!</h1>
@@ -18,7 +18,7 @@ export const Hello = () => <h1 class='hello'>Hello World!</h1>
 
 ## Modular CSS
 
-Reactful fixes the global leaking in CSS imports\*, enabling modular CSS.
+React Away fixes the global leaking in CSS imports\*, enabling modular CSS.
 
 <aside cols='2'><section>
 
@@ -53,7 +53,7 @@ export default const Hello = () => <h1>Hello World!</h1>
 
 ## ClassName tag
 
-In Reactful, all component receives the component name as a CSS className, allowing component-scoped in style-side with classless CSS.
+In React Away, all component receives the component name as a CSS className, allowing component-scoped in style-side with classless CSS.
 
 <aside cols='5:4' style='margin-top: 10px;'>
 
@@ -71,7 +71,7 @@ h1.Hello { color: red;  }
 
 ## Routed style
 
-Reactful reserves a CSS class .routed for toggled state in component using `[link]` props router, enabling fast and easy toggle state for element.
+React Away reserves a CSS class .routed for toggled state in component using `[link]` props router, enabling fast and easy toggle state for element.
 
 <aside cols='2'>
 

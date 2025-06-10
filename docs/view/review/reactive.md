@@ -25,7 +25,7 @@ function Hello() {
 }
 ```
 
-All props are converted in reactive objects in Reactful, avoiding any extra coding for imports, hooks and calls to deal with local states.
+All props are converted in reactive objects in React Away, avoiding any extra coding for imports, hooks and calls to deal with local states.
 
 ```tsx
 const Hello = props => <>   
@@ -63,7 +63,7 @@ const Hello = (props, { store }) => <>
 For multiple shared states, the partial states allows modular approach. First, you need to creat explicitly a store by useStore function.
 
 ```ts
-import { useStore } from '@c0d3x/reactful'
+import { useStore } from 'react-away'
 
 export const person = useStore({ guid: 0, name: 'john' })
 ```
@@ -71,7 +71,7 @@ export const person = useStore({ guid: 0, name: 'john' })
 After that, you need to import the crated store and binding it into a component using `@client(true, state=null)` decorator.
 
 ```tsx
-import { client } from '@c0d3x/reactful'
+import { client } from 'react-away'
 import { person } from './stores'
 
 @client(true, person)
@@ -83,7 +83,7 @@ const Hello = props => <>
 
 ## Performatic debounce algorithm
 
-The Reactful implements in background a debounce render algorithm with 0.5s delay between each rendering, avoiding render overload.
+The React Away implements in background a debounce render algorithm with 0.5s delay between each rendering, avoiding render overload.
 
 ## Deconstruction state concern
 

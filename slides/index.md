@@ -16,7 +16,7 @@ paginate: true
    h1 + P { padding: 0 200px;}
 </style>
 
-![reactful](./img/reactful.png)
+![react-away](./img/react-away.png)
 
 
 # REACTFUL
@@ -192,7 +192,7 @@ export const Hello = () => <h1>Hello World!</h1>
 ## Fixings 
 ### metadataless | **functional decorator**
 
-Reactful transpiles function decorator for easy metadata function.
+React Away transpiles function decorator for easy metadata function.
 
 <div cols='auto:fill' style='margin-top:-10px'>
 <aside>
@@ -291,7 +291,7 @@ const Component = props => <h1 show={props.show}>Hi...</h1>
 ## Fixings
 ### stateful complexity | **dependency injection**
 
-Reactful resolves dependencies with feeds object of component second argument, injecting dependencies like directives, error, state and context.
+React Away resolves dependencies with feeds object of component second argument, injecting dependencies like directives, error, state and context.
 
 ```ts
 const Component = (props, feeds) => feeds... // contextual + injections
@@ -300,7 +300,7 @@ const Component = (props, feeds) => feeds... // contextual + injections
 <aside cols='7:6'>
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import { highlight } from './directives'
 import error from './error-component'
 import store from './store'

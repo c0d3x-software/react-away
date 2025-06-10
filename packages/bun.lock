@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@c0d3x/reactful",
+      "name": "react-away",
       "dependencies": {
         "css": "^3.0.0",
         "jsdom": "^26.1.0",

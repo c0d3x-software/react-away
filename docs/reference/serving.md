@@ -11,12 +11,12 @@
 
 Server launcher starting point allows some configurations.
 ```ts
-import { launch } from '@c0d3x/reactful/server'
+import { launch } from 'react-away/server'
 
 await launch({ folders:{ routes: '/pages' }}).server('#root')
 ```
 
-The Reactful IoC supports injection stores (global states) and handlers.
+The React Away IoC supports injection stores (global states) and handlers.
 
 <aside cols='5:4'>
 
@@ -79,7 +79,7 @@ SEO with function decorator with string or metatatag object. The **sitemap** and
  
 
 ```tsx
-import { seo } from '@c0d3x/reactful'
+import { seo } from 'react-away'
  
 @seo('title', 'description')  
 function Home(props) { return <>Home</> }
@@ -108,7 +108,7 @@ ROBOT=[{
 
 ## Markdown and HTML+
 
-Reactful supports markdown rendering with Marko lib and extends HTML to allow JSX in HTML, enabling micro component tree and container page design, breaking a monolith component tree in micro-component threes (still in experimental stage).
+React Away supports markdown rendering with Marko lib and extends HTML to allow JSX in HTML, enabling micro component tree and container page design, breaking a monolith component tree in micro-component threes (still in experimental stage).
 
 ```html
 <section>

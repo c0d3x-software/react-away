@@ -22,7 +22,7 @@ console.log('___________________________________________________')
 console.log('')
 console.log(`                ${GREEN}REACTful${RESET} create    `)
 console.log(`              ${CIANO}current version 1.2${RESET}  `)
-//console.log(`${decor}( ${GREEN}reactful${RESET}.js )${decor}`)
+//console.log(`${decor}( ${GREEN}react-away${RESET}.js )${decor}`)
 console.log('___________________________________________________')
 // console.log(line)
 console.log('')
@@ -53,7 +53,7 @@ async function prompting(answers) {
    await createDirectory(destination)
 
    console.log('- loading NPM...')
-   await download('@reactful/create', downloadPath)
+   await download('@react-away/create', downloadPath)
 
    console.log('- creating env...')
    const env = `PORT=333\nMINIFY=FALSE`

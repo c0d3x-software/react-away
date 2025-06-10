@@ -1,5 +1,5 @@
 import React from 'react'
-import { seo, server, error } from '@c0d3x/reactful'
+import { seo, server, error } from 'react-away'
 
 //@ts-ignore
 @server("periodic", "30min")

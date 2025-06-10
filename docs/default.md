@@ -6,7 +6,7 @@
 
 <center style='margin: 0 50px'>
 
-Reactful is a fullstack React meta-framework with innovative stateful design, advanced patterns and comprehensive framework features. 
+React Away is a fullstack React meta-framework with innovative stateful design, advanced patterns and comprehensive framework features. 
 
 |         |                                            |
 | ------- | ------------------------------------------ |

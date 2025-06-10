@@ -241,8 +241,8 @@ body.marp-vscode blockquote {
 <h1 id="property-handlers">Property handlers</h1>
 <h2 id="directive-concept">Directive concept</h2>
 <p>Property handler emulates the Angular-like attribute directive, but a functional approach and with less coding. Directive enables attributes that you can encapsulate algorithm and shared between elements.</p>
-<h2 id="reactful-directives">Reactful directives</h2>
-<p>Reactful directives are built-in props handlers that appends new attributes into React elements, enabling resources like data binding, style extensions, etc.</p>
+<h2 id="react-away-directives">React Away directives</h2>
+<p>React Away directives are built-in props handlers that appends new attributes into React elements, enabling resources like data binding, style extensions, etc.</p>
 <section cols='5:4'>
 <pre><code class="language-tsx"><span class="hljs-comment">// decorator producer</span>
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">decorator</span> = props =&gt; { ...props }
@@ -253,7 +253,7 @@ body.marp-vscode blockquote {
 </section>
 <h2 id="custom-directives">Custom directives</h2>
 <p>Custom directives are registered it server IoC container, here an example of how to creation, register and usage of a custom directive.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@c0d3x/reactful&#x27;</span>
+<pre><code class="language-tsx"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away&#x27;</span>
 
 <span class="hljs-comment">// 1. create a function that receives and returns a props </span>
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">shown</span> = props =&gt; ({ ...props, <span class="hljs-attr">hidden</span>: !props.<span class="hljs-property">shown</span> })

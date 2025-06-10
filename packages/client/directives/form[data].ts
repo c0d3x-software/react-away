@@ -12,7 +12,7 @@ export interface Props<T extends object = object> {
    onValidate?: OnValidateEvent // custom post-validation
 }
 
-/** reactful forms as form[data] and children[bind] 
+/** react-away forms as form[data] and children[bind] 
  * with RESTful actions and validation api */
 export function formProps(props: Props, params: Params) {
    if (global.env.SIDE == "server") return props

@@ -1,7 +1,7 @@
 "user server"
 
 import { db } from "./db"
-import { delay } from '@c0d3x/reactful'
+import { delay } from 'react-away'
 
 const SECRET_KEY = '0123456789'
 

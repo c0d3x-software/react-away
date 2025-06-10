@@ -1,6 +1,6 @@
 import React from "react"
 import { shown } from './directives'
-import { launch } from "@reactful/server"
+import { launch } from "@react-away/server"
 
 const storage = { name: "ok" }
 

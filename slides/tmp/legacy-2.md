@@ -12,7 +12,7 @@ Minimalist Stateful React framework
 ---
 
 ## Personal information
-### reactful
+### react-away
 
 - Jonathan de Sena Ribeiro
 - mestre em ciência da computação (UFC)
@@ -285,7 +285,7 @@ React ecosystem also deals with another verbosity and complexity flaws.
 
 # Proposal
 
-Reactful Framework
+React Away Framework
 
 >  styling | routing | binding | serving | syncing
 
@@ -328,7 +328,7 @@ Scopeless CSS issue in JavaScript React is solved by:
 ## Styling **modular CSS**
 ### proposal
 
-Modular-scoped CSS imports by new Reactful CSS transpiler.
+Modular-scoped CSS imports by new React Away CSS transpiler.
 
 <aside cols='2'><section>
 
@@ -503,7 +503,7 @@ async function onPost(response: Response) { /* etc... */ }
 ## Serving
 ### proposal
 
-Reactful server has multiple features and technological supports:
+React Away server has multiple features and technological supports:
 
 - **hybrid renders**: SSR, SSG, ISR, CSR
 - **multiple supports**: HTML, REST, JSX, RSC, MD
@@ -527,7 +527,7 @@ The React server implements a lite IoC container with those dependency injection
 </div>
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import { directive } from './directives'
 
 const error = (status, error) => ...

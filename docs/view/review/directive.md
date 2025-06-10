@@ -7,9 +7,9 @@
 
 Property handler emulates the Angular-like attribute directive, but a functional approach and with less coding. Directive enables attributes that you can encapsulate algorithm and shared between elements.
 
-## Reactful directives
+## React Away directives
 
-Reactful directives are built-in props handlers that appends new attributes into React elements, enabling resources like data binding, style extensions, etc.
+React Away directives are built-in props handlers that appends new attributes into React elements, enabling resources like data binding, style extensions, etc.
 
 <section cols='5:4'>
 
@@ -30,7 +30,7 @@ const decorator = props => { ...props }
 Custom directives are registered it server IoC container, here an example of how to creation, register and usage of a custom directive.
 
 ```tsx
-import { launch } from '@c0d3x/reactful'
+import { launch } from 'react-away'
 
 // 1. create a function that receives and returns a props 
 const shown = props => ({ ...props, hidden: !props.shown })

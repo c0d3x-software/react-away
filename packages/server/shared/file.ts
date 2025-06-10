@@ -24,7 +24,7 @@ export class File implements IFile {
          this.name = path ? path.split('/').at(-1) || '' : ''
       }
       catch(ex) {
-         console.log(`reactful file.ts contructor (${path})`)
+         console.log(`react-away file.ts contructor (${path})`)
          throw ex
       }
    }

@@ -1,6 +1,6 @@
 import { JSDOM } from 'jsdom'
 import { expect, test } from "bun:test";
-import { Reactful } from "../../kernel";
+import { React Away } from "../../kernel";
 import { styler } from './style';
 
 test.skip('styler: ignore when no node or path ', function () {
@@ -30,7 +30,7 @@ test.skip('styler: modular CSS as JSX same cached path', function () {
    global['meta'].style = { ['/test']: [`h1 { color: red }`] }
    
    const path = '/test'
-   const node = Reactful.createElement('h1', {}) 
+   const node = React Away.createElement('h1', {}) 
    
    expect(node.props.color).toBe(undefined)      
    const newProps = styler(node, path)

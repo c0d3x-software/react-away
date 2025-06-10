@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '../components'
-import { client } from '@c0d3x/reactful'
+import { client } from 'react-away'
 
 //@ts-ignore
 @client(true)

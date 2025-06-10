@@ -55,7 +55,7 @@ export const get = request => new Response('Hello World!')
 The inject launch method also allows middlewares in request-response pipeline.
 
 ```ts
-import { launch } from '@c0d3x/reactful/server'
+import { launch } from 'react-away/server'
 import { middleware } from './middlewares'
 
 await launch().inject(middleware).render()
@@ -74,7 +74,7 @@ function middleware(request: Request): Response | void {
 
 ## Markdown support
 
-Reactful has a built-in markdown render with routing support. In case of name conflits with another extensions, check the <a href='structure.html#conflict-rules'>confliting name resolution</a> section.
+React Away has a built-in markdown render with routing support. In case of name conflits with another extensions, check the <a href='structure.html#conflict-rules'>confliting name resolution</a> section.
 
 ## Extended HTML
 
@@ -111,7 +111,7 @@ const SyspenseExample = async props => <>
 </>
 ```
 
-The await directive is a Reactful alternative to Suspense component. Since it is an attribute, it could use an HTML element that could by stylized.
+The await directive is a React Away alternative to Suspense component. Since it is an attribute, it could use an HTML element that could by stylized.
 
 ```tsx
 const Await = async () => <p await={Async}><h1>loading...</h1></p>
@@ -124,8 +124,8 @@ SEO using decorators with typed MetaTag with Open Graph Protocol.
 <aside cols='5:4'>
 
 ```tsx
-import { seo } from '@c0d3x/reactful'
-import { MetaTag } from '@c0d3x/reactful'
+import { seo } from 'react-away'
+import { MetaTag } from 'react-away'
 
 @seo('title', 'description') 
 export function Hi(props) {

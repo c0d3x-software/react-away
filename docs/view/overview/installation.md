@@ -4,13 +4,13 @@
 
 # Installation
 
-With the latest `bun` installed, create a new project with the template creator `@c0d3x/reactful/create@latest`, the entry code starts with server render.
+With the latest `bun` installed, create a new project with the template creator `react-away/create@latest`, the entry code starts with server render.
 
 
 <section cols='3:5'>
 
 ```ps
-$ bunx @c0d3x/reactful/create
+$ bunx react-away/create
 - none=0|init=1|full=3? 3
 - project name? MyProject
 - install? (Y/n) y
@@ -23,8 +23,8 @@ running at localhost:3000
 ```
 
 ```typescript
-import { launch } from '@c0d3x/reactful/server'
-import { client } from '@c0d3x/reactful'
+import { launch } from 'react-away/server'
+import { client } from 'react-away'
 
 await launch().server('#root')
 

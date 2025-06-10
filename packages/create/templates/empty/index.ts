@@ -1,3 +1,3 @@
-import { launch } from "@c0d3x/reactful/server"
+import { launch } from "react-away/server"
 
 await launch("/routes").server("#root")

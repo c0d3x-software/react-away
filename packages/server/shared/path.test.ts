@@ -43,7 +43,7 @@ test('Path: resolve relative path syntax', async function () {
 
 test('Path: get NPM module folder', async function () {
    const resulted = Path.npm
-   const expected = 'reactful/modules/node_modules'
+   const expected = 'react-away/modules/node_modules'
    expect(resulted).toInclude(expected)
 })
 

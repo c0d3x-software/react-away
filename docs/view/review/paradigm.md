@@ -9,7 +9,7 @@ table td { font-weight:100 !important; color:white; }
 
 ## Dual binding
 
-Reactful reactive objects emulates Angular's two-way data binding, abstracting the React one-way data flow using built-in `[data]` and `[bind]` <a href='directive.html'>directives</a>. The dual data binding is a two-way data binding design with a one-way data flow architecture. It is dual because it binds the value and the event change to each input-like element. 
+React Away reactive objects emulates Angular's two-way data binding, abstracting the React one-way data flow using built-in `[data]` and `[bind]` <a href='directive.html'>directives</a>. The dual data binding is a two-way data binding design with a one-way data flow architecture. It is dual because it binds the value and the event change to each input-like element. 
 
 | input | select | textarea | radio | checkbox | button | 
 |-|-|-|-|-|-|

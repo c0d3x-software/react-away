@@ -7,7 +7,7 @@ export interface Props<T extends object = object> {
     onSubmit?: OnSubmitEvent;
     onValidate?: OnValidateEvent;
 }
-/** reactful forms as form[data] and children[bind]
+/** react-away forms as form[data] and children[bind]
  * with RESTful actions and validation api */
 export declare function formProps(props: Props, params: Params): any;
 export declare function clearProps(props: any): any;

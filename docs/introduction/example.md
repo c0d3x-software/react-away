@@ -14,7 +14,7 @@ A **TodoList** component in root route `/` with modular CSS, reactive objects an
 ##### /index.ts
 
 ```ts
-import { launch } from '@c0d3x/reactful/server'
+import { launch } from 'react-away/server'
 const store = { list:[], task:'', done:false }
 await launch({ store }).server("#root") 
 ```

@@ -77,8 +77,8 @@ iframe {
 pre { height: 100% !important; }
 pre+pre { margin-top: 20px; }
 
-#reactful { color:wheat }
-#reactful:hover { filter:invert(1) brightness(5) }
+#react-away { color:wheat }
+#react-away:hover { filter:invert(1) brightness(5) }
 
 #main {
    padding: 0;

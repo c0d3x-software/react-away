@@ -240,8 +240,8 @@ body.marp-vscode blockquote {
 <style>@import url(../css/index.css);</style> 
 <h1 id="dependency-injection">Dependency Injection</h1>
 <h2 id="ioc-container">IoC Container</h2>
-<p>The Reactful IoC container handles <a onclick='goto("review/reactive.html")'>global state</a>, <a href='#error-handling'>error components<a> and<a onclick='goto("review/directive.html")'>props handlers</a> dependencies as server argument or inject method.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;reactful/server&#x27;</span>
+<p>The React Away IoC container handles <a onclick='goto("review/reactive.html")'>global state</a>, <a href='#error-handling'>error components<a> and<a onclick='goto("review/directive.html")'>props handlers</a> dependencies as server argument or inject method.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away/server&#x27;</span>
 <span class="hljs-keyword">import</span> { directive } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./directives&#x27;</span>
 
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">error</span> = (<span class="hljs-params">status, errors</span>) =&gt; ...
@@ -269,7 +269,7 @@ body.marp-vscode blockquote {
 <pre><code class="language-ts"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Feeds</span> {
    <span class="hljs-attr">param</span>: record    <span class="hljs-comment">// route params of dynamic routing</span>
    <span class="hljs-attr">store</span>: record    <span class="hljs-comment">// custom global store by DI</span>
-   <span class="hljs-attr">logon</span>: record    <span class="hljs-comment">// current logged user by Reactful auth</span>
+   <span class="hljs-attr">logon</span>: record    <span class="hljs-comment">// current logged user by React Away auth</span>
    <span class="hljs-attr">await</span>: <span class="hljs-built_in">boolean</span>   <span class="hljs-comment">// global pending fetch for loading spine</span>
    <span class="hljs-attr">fails</span>: <span class="hljs-title class_">Invalid</span>[] <span class="hljs-comment">// current fetch errors</span>
 }
@@ -282,7 +282,7 @@ body.marp-vscode blockquote {
    { errors.map((e,i) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>&gt;</span>{ e }<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>) }
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 </code></pre>
-<p>The error component is injected in Reactful launch function.</p>
+<p>The error component is injected in React Away launch function.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ <span class="hljs-attr">error</span>: errorComponent }).<span class="hljs-title function_">server</span>(<span class="hljs-string">&quot;#root&quot;</span>)
 </code></pre>
 <p>Specific compnoent errors is handled by  <code>@error(component)</code> decorator.</p>
@@ -295,7 +295,7 @@ body.marp-vscode blockquote {
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 </code></pre>
 <h2 id="conflits-with-react-19">Conflits with React 19</h2>
-<p>Canary React 19 will is considering use the function second parameter for server component context. So, when if this decision goes to final version,  Reactful will realocate this information to serve field in Feeds.</p>
+<p>Canary React 19 will is considering use the function second parameter for server component context. So, when if this decision goes to final version,  React Away will realocate this information to serve field in Feeds.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Feeds</span> {
    <span class="hljs-attr">serve</span>: <span class="hljs-title class_">Context</span>
    ...,

@@ -23,7 +23,7 @@ declare global {
       (props: P): ReactNode
    }
 
-   /** Reactful Functional Element (reactful) */
+   /** React Away Functional Element (react-away) */
    type RFE = RRE<Props, REC<Props>>
 }
 

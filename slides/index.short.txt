@@ -1,6 +1,6 @@
-O Reactful framework completamente transforma o React!
+O React Away framework completamente transforma o React!
 
-Reactful é um framework completo com conceitos inovadores que resolve as principais fraquezas do desenvolvimento com React.
+React Away é um framework completo com conceitos inovadores que resolve as principais fraquezas do desenvolvimento com React.
 
 Ele corrige o vazamento de escopo no import de CSS, modularizando o CSS sem necessidade de libs como css-module ou styled-component.
 
@@ -10,13 +10,13 @@ Também introduz diretivas de propriedade para dual data binding, que permite bi
 
 Também implementa decoradores com suporte a funções, que facilita a codificação de rotas dinâmicas, autorização de rotas, renderização híbrida, seach enginering optmization, entre outros.
 
-Para mais informação, vite tinyurl.com/reactful
+Para mais informação, vite tinyurl.com/react-away
 
 ---
 
-The Reactful framework completely transforms React!
+The React Away framework completely transforms React!
 
-Reactful is a full-featured framework with innovative concepts that solves the main react developing flaws.
+React Away is a full-featured framework with innovative concepts that solves the main react developing flaws.
 
 It fixes the global scope leaking in CSS imports, allowing modularized CSS design.
 
@@ -24,4 +24,4 @@ The state management verbosity is fixed by reactive objects and props binding di
 
 It also implements function decorators, simplifing SEO, dynamic routes, route authorization and, hybrid rendering.
 
-For more information, see tinyurl.com/reactful
+For more information, see tinyurl.com/react-away

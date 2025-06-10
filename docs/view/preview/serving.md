@@ -9,10 +9,10 @@
 
 ## Server launcher
 
-Reactful IoC container for <a onclick='goto("review/reactive.html#global-store")'>global store</a>, <a onclick='goto("review/injection.html#error-components")'>error components</a> and <a onclick='goto("review/directive.html#props-directives")'>props handlers</a>.
+React Away IoC container for <a onclick='goto("review/reactive.html#global-store")'>global store</a>, <a onclick='goto("review/injection.html#error-components")'>error components</a> and <a onclick='goto("review/directive.html#props-directives")'>props handlers</a>.
 
 ```ts
-import { launch } from '@c0d3x/reactful/server'
+import { launch } from 'react-away/server'
 import { directive } from './directives'
 import { decorator } from './decorators'
 
@@ -47,8 +47,8 @@ Function decorator overloads for SEO with typed metatags.
 <aside cols='2'>
 
 ```tsx
-import { seo } from '@c0d3x/reactful'
-import { MetaTag } from '@c0d3x/reactful'
+import { seo } from 'react-away'
+import { MetaTag } from 'react-away'
 
 @seo('title', 'description') 
 export function Hi(props) {

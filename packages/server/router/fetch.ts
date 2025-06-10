@@ -10,7 +10,7 @@ export async function fetcher(request: Request) {
           || await serve(request)
    } 
    catch(ex: any) {
-      console.error('reactful', ex)         
+      console.error('react-away', ex)         
       return response(500, ex.message || ex)
    }     
 }

@@ -1,4 +1,4 @@
-Hi, I will present the Reactful framework, an innovative approach to dealing with the core issues in the React development experience.
+Hi, I will present the React Away framework, an innovative approach to dealing with the core issues in the React development experience.
 
 ----
 
@@ -14,9 +14,9 @@ The lack of functional metadata overloads the framework design with file naming 
 
 ---
 
-Reactful intruduces five new concepts into React ecosystem to deal with those issues.
+React Away intruduces five new concepts into React ecosystem to deal with those issues.
 
-Reactful solves the modular CSS issues with its loader CSS transpiler. 
+React Away solves the modular CSS issues with its loader CSS transpiler. 
 
 Its function decorators solves the lack of function metadata.
 
@@ -28,13 +28,13 @@ Reactiful IoC containers use the component's second argument for dependency inje
 
 ---
 
-Reactful Framework is also a full-featured React framework.
+React Away Framework is also a full-featured React framework.
 
 Its support static and nested directory routing, and dynamic routes with decorators.
 
 Its modular CSS has also component-scoped CSS, style props and classless CSS default.
 
-Reactful server supports markdown, API folder, SEO, CSR, SSR, SSG and ISR.
+React Away server supports markdown, API folder, SEO, CSR, SSR, SSG and ISR.
 
 The already mentioned stateful local props and global stores, has also modular states.
 
@@ -42,4 +42,4 @@ Controlled and uncontrolled components data and bind directives for props, form,
 
 ---
 
-So, that's it. The Reactful framework is still in alpha test, but we looking for design feedback from the dev community. Let your thoughts be in the comments. Thank you for watching!
+So, that's it. The React Away framework is still in alpha test, but we looking for design feedback from the dev community. Let your thoughts be in the comments. Thank you for watching!

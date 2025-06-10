@@ -1,12 +1,12 @@
 {
-   "name": "@c0d3x/create-reactful",
+   "name": "@c0d3x/create-react-away",
    "version": "1.3.0",
    "main": "index.js",
    "type": "module",
-   "description": "@reactful scaffold",
+   "description": "@react-away scaffold",
    "author": "jonathan de sena ribeiro <jsenaribeiro@gmail.com>",
    "bin": {
-      "create-reactful": "index.js"
+      "create-react-away": "index.js"
    },
    "files": [
       "index.js",

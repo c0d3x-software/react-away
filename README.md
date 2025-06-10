@@ -1,15 +1,15 @@
-# @reactful
+# @react-away
 
 > **WARNING! This project is not fully open source.**
 
-<p center>Reactful solves stateful complexity in React with by stateful objects with function decorators and props handler; with support to server-side rendering with easy SEO and comprehensive routing.</p>
+<p center>React Away solves stateful complexity in React with by stateful objects with function decorators and props handler; with support to server-side rendering with easy SEO and comprehensive routing.</p>
 
 ## Overview
 
 Stateful objects evokes the component render when object fields is changed, being managed by a performatic batching algorithm to prevents multiple rendering.
 
 ```ts
-import * from '@c0d3x/reactful'
+import * from 'react-away'
 
 const store = useStore({ hello: world })
 store.hello = 'john' // setState behavior
@@ -30,7 +30,7 @@ const Hello = props => <>
 
 ## Features
 
-Reactful framework introduces those new features that enable its stateful approach and bring another React improvements, like CSS scoping. TODO: complete
+React Away framework introduces those new features that enable its stateful approach and bring another React improvements, like CSS scoping. TODO: complete
 
 - **function decorators**: enable decorators with functions by transpiler.
   
@@ -40,7 +40,7 @@ Reactful framework introduces those new features that enable its stateful approa
   
 - **modular CSS**: fixes the global CSS leakins during modular CSS imports.
 
-More details in site [documentation](https://c0d3x.github.io/reactful).
+More details in site [documentation](https://c0d3x.github.io/react-away).
 
 ## Architecture 
 
@@ -54,9 +54,9 @@ More details in site [documentation](https://c0d3x.github.io/reactful).
 | **kernel** | Core decorators, directives, constants, variables, etc |
 | **server** | Server transpilers, renders, routing, etc              |
 | **client** | Client data binding, routing and renderers             |
-| **create** | CLI tool to create an scaffold project with Reactful   |
+| **create** | CLI tool to create an scaffold project with React Away   |
 | **script** | Bun TypeScripts for utilities in package.json          |
 
 
 ##  Documnentation
-https://c0d3x-software.github.io/reactful
+https://c0d3x-software.github.io/react-away

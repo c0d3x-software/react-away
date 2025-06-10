@@ -5,7 +5,7 @@
 
 ## Decorators
 
-Since Javascript decorator is a class-only feature. The functional paradigm in React turns native decorators useles. Reactful fixes it implementing a functional decorator transpiler.
+Since Javascript decorator is a class-only feature. The functional paradigm in React turns native decorators useles. React Away fixes it implementing a functional decorator transpiler.
 
 ## Modelling
 
@@ -28,7 +28,7 @@ export function decorating(args: string): Decorator<RFC> {
 
 ## Library
 
-Reactful has its built-int decorators for multiple purposes. 
+React Away has its built-int decorators for multiple purposes. 
 
 |         | |
 | -------: |-|

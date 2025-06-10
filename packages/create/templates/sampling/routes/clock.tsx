@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { server, seo } from '@c0d3x/reactful'
+import { server, seo } from 'react-away'
 
 const loading = <h3>Loading content...</h3>
 const address = "https://timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam"

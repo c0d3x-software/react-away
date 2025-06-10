@@ -1,6 +1,6 @@
 # Architecture
 
-Reactful is a full-featured react meta-framework with a minimalist design and maximalist performance.
+React Away is a full-featured react meta-framework with a minimalist design and maximalist performance.
 
 || | |
 |-|-|-| 
@@ -10,8 +10,8 @@ Reactful is a full-featured react meta-framework with a minimalist design and ma
 
 ## PRODUCTIVITY
 
-Reactful has a large focus in dev experience with component-based SPA. 
-Reactful is an standard-driven minimalist stateful React.
+React Away has a large focus in dev experience with component-based SPA. 
+React Away is an standard-driven minimalist stateful React.
 
 * simplicity
 * intuitivity
@@ -29,7 +29,7 @@ The lack of CSS modularization, or CSS leaking imports, push React ecosystem to 
 | styled-component | It uses literal strings to code CSS string content inside of script, converting it in a CSS object to associate to JSX style props | It is similar to css-module but without any opaque convention required, but mix style inside script, and  is not able to deal with existent CSS files |
 | tailwind CSS lib | Create utility CSS to style component using CSS class composition inside component className props | It completelly breaks the SoC between style and component, and polluted the code with styling information |
 
-Reactful made the more obvious solution, just fix the CSS imports, allowing that any CSS import is only injected inside the modular components, a more web standard solution with zero learning curve overhead.
+React Away made the more obvious solution, just fix the CSS imports, allowing that any CSS import is only injected inside the modular components, a more web standard solution with zero learning curve overhead.
 
 Warning! the current version does not support pseudo-selector. For CSS pseudo-selector content, just load your CSS files by HTML link[href] attribute.
 
@@ -121,7 +121,7 @@ export default function App() {
 }
 ```
 
-Reactful solution implements reactive objects, property handlers and dependency injections. Here, props are reactives objects that triggers the render when it is change, and store is a global state injected in component second argument. So, in Reactful, the props itself is a state, avoiding any imports, hooks, call, etc. 
+React Away solution implements reactive objects, property handlers and dependency injections. Here, props are reactives objects that triggers the render when it is change, and store is a global state injected in component second argument. So, in React Away, the props itself is a state, avoiding any imports, hooks, call, etc. 
 
 ```tsx
 export const LocalState = props => <>
@@ -158,7 +158,7 @@ const Form = props => <>
 Global states are injected with the Reacful IoC container.
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import store from './store'
 
 await launch({ store }).server("#root")
@@ -170,7 +170,7 @@ await launch({ store }).server("#root")
 
 #### a) static server rendering (SSG)
 
-|             |   reactful | next.js | remix | fresh | astro |
+|             |   react-away | next.js | remix | fresh | astro |
 | ----------- | --- |-|-|-|-|
 | RAM   |
 | CPU  |
@@ -194,7 +194,7 @@ await launch({ store }).server("#root")
 
 ## PROFICIENCY
 
-In this contenxt, proficiency is the range of capacities and features of a given technology. It implies the manager experience to minimizes the number of licences and technological fragmentation of the project and team. Reactful supports:
+In this contenxt, proficiency is the range of capacities and features of a given technology. It implies the manager experience to minimizes the number of licences and technological fragmentation of the project and team. React Away supports:
 
 ### supports
 

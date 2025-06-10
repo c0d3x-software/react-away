@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '../components';
-import { seo, client } from '@c0d3x/reactful'
+import { seo, client } from 'react-away'
 
 const complexDataForTest = { person: { name: 'john' } }
 const functionProps = () => console.log('function props works!')

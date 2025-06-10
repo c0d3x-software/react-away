@@ -1,5 +1,5 @@
 import React from 'react'
-import { client } from '@c0d3x/reactful'
+import { client } from 'react-away'
 import './detail.css'
 
 const Tester = import('./tester').asLazyComponent("Tester")

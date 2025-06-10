@@ -89,7 +89,7 @@ Dependency injection to handle props, requests and exceptions.
 <aside cols='5:3'>
 
 ```tsx
-import { launch } from '@c0d3x/reactful'
+import { launch } from 'react-away'
 
 const shown = props => props...
 const token = request => new Response(ok)

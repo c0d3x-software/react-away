@@ -5,7 +5,7 @@ declare global {
    /** dependency injection object */
    interface IoC<P extends object = any, S extends object = record, L extends object = record> {
       
-      /** current logon user from Reactful auth */
+      /** current logon user from React Away auth */
       logon: L // current user
       
       //** params from dynamic route using @route */

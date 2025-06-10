@@ -3,8 +3,8 @@ import { modulePlugin } from "."
 import { AUTOGEN_COMMENTS } from "../../../kernel"
 
 const code = `import React, { Suspense, Test: { SubTest } } from 'react'
-import { server, seo, client } from '@c0d3x/reactful/web'
-import '@reactful/extensions'
+import { server, seo, client } from 'react-away/web'
+import '@react-away/extensions'
 
 export const whatever = 1
 

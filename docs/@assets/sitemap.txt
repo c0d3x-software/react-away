@@ -1,5 +1,5 @@
 introduction
-- creation: create-reactful
+- creation: create-react-away
 - structure: folders, settings
 - essentials: components, states, props
 

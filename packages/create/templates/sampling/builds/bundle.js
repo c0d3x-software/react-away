@@ -44,7 +44,7 @@ var init_constants = __esm(() => {
   GLOBAL_KEY = Symbol.for("settings");
   PRIMITIVES = ["symbol", "string", "number", "undefined", "null", "bigint"];
   IS_ONLY_FOR_ROUTE = "is only for default route component directory";
-  PREFIX_ERROR = "@reactful error: ";
+  PREFIX_ERROR = "@react-away error: ";
 });
 
 // node_modules/@c0d3x/reacful/variables/all.js
@@ -34570,7 +34570,7 @@ var init_header = __esm(() => {
   }, props2.children || props2.title));
   try {
     Header["metadata"] ||= {};
-    Header["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/components/header.tsx";
+    Header["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/components/header.tsx";
   } finally {
   }
 });
@@ -34582,7 +34582,7 @@ var init_hello = __esm(() => {
   Hello = (props2) => import_react7.default.createElement(import_react7.default.Fragment, null, import_react7.default.createElement("h1", null, "Hello ", props2.name || "World", " !"));
   try {
     Hello["metadata"] ||= {};
-    Hello["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/components/hello.tsx";
+    Hello["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/components/hello.tsx";
   } finally {
   }
 });
@@ -34597,7 +34597,7 @@ var init_icon = __esm(() => {
   }));
   try {
     Icon["metadata"] ||= {};
-    Icon["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/components/icon.tsx";
+    Icon["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/components/icon.tsx";
   } finally {
   }
 });
@@ -34650,18 +34650,18 @@ var init_counter = __esm(() => {
   });
   try {
     functionProps["metadata"] ||= {};
-    functionProps["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/counter.tsx";
+    functionProps["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/counter.tsx";
   } finally {
   }
   try {
     default$["metadata"] ||= {};
-    default$["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/counter.tsx";
+    default$["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/counter.tsx";
   } finally {
   }
   counter_default = default$;
   try {
     CountButton["metadata"] ||= {};
-    CountButton["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/counter.tsx";
+    CountButton["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/counter.tsx";
   } finally {
   }
 });
@@ -34729,23 +34729,23 @@ var init_form2 = __esm(() => {
   }, import_react10.default.createElement("legend", null, "ERROR"), import_react10.default.createElement("ul", null, errors?.map((x) => import_react10.default.createElement("li", null, x.error))))));
   try {
     default$2["metadata"] ||= {};
-    default$2["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/forms/form.tsx";
+    default$2["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/forms/form.tsx";
   } finally {
   }
   form_default = default$2;
   try {
     modeValidate["metadata"] ||= {};
-    modeValidate["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/forms/form.tsx";
+    modeValidate["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/forms/form.tsx";
   } finally {
   }
   try {
     onSubmit["metadata"] ||= {};
-    onSubmit["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/forms/form.tsx";
+    onSubmit["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/forms/form.tsx";
   } finally {
   }
   try {
     onValidate["metadata"] ||= {};
-    onValidate["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/forms/form.tsx";
+    onValidate["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/forms/form.tsx";
   } finally {
   }
 });
@@ -34835,22 +34835,22 @@ var init_hello2 = __esm(() => {
   }));
   try {
     SubGlobal["metadata"] ||= {};
-    SubGlobal["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/hello.tsx";
+    SubGlobal["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/hello.tsx";
   } finally {
   }
   try {
     SubLocal["metadata"] ||= {};
-    SubLocal["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/hello.tsx";
+    SubLocal["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/hello.tsx";
   } finally {
   }
   try {
     SubOrbital["metadata"] ||= {};
-    SubOrbital["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/hello.tsx";
+    SubOrbital["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/hello.tsx";
   } finally {
   }
   try {
     Hello2["metadata"] ||= {};
-    Hello2["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/hello.tsx";
+    Hello2["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/hello.tsx";
   } finally {
   }
   hello_default = Hello2;
@@ -34896,7 +34896,7 @@ var init_login = __esm(() => {
   }, import_react12.default.createElement("legend", null, "token"), sessionStorage.getItem("token"))));
   try {
     default$3["metadata"] ||= {};
-    default$3["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/login.tsx";
+    default$3["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/login.tsx";
   } finally {
   }
   login_default = default$3;
@@ -34923,7 +34923,7 @@ var init_tester = __esm(() => {
   import_react13 = __toESM(require_react(), 1);
   try {
     Tester["metadata"] ||= {};
-    Tester["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/profile/tester.tsx";
+    Tester["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/profile/tester.tsx";
   } finally {
   }
 });
@@ -34960,7 +34960,7 @@ var init_detail2 = __esm(() => {
   });
   try {
     Detail["metadata"] ||= {};
-    Detail["metadata"].path = "/mnt/b/Repositorios/reactful/prototype/routes/profile/detail.tsx";
+    Detail["metadata"].path = "/mnt/b/Repositorios/react-away/prototype/routes/profile/detail.tsx";
   } finally {
   }
 });
@@ -34968,14 +34968,14 @@ var init_detail2 = __esm(() => {
 // prototype/builds/bundle.ts
 init_client();
 globalThis[GLOBAL_KEY].clients ||= {};
-globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/counter"] = { off: false, tag: "CountButton" };
-Promise.resolve().then(() => (init_counter(), exports_counter)).then((x) => x.CountButton).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/counter"] = x);
-globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/forms/form"] = { off: false, tag: "default" };
-Promise.resolve().then(() => (init_form2(), exports_form)).then((x) => x.default).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/forms/form"] = x);
-globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/hello"] = { off: false, tag: "Hello" };
-Promise.resolve().then(() => (init_hello2(), exports_hello)).then((x) => x.default).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/hello"] = x);
-globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/login"] = { off: false, tag: "default" };
-Promise.resolve().then(() => (init_login(), exports_login)).then((x) => x.default).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/login"] = x);
-globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/profile/detail"] = { off: false, tag: "Detail" };
-Promise.resolve().then(() => (init_detail2(), exports_detail)).then((x) => x.Detail).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/reactful/prototype/routes/profile/detail"] = x);
+globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/counter"] = { off: false, tag: "CountButton" };
+Promise.resolve().then(() => (init_counter(), exports_counter)).then((x) => x.CountButton).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/counter"] = x);
+globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/forms/form"] = { off: false, tag: "default" };
+Promise.resolve().then(() => (init_form2(), exports_form)).then((x) => x.default).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/forms/form"] = x);
+globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/hello"] = { off: false, tag: "Hello" };
+Promise.resolve().then(() => (init_hello2(), exports_hello)).then((x) => x.default).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/hello"] = x);
+globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/login"] = { off: false, tag: "default" };
+Promise.resolve().then(() => (init_login(), exports_login)).then((x) => x.default).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/login"] = x);
+globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/profile/detail"] = { off: false, tag: "Detail" };
+Promise.resolve().then(() => (init_detail2(), exports_detail)).then((x) => x.Detail).then((x) => globalThis[GLOBAL_KEY].clients["/mnt/b/Repositorios/react-away/prototype/routes/profile/detail"] = x);
 await Promise.resolve().then(() => (init_renders(), exports_renders)).then((x) => x.default());

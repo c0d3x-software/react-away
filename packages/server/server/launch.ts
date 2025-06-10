@@ -8,16 +8,16 @@ interface Settings {
    paths?: Folders
 }
 
-/** reactful startup server 
+/** react-away startup server 
  * @param {string} routes entry routes folder */
 export function launch(routes: RouteString | Settings): LaunchFluent
 
-/** reactful startup server 
+/** react-away startup server 
  * @param {string} routes entry routes folder 
  * @param {Context} settings custom server settings */
 export function launch(routes: RouteString | Settings, settings: Settings): LaunchFluent
 
-/** reactful startup server 
+/** react-away startup server 
  * @param {string} routes entry routes folder 
  * @param {Context} settings custom server settings */
 export function launch(settings?: Settings): LaunchFluent

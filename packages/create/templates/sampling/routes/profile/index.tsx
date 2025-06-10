@@ -1,6 +1,6 @@
 import React from 'react'
 import { Detail } from './detail'
-import { seo, route } from '@c0d3x/reactful'
+import { seo, route } from 'react-away'
 import './profile.css'
 
 //@ts-ignore

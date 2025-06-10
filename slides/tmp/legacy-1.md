@@ -12,7 +12,7 @@ Comprehensive stateful React framework
 ---
 
 ## Personal information
-### reactful
+### react-away
 
 - Jonathan de Sena Ribeiro
 - mestre em ciência da computação (UFC)
@@ -275,7 +275,7 @@ Intercept and transform the React client-side rendering with:
 ## Mutation
 ### proposal
 
-After prototype fase, arrives the new React framework that turns the Reactful library unfeasable, due the need to:
+After prototype fase, arrives the new React framework that turns the React Away library unfeasable, due the need to:
 
 - Reapply rendering interception in server-side
 - Reapply to each server rendering framework
@@ -345,7 +345,7 @@ Framework coding showcase
 ## Styling
 ### demonstration
 
-Reactful fixes scopeless isues using CSS in React.
+React Away fixes scopeless isues using CSS in React.
 
 - modular-scoped CSS
 - component-scoped CSS by decorator
@@ -356,7 +356,7 @@ Reactful fixes scopeless isues using CSS in React.
 ## Styling **modular-scoped CSS**
 ### demonstration
 
-Modular-scoped CSS imports by new Reactful CSS transpiler.
+Modular-scoped CSS imports by new React Away CSS transpiler.
 
 <aside cols='2'><section>
 
@@ -624,7 +624,7 @@ async function onPost(response: Response) { /* etc... */ }
 ## Serving
 ### demonstration
 
-Reactful server has multiple and versatile features, as:
+React Away server has multiple and versatile features, as:
 
 - **rendering docorators**: SSR, SSG, ISR, CSR
 - **multiple servers**: HTML, REST, JSX, RSC, MD
@@ -662,7 +662,7 @@ The React server function starts the IoX container with those dependency injecti
 </div>
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import { directive } from './directives'
 import { decorator } from './decorators'
 

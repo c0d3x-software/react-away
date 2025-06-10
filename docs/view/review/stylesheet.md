@@ -8,7 +8,7 @@ table { margin-top:-20px;  }
 
 ## Classless CSS
 
-Instead of Tailwind approach, tha mixes style information into component, breaking the separation of concern between scripts and styles, Reactful follows a classless CSS approach, using a classless lib minimal.css as starter styling. Minimal.css is an extension of popular classless lib pico.css. It enable SoC between style and script fixing internal issues, as CSS imports bug, using just HTML, CSS and JS native specifications.
+Instead of Tailwind approach, tha mixes style information into component, breaking the separation of concern between scripts and styles, React Away follows a classless CSS approach, using a classless lib minimal.css as starter styling. Minimal.css is an extension of popular classless lib pico.css. It enable SoC between style and script fixing internal issues, as CSS imports bug, using just HTML, CSS and JS native specifications.
 
 ## CSS imports bug
 
@@ -66,7 +66,7 @@ export default const Hello = () => <h1>Hello World!</h1>
 
 ## Component className
 
-Reactful automatically adds the component name in CSS className of its inner elements, allowing a CSS-side styling for an specific component.
+React Away automatically adds the component name in CSS className of its inner elements, allowing a CSS-side styling for an specific component.
 
 <aside cols='5:4'>
 

@@ -4,7 +4,7 @@ export const IS_ONLY_FOR_ROUTE = 'is only for default route component directory'
 
 export const QUERY_ERROR = 'The query selector for root element in index.html must be by id or tag name'
 
-export const PREFIX_ERROR = '@reactful error: '
+export const PREFIX_ERROR = '@react-away error: '
 
 export const BIND_SYNTAX_ERROR = `${PREFIX_ERROR}Not valid binding to valueof, it needs a name or `
    + `dot syntax path: like 'name' or 'person.name'`

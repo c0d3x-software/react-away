@@ -1,12 +1,12 @@
-# 🗺️ Reactful Project Roadmap
+# 🗺️ React Away Project Roadmap
 
-Welcome to the roadmap of **Reactful**, a fullstack React meta-framework.
+Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 
 ## ✓ | Milestones
 
 - **framework architecture**: monorepo repository structure  
 - **hybrid rendering**: support to SSR, SSG and ISR 
-- **create CLI tool**: template generator with `create-reactful` 
+- **create CLI tool**: template generator with `create-react-away` 
 - **dependency injection**: IoC container resolved in 2nd component argument 
 - **function decorator**: adecorator for functions 
 - **function extensions**: metadata to functions 
@@ -50,7 +50,7 @@ Welcome to the roadmap of **Reactful**, a fullstack React meta-framework.
  - .env complex type support
  - queryString in feeds.params
  - new documentation: tutorial | reference | architecture
- - checking minimal dependencies: react + reactful
+ - checking minimal dependencies: react + react-away
  - rename all for reactway
  - JSON-LD design
  - high-order function decorator

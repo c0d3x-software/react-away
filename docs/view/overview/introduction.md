@@ -16,7 +16,7 @@ table td { padding:2px 7px;  }
 
 <center style='margin: 0 40px'>
 
-Reactful is a fullstack React meta-framework with innovative stateful design, advanced patterns and comprehensive framework features. 
+React Away is a fullstack React meta-framework with innovative stateful design, advanced patterns and comprehensive framework features. 
 
 |         |                                            |
 | ------- | ------------------------------------------ |

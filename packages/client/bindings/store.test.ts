@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { auth, client, delay, Reactful, UID } from "../../kernel"
+import { auth, client, delay, React Away, UID } from "../../kernel"
 import { useStore } from "./store";
 import { AuditProxy } from "./audit";
 

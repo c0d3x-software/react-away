@@ -31,7 +31,7 @@ React code design it, in same time, the most concise componentization design in 
 
 ## Minimalist principles
 
-Reactful core principles drivens the minimalist Reactful philosophy.
+React Away core principles drivens the minimalist React Away philosophy.
 
 * **simplicity**: solution with less verbosity
 * **intuitivity**: conceptual background reuse

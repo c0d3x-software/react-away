@@ -29,7 +29,7 @@ function Stateful() {
 
 </aside>
 
-Based in that minimalist stateless inspiration, Reactful is designed to solve the 3 main issues in developement experience with React ecosystem.
+Based in that minimalist stateless inspiration, React Away is designed to solve the 3 main issues in developement experience with React ecosystem.
 
 <center>
 

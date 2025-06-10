@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '../components/header'
-import { seo, client, useStore } from '@c0d3x/reactful'
+import { seo, client, useStore } from 'react-away'
 
 const state1 = useStore({ value:11 })
 const state2 = useStore({ value:99 })

@@ -274,7 +274,7 @@ MY_VALUE=<span class="hljs-number">100</span> <span class="hljs-comment"># custo
 </code></pre>
 <h2 id="http-middleware-draft">HTTP Middleware (draft)</h2>
 <p>The inject launch method also allows middlewares in request-response pipeline.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@c0d3x/reactful/server&#x27;</span>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away/server&#x27;</span>
 <span class="hljs-keyword">import</span> { middleware } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./middlewares&#x27;</span>
 
 <span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>().<span class="hljs-title function_">inject</span>(middleware).<span class="hljs-title function_">render</span>()
@@ -288,7 +288,7 @@ MY_VALUE=<span class="hljs-number">100</span> <span class="hljs-comment"># custo
 }
 </code></pre>
 <h2 id="markdown-support">Markdown support</h2>
-<p>Reactful has a built-in markdown render with routing support. In case of name conflits with another extensions, check the <a href='structure.html#conflict-rules'>confliting name resolution</a> section.</p>
+<p>React Away has a built-in markdown render with routing support. In case of name conflits with another extensions, check the <a href='structure.html#conflict-rules'>confliting name resolution</a> section.</p>
 <h2 id="extended-html">Extended HTML</h2>
 <p>The <code>&lt;link&gt;</code> supports a new <code>type=&quot;react&quot;</code>, for JSX rendering injected in HTML for default import or named imports by <code>rel</code> attribute.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -315,14 +315,14 @@ MY_VALUE=<span class="hljs-number">100</span> <span class="hljs-comment"># custo
    <span class="hljs-tag">&lt;/<span class="hljs-name">Suspense</span>&gt;</span>
 <span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
-<p>The await directive is a Reactful alternative to Suspense component. Since it is an attribute, it could use an HTML element that could by stylized.</p>
+<p>The await directive is a React Away alternative to Suspense component. Since it is an attribute, it could use an HTML element that could by stylized.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Await</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">await</span>=<span class="hljs-string">{Async}</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>loading...<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 </code></pre>
 <h2 id="search-engine-optmization-seo">Search Engine Optmization (SEO)</h2>
 <p>SEO using decorators with typed MetaTag with Open Graph Protocol.</p>
 <aside cols='5:4'>
-<pre><code class="language-tsx"><span class="hljs-keyword">import</span> { seo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@c0d3x/reactful&#x27;</span>
-<span class="hljs-keyword">import</span> { <span class="hljs-title class_">MetaTag</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@c0d3x/reactful&#x27;</span>
+<pre><code class="language-tsx"><span class="hljs-keyword">import</span> { seo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away&#x27;</span>
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">MetaTag</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away&#x27;</span>
 
 @<span class="hljs-title function_">seo</span>(<span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-string">&#x27;description&#x27;</span>) 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Hi</span>(<span class="hljs-params">props</span>) {

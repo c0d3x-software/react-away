@@ -246,11 +246,11 @@ body.marp-vscode blockquote {
 <p>module-scoped CSS • component scope CSS • layout props • function decorator • SoC styling • vanilla-like CSS</p>
 </blockquote>
 <h2 id="css-class">CSS class</h2>
-<p>Reactful support the attribute class as alias for CSS className.</p>
+<p>React Away support the attribute class as alias for CSS className.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#x27;hello&#x27;</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 </code></pre>
 <h2 id="modular-css">Modular CSS</h2>
-<p>Reactful fixes the global leaking in CSS imports*, enabling modular CSS.</p>
+<p>React Away fixes the global leaking in CSS imports*, enabling modular CSS.</p>
 <aside cols='2'><section>
 <pre><code class="language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./hello.css&#x27;</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; 
@@ -271,7 +271,7 @@ body.marp-vscode blockquote {
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 </code></pre>
 <h2 id="classname-tag">ClassName tag</h2>
-<p>In Reactful, all component receives the component name as a CSS className, allowing component-scoped in style-side with classless CSS.</p>
+<p>In React Away, all component receives the component name as a CSS className, allowing component-scoped in style-side with classless CSS.</p>
 <aside cols='5:4' style='margin-top: 10px;'>
 <pre><code class="language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;./hello.css&#x27;</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hi!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
@@ -281,7 +281,7 @@ body.marp-vscode blockquote {
 </code></pre>
 </aside>
 <h2 id="routed-style">Routed style</h2>
-<p>Reactful reserves a CSS class .routed for toggled state in component using <code>[link]</code> props router, enabling fast and easy toggle state for element.</p>
+<p>React Away reserves a CSS class .routed for toggled state in component using <code>[link]</code> props router, enabling fast and easy toggle state for element.</p>
 <aside cols='2'>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/&#x27;</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>

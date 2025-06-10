@@ -4,10 +4,10 @@
 
 > HTML | CSS | TypeScript | Bun
 
-New project with the template creator using `@c0d3x/reactful/create@latest`. 
+New project with the template creator using `react-away/create@latest`. 
 
 ```ps
-$ bunx @c0d3x/reactful/create 
+$ bunx react-away/create 
 ```
 
 
@@ -27,23 +27,23 @@ The minimal templates starts with index.html wrapper and index.ts boostrap.
 
 ```typescript
 // index.ts
-import Reactful 
-from '@c0d3x/reactful'
+import React Away 
+from 'react-away'
 
-await Reactful.launch().server()  
+await React Away.launch().server()  
 ```
 
 ```ts
 // routes/index.ts
 export default props => <>
-   <h1>Welcome to Reactful</h1>
+   <h1>Welcome to React Away</h1>
    <p>Hello World!</p>
 </>
 ```
 
 </aside>
 
-Reactful is debug-ready configuration for Vs Code and with package.json scripts:
+React Away is debug-ready configuration for Vs Code and with package.json scripts:
 
 <section style='margin-left: 30px; zoom: 95%'>
 

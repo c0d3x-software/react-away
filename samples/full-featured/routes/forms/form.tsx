@@ -1,5 +1,5 @@
 import React from "react"
-import { client } from "@c0d3x/reactful"
+import { client } from "react-away"
 import "./form.css"
 
 //@ts-ignore

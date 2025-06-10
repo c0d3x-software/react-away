@@ -15,7 +15,7 @@ paginate: true
    img { width:70px !important; }
 </style>
 
-![reactful](./img/reactful.png)
+![react-away](./img/react-away.png)
 
 # REACTFUL
 
@@ -319,7 +319,7 @@ export default function PostingName() {
 ### proposal
 
 <div left style='margin: 20px 0 10px 0'>
-Modular-scoped CSS imports by new Reactful CSS transpiler.
+Modular-scoped CSS imports by new React Away CSS transpiler.
 </div>
 
 <aside cols='3:5'>
@@ -436,7 +436,7 @@ IoC container, full hybrid rendering and API folder.
 </div>
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import { directive } from './directives'
 
 const error = (status, error) => ...

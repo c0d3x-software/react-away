@@ -13,7 +13,7 @@ Hybrid rendering allows multiple rendering strategies, like client-side renderin
 The fluent launch function is the framework starting point to run the application. It sets `"/routes"` folder and `"#root"` element as default values.
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 
 await launch().server()
 await launch("/routes").server("#root") 
@@ -23,7 +23,7 @@ await launch({ routes: "/routes" }).server("#root")
 Directives are injected in `inject` method, and another dependencies is passed in launch function object argument. See more details in <a onclick='goto("review/injection.html")'>dependency injection</a>.
 
 ```ts
-import { launch } from 'reactful/server'
+import { launch } from 'react-away/server'
 import { directive } from './directives'
 
 const myStore = { ok: true }

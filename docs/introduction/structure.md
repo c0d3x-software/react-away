@@ -30,7 +30,7 @@
 
 ## .env settings
 
-Reactful supports **.env** file swith complex types and prefix in fullstack global.env variable. 
+React Away supports **.env** file swith complex types and prefix in fullstack global.env variable. 
 
 <aside cols='2:5' style='margin-bottom: 10px'>
 
@@ -56,7 +56,7 @@ declare interface Env { MY_VALUE: number }
 
 <aside id='standard' cols='2'>
  
-The Reactful follows web standard index semantics and vanilla React, with index.html as wrapper and index.ts entry file.
+The React Away follows web standard index semantics and vanilla React, with index.html as wrapper and index.ts entry file.
   
 * **/index.ts**: startup script with IoC container
 * **/index.html**: template warpper HTML
@@ -70,7 +70,7 @@ The Reactful follows web standard index semantics and vanilla React, with index.
 <html>
 <head> 
   <meta charset="utf-8">
-  <title>Reactful</title>
+  <title>React Away</title>
 </head>
 <body>
   <div id="root"></div>
@@ -79,12 +79,12 @@ The Reactful follows web standard index semantics and vanilla React, with index.
 ```
 
 ```ts
-import Reactful from '@c0d3x/reactful'
+import React Away from 'react-away'
 
 // customizing system folders
 const folders = { route: '/pages' }
 
-await Reactful
+await React Away
    .launch({ folders })
    .server('#root')  
 ```

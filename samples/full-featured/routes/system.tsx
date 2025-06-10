@@ -1,6 +1,6 @@
 import OS from "os"
 import React from "react"
-import { seo, style } from '@c0d3x/reactful'
+import { seo, style } from 'react-away'
 
 const metatags: MetaTags = { 
    charset:"UTF-16", 
