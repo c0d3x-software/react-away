@@ -1,5 +1,3 @@
-<script src='../@assets/js/index.js'></script>
-<script src='default.js'></script>
 <style>@import url(default.css);</style> 
 
 # React Away
