@@ -1,17 +1,17 @@
 /** it loads the env file and sets to env object */
-export async function load(that: any, delegate: (d: Date) => Promise<record>) {
-   const ref = await delegate(new Date());
+export async function load(that: any, loader: () => Promise<record>) {
+   const record = await loader();
 
-   Object.keys(ref) // boolean
-      .filter(k => ref[k])
-      .filter(k => ref[k].match(/true|false/i))
-      .forEach(k => ref[k] = ref[k].toLowerCase().trim() == 'true')
+   Object.keys(record) // boolean
+      .filter(k => record[k])
+      .filter(k => record[k].match(/true|false/i))
+      .forEach(k => record[k] = record[k].toLowerCase().trim() == 'true')
 
-   Object.keys(ref) // number
-      .filter(k => !isNaN(parseFloat(ref[k])))
-      .forEach(k => ref[k] = parseFloat(ref[k]))
+   Object.keys(record) // number
+      .filter(k => !isNaN(parseFloat(record[k])))
+      .forEach(k => record[k] = parseFloat(record[k]))
 
-   Object.merge(that, ref)
+   Object.merge(that, record)
 
    validation(that)
 }
@@ -20,7 +20,6 @@ export async function load(that: any, delegate: (d: Date) => Promise<record>) {
 export function validation(instance) {
    const requireds = {
       PORT: 3000,
-      DEBOUNCE: 50,
       PREFIX_URL: '/'
    }
 
@@ -34,7 +33,6 @@ export function validation(instance) {
 
    return true
 }
-
 
 /** env file error message */
 const fail = (key, pre = '') => `Not found ${pre}'${key.trim()}' of .env file`

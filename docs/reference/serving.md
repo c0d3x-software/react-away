@@ -90,7 +90,6 @@ const metas = { chartset:'UTF-8', etc... }
 const About = props => <>etc...</> 
 ```
 
-
 ```js
 PORT=3333
 ZIPPED=FALSE
@@ -99,11 +98,18 @@ PREFIX_URL=/
 SITEMAP=['www.site.com']
 ROBOT=[{ 
    agent:'*',  
-   allow: '/' 
+   allow: ['/'] 
 }]
 ``` 
 
 </aside>
+
+It also supports dynamic SEO for dynamic routing with high-order functions.
+
+```ts
+@seo('title', params => ({ description: params.details }))
+const Hello => (props, feeds) => <h1>{ feeds.params.details }/<h1>
+```
 
 
 ## Markdown and HTML+

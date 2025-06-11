@@ -29,48 +29,38 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 ## ○◔◐◕  | Pendings 
 
  - **HTML Validation API** | ◕ | ProblemDetails interface, unit tests, etc
- - **Documentation updates** | ◐ | sitemap, use directives, fallback routing, web standard driven, zipped responses, framework=modules, prototype=samples, document=docs
  - **zipped response** | ◕ | unit tests, client-side unzip
  - **GitHub Sponsors page launched** | ◔
- - **SEO sitemap + robot**: | ◐
- - **prefix_url context** | ◔
- - **SEO inner HTML** | ◔
+ - **SEO sitemap + robot + .env (tests)**: | ◐
+ - **prefix_url context (tests)** | ◔
+ - **SEO HTML metatags transfer (tests)** | ◔
  - **[auth]** + **@auth** | ◔ : [auth] authenticator + @auth authorizator
- - env.yaml + @seo configuration 
  - Zero bundle.js
  - iFrame merging
- - performance benchmarks
+ - performance: benchmarks and docs
  - preact support abstration
  - new template CLI
  - [type=file] binding
  - template error default
  - outlet props
  - e2e test coverage 
- - site documentation remake
- - .env complex type support
  - queryString in feeds.params
- - new documentation: tutorial | reference | architecture
- - checking minimal dependencies: react + react-away
- - rename all for reactway
  - JSON-LD design
- - high-order function decorator
  - kickistart | : proof of concept
  - presentation | : remake   
- - error handler must be exception only, not invalids
  - support to React native
  - class + style binding support
- - finishing syncher lib for syncing features
- - mudar nome para react-away
+ - syncher lib for syncing features
+ - validation form[data] only after first render
+ - ambigous fragment children behavior: array x not-array
  
 ## △ | Warnings
 
 - CSS modular imports does not support pseudo-selector (yet)
-- the prototype project is outdated (update is pending)
-- custom decorators does not support 'import' keyword
-- inner component code must preceed outer components
-- no intelissense for new function decorators
-- validation form[data] only after first render
-- ambigous fragment children behavior: array x not-array
+- prototype project is outdated (update is pending)
+- custom decorators does not support import
+- inner component must preceed outer components
+- no intelissense for function decorators
 
 ## @ | Want to contribute?
 

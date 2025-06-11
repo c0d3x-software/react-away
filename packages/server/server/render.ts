@@ -12,7 +12,7 @@ export async function render()
 export async function render(query: string)
 
 export async function render(query = '#root') {   
-   await global.env.load(async _ => await loadEnv('.env'))
+   await global.env.load(() => loadEnv('.env'))
 
    Path.startup() && await bundler(false)
    const port = parseInt(process.env.PORT || '3000')             

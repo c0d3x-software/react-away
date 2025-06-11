@@ -309,10 +309,14 @@ body.marp-vscode blockquote {
 <span class="hljs-variable constant_">SITEMAP</span>=[<span class="hljs-string">&#x27;www.site.com&#x27;</span>]
 <span class="hljs-variable constant_">ROBOT</span>=[{ 
    <span class="hljs-attr">agent</span>:<span class="hljs-string">&#x27;*&#x27;</span>,  
-   <span class="hljs-attr">allow</span>: <span class="hljs-string">&#x27;/&#x27;</span> 
+   <span class="hljs-attr">allow</span>: [<span class="hljs-string">&#x27;/&#x27;</span>] 
 }]
 </code></pre>
 </aside>
+<p>It also supports dynamic SEO for dynamic routing with high-order functions.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@seo</span>(<span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-function"><span class="hljs-params">params</span> =&gt;</span> ({ <span class="hljs-attr">description</span>: params.<span class="hljs-property">details</span> }))
+<span class="hljs-keyword">const</span> <span class="hljs-title class_">Hello</span> =&gt; <span class="hljs-function">(<span class="hljs-params">props, feeds</span>) =&gt;</span> &lt;h1&gt;{ feeds.<span class="hljs-property">params</span>.<span class="hljs-property">details</span> }/&lt;h1&gt;
+</code></pre>
 <h2 id="markdown-and-html">Markdown and HTML+</h2>
 <p>React Away supports markdown rendering with Marko lib and extends HTML to allow JSX in HTML, enabling micro component tree and container page design, breaking a monolith component tree in micro-component threes (still in experimental stage).</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>

@@ -9,6 +9,8 @@ export const env: Env = {
    MINIFIED: true,
    PREFIX_URL: '/',
    HOSTNAME: 'http://locahost',
-   load: x => load(this, x),
+   load: () => load(this, () => Promise.resolve({})),
+   ROBOT: [],
+   SITEMAPS: [],
    get SIDE(): "client" | "server" { return },
 }
