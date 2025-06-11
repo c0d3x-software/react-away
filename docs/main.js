@@ -16,8 +16,10 @@ function resize(iframe, remake) {
    const repeat = () => resize(iframe, true)   
    const target = iframe.contentWindow.document.body
    const height = target?.scrollHeight + 'px'
+   const equals = iframe?.style?.height == height
 
-   if (!height || !iframe) return
+   if (equals) return
+   else if (!height || !iframe) return
    else iframe.style.height = height
    if (!remake) setTimeout(repeat, 333)
 }
@@ -38,12 +40,10 @@ async function goto(address, manual) {
    const menu = address.split('/').at(-1).split('.')[0]
    const main = document.querySelector('iframe')
 
-   await wait (111)
-
    main.src = address
    main.style.height = 'auto'
 
-   wait(111, () => resize(main))
+   wait(333, () => resize(main))
    wait(999, () => loading(false))
 
    if (manual) return
