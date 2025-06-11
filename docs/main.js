@@ -5,6 +5,7 @@ function startup() {
 
    createLinks('introduction')
    createLinks('reference')
+   createLinks('architecture')
    
    resize(frame)
 

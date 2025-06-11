@@ -2,52 +2,70 @@
 <script src='default.js'></script>
 <style>@import url(default.css);</style> 
 
-# Overview
+# React Away
+
+Minimalist full-featured React meta-framework.
+
+
+<style>
+</style>
 
 <center style='margin: 0 50px'>
 
-React Away is a fullstack React meta-framework with innovative stateful design, advanced patterns and comprehensive framework features. 
+<div dky why>
 
-|         |                                            |
-| ------- | ------------------------------------------ |
-| binding | dual binding using props handlers          |
-| styling | modular and component CSS scope transpiler |
-| serving | supports SSG, SSR, ISR, RSC, HTML and MD   |
-| ranking | SEO metatags and Open Graph Protocol       |
-| storing | local, global and partial state management |
-| routing | static, dynamic and nestes routing         |
+|    D R Y     |      K I S S      |    Y A G N I    |
+| :----------: | :---------------: | :-------------: |
+| web standard | minimalist design | incremental jsx |
 
-</center>
+</div>
 
-<center style='margin:0 111px'>
-<h2 upper smart-object>reactive objects</h2>
+<div why>
 
-Reactive objects are self-rendering state feature that encapsulates all boilerplate code in stateful React. 
+| e x t e n s i v e | i n n o v a t i v e |
+|-:|:-|
+| SEO, CSR, SSR, ISR, SSG, SWR, streaming, partial hydration, pre-fetched route, nested route, server components, resumability, zero bundle.js | modular css imports, hookless states, props handlers, function decorators, fallback routing, dual binding, reactive forms, RESTful actions, fetch+ SWR |
 
-</center>
-<section cols='3' divs><aside right>
+</div>
 
-## Property handler
 
-Render-time injectable property handler
-
-</aside><aside center>
-
-## Function decorator
-
-Built-in transpiler to use decorator with functions
-
-</aside><aside left>
-
-## Dependency injection
-
-IoC container with second argument resolution
-
-</aside></section>
-
-<center style='zoom:0.9; color:#AAA; padding: 0 50px;'>
 <b style='font-weight:bolder; font-size: 2.5rem'>. . .</b>
 
-**WARNING!** The project is not public yet, we are preparing the project to be open source. Some features are in draft stage. It is really important your design feedbacks in this development stage. Back to <a ignore onclick='gotoLandingPage()'>landing page</a> to send your thougths in textbox.
-
 </center>
+
+<aside cols=2>
+
+```tsx
+@route('/routes/user/:id')
+const User = (_, feeds) => 
+   <h3>{ feeds.param.id }</h3>
+
+@client(true)
+const Hello = props = <p>
+   <h1>Hello { props.name }</h1>
+   <input data={props} data='name' />   
+</p>
+
+const Main = import('./main')
+   .asLazyComponent('Sample')
+
+```
+
+```tsx
+export const Menu = props => <p>
+   <ul class='menu'>
+      <li link='/dom'>Dom</li>
+      <li link='/main'>Main</li>
+      <li link='/user/1'>User</li>
+   </ul> 
+   <div class='outlet'>
+      <div route='dom'>OK!</div>
+      <Main route='/main' />
+      <User route='/user/:id' />
+   </div>
+</p>
+```
+
+</aside>
+
+

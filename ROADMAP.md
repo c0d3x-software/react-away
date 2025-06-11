@@ -28,31 +28,34 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 
 ## ○◔◐◕  | Pendings 
 
- - **HTML Validation API** | ◕ | ProblemDetails interface, unit tests, etc
- - **zipped response** | ◕ | unit tests, client-side unzip
- - **GitHub Sponsors page launched** | ◔
- - **SEO sitemap + robot + .env (tests)**: | ◐
- - **prefix_url context (tests)** | ◔
- - **SEO HTML metatags transfer (tests)** | ◔
- - **[auth]** + **@auth** | ◔ : [auth] authenticator + @auth authorizator
- - Zero bundle.js
- - iFrame merging
- - performance: benchmarks and docs
- - preact support abstration
- - new template CLI
- - [type=file] binding
- - template error default
- - outlet props
- - e2e test coverage 
- - queryString in feeds.params
- - JSON-LD design
- - kickistart | : proof of concept
- - presentation | : remake   
- - support to React native
- - class + style binding support
- - syncher lib for syncing features
- - validation form[data] only after first render
- - ambigous fragment children behavior: array x not-array
+- **HTML Validation API** | ◕ | ProblemDetails interface, unit tests, etc
+- **zipped response** | ◕ | unit tests, client-side unzip
+- **GitHub Sponsors page launched** | ◔
+- **SEO sitemap + robot + .env (tests)**: | ◐
+- **prefix_url context (tests)** | ◔
+- **SEO HTML metatags transfer (tests)** | ◔
+- **[auth]** + **@auth** | ◔ : [auth] authenticator + @auth authorizator
+- Zero bundle.js
+- iFrame merging
+- performance: benchmarks and docs
+- preact support abstration
+- new template CLI
+- [type=file] binding
+- template error default
+- outlet props
+- e2e test coverage 
+- queryString in feeds.params
+- JSON-LD design
+- kickistart | : proof of concept
+- presentation | : remake   
+- support to React native
+- class + style binding support
+- syncher lib for syncing features
+- validation form[data] only after first render
+- ambigous fragment children behavior: array x not-array
+- attribute styles (declare + params + props handler)
+- resumability
+- doc route dom element x route component
  
 ## △ | Warnings
 

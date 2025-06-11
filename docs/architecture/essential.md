@@ -1,10 +1,26 @@
-<script src='../@assets/js/index.js'></script>
-<style>@import url(essentials.css);</style> 
+<style>@import url(essential.css);</style> 
 
 # Essentials
 
-Reacftul follows a standardized minimalist design with low abstraction based on DRY, KISS and YAGNY design principles and high performance architecture. 
+<section style='margin:0 auto; display:flex; justify-self: center;'>
+
+|                     |                                             |
+| ------------------: | ------------------------------------------- |
+|         modular CSS | fixed import CSS for standard SoC styling   |
+|    reactive objects | classess and hookless stateful handling     |
+|   properly handlers | injectable props transformation algorithm   |
+|   dual data binding | two way data binding props handlers         |
+| function decorators | standard metadata over private conventions  |
+|   enhanced fetching | fetch API with with agnostic SWR extensions |
+|      reactive forms | uncontrolled component as data binding      |
+
+</section>
+
+
+## Performance
  
+Reactful is built with ultra-fast **bun** toolkit, supporting server rendering, static zero bundle, prefetch routing, partial hydration, streaming SSR and lazy loading.
+
 ## Modular CSS
 
 Fixed modular CSS imports with component-scoped style decorator.
@@ -31,11 +47,11 @@ Server with **/apis**, **/assets** and **/routes** with zero conventions.
 
 <aside cols='3:5'>
 
-| | |
-|-|-|
-| **/** | **/routes/index.tsx**  <br/> standard convention |
-| **/about** | **/routes/about.md** <br/> markdown support | 
-| **/profile** | **/routes/profile.tsx** <br/> raw HTML support
+|              |                                                  |
+| ------------ | ------------------------------------------------ |
+| **/**        | **/routes/index.tsx**  <br/> standard convention |
+| **/about**   | **/routes/about.md** <br/> markdown support      |
+| **/profile** | **/routes/profile.tsx** <br/> raw HTML support   |
 
 ```tsx
 const Main = import('./main')
@@ -59,6 +75,7 @@ export default const Menu = props => <>
 Reactive objects is a hookless stateful approach that encapsulates all state boilerplate codewith dual data binding props for clean minimalist components
 
 ```tsx
+@client(true)
 const Hello = props => <>
    <h1> Hello { props.name }!</h1>
    <input data={props} bind='name' />  
@@ -71,8 +88,8 @@ const Hello = props => <>
 
 Built-in framework props that encapsulates props transformation.
 
-| **[data]** | **[bind]** | **[link]** | **[route]** | **[grid]**
-|:-:|:-:|:-:|:-:|:-:|
+| **[data]** |  **[bind]**  |     **[link]**     |    **[route]**    |    **[grid]**     |
+| :--------: | :----------: | :----------------: | :---------------: | :---------------: |
 | data bound | data binding | declarative router | conditional route | grid layout props |
 
 ```tsx
@@ -89,7 +106,7 @@ Dependency injection to handle props, requests and exceptions.
 <aside cols='5:3'>
 
 ```tsx
-import { launch } from 'react-away'
+import { launch } from '@c0d3x/reactful'
 
 const shown = props => props...
 const token = request => new Response(ok)

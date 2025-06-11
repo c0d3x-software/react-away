@@ -7,14 +7,19 @@
    font-size: 1.7rem;
 }
 
-table tr:empty  {
+table tr:empty {
    margin-top: -20px;
 }
 
-strong, table th strong {
+strong,
+table th strong {
    font-weight: 900 !important;
 }
 
 #property-handlers {
    margin: 10px 0 0 0;
+}
+
+table td {
+   padding: 2px 7px;
 }

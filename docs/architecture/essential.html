@@ -236,10 +236,50 @@ body.marp-vscode blockquote {
         
         </head>
         <body class="vscode-body vscode-dark">
-            <script src='../@assets/js/index.js'></script>
-<style>@import url(essentials.css);</style> 
+            <style>@import url(essential.css);</style> 
 <h1 id="essentials">Essentials</h1>
-<p>Reacftul follows a standardized minimalist design with low abstraction based on DRY, KISS and YAGNY design principles and high performance architecture.</p>
+<section style='margin:0 auto; display:flex; justify-self: center;'>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">modular CSS</td>
+<td>fixed import CSS for standard SoC styling</td>
+</tr>
+<tr>
+<td style="text-align:right">reactive objects</td>
+<td>classess and hookless stateful handling</td>
+</tr>
+<tr>
+<td style="text-align:right">properly handlers</td>
+<td>injectable props transformation algorithm</td>
+</tr>
+<tr>
+<td style="text-align:right">dual data binding</td>
+<td>two way data binding props handlers</td>
+</tr>
+<tr>
+<td style="text-align:right">function decorators</td>
+<td>standard metadata over private conventions</td>
+</tr>
+<tr>
+<td style="text-align:right">enhanced fetching</td>
+<td>fetch API with with agnostic SWR extensions</td>
+</tr>
+<tr>
+<td style="text-align:right">reactive forms</td>
+<td>uncontrolled component as data binding</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="performance">Performance</h2>
+<p>Reactful is built with ultra-fast <strong>bun</strong> toolkit, supporting server rendering, static zero bundle, prefetch routing, partial hydration, streaming SSR and lazy loading.</p>
 <h2 id="modular-css">Modular CSS</h2>
 <p>Fixed modular CSS imports with component-scoped style decorator.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;modular-css-only-applies-in-components-of-module.tss&#x27;</span>
@@ -292,7 +332,8 @@ body.marp-vscode blockquote {
 <h2 id="reactive-objects">Reactive objects</h2>
 <aside cols='4:5'>
 <p>Reactive objects is a hookless stateful approach that encapsulates all state boilerplate codewith dual data binding props for clean minimalist components</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+<pre><code class="language-tsx">@<span class="hljs-title function_">client</span>(<span class="hljs-literal">true</span>)
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> Hello { props.name }!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{props}</span> <span class="hljs-attr">bind</span>=<span class="hljs-string">&#x27;name&#x27;</span> /&gt;</span>  
 <span class="hljs-tag">&lt;/&gt;</span></span>
@@ -328,7 +369,7 @@ body.marp-vscode blockquote {
 <h2 id="dependency-injection">Dependency injection</h2>
 <p>Dependency injection to handle props, requests and exceptions.</p>
 <aside cols='5:3'>
-<pre><code class="language-tsx"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away&#x27;</span>
+<pre><code class="language-tsx"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@c0d3x/reactful&#x27;</span>
 
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">shown</span> = props =&gt; props...
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">token</span> = request =&gt; <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(ok)

@@ -2,7 +2,7 @@
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>React Away</title>
+            <title>Domain</title>
             <style>
 /* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
@@ -236,79 +236,26 @@ body.marp-vscode blockquote {
         
         </head>
         <body class="vscode-body vscode-dark">
-            <script src='../@assets/js/index.js'></script>
-<script src='default.js'></script>
-<style>@import url(default.css);</style> 
-<h1 id="react-away">React Away</h1>
-<p>Minimalist full-featured React meta-framework.</p>
-<style>
-</style>
-<center style='margin: 0 50px'>
-<div dky why>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">D R Y</th>
-<th style="text-align:center">K I S S</th>
-<th style="text-align:center">Y A G N I</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">web standard</td>
-<td style="text-align:center">minimalist design</td>
-<td style="text-align:center">incremental jsx</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div why>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">e x t e n s i v e</th>
-<th style="text-align:left">i n n o v a t i v e</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">SEO, CSR, SSR, ISR, SSG, SWR, streaming, partial hydration, pre-fetched route, nested route, server components, resumability, zero bundle.js</td>
-<td style="text-align:left">modular css imports, hookless states, props handlers, function decorators, fallback routing, dual binding, reactive forms, RESTful actions, fetch+ SWR</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><b style='font-weight:bolder; font-size: 2.5rem'>. . .</b></p>
-</center>
-<aside cols=2>
-<pre><code class="language-tsx">@<span class="hljs-title function_">route</span>(<span class="hljs-string">&#x27;/routes/user/:id&#x27;</span>)
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">User</span> = (<span class="hljs-params">_, feeds</span>) =&gt; 
-   <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>{ feeds.param.id }<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></span>
-
-@<span class="hljs-title function_">client</span>(<span class="hljs-literal">true</span>)
-<span class="hljs-keyword">const</span> <span class="hljs-title class_">Hello</span> = props = <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello { props.name }<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{props}</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&#x27;name&#x27;</span> /&gt;</span>   
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-
-<span class="hljs-keyword">const</span> <span class="hljs-title class_">Main</span> = <span class="hljs-title function_">import</span>(<span class="hljs-string">&#x27;./main&#x27;</span>)
-   .<span class="hljs-title function_">asLazyComponent</span>(<span class="hljs-string">&#x27;Sample&#x27;</span>)
-
-</code></pre>
-<pre><code class="language-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Menu</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#x27;menu&#x27;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/dom&#x27;</span>&gt;</span>Dom<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/main&#x27;</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/user/1&#x27;</span>&gt;</span>User<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span> 
-   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#x27;outlet&#x27;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;dom&#x27;</span>&gt;</span>OK!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">Main</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/main&#x27;</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">User</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/user/:id&#x27;</span> /&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
-</code></pre>
-</aside>
+            <style>@import url(domain.css);</style> 
+<h1 id="domain">Domain</h1>
+<p>Overview domain workflows</p>
+<br/>
+<aside cols='4:5'>
+<div>
+<p>It is very coloquial domain view of each client-side and server-side module with its basic workflow. The notation used here means:</p>
+<ul>
+<li><code>--&gt;</code> implementation details</li>
+<li><code>──&gt;</code> dependency workflow</li>
+<li><code>&lt;-&gt;</code> bidirectiona</li>
+<li><code>(C)</code> client-side starter</li>
+<li><code>(S)</code> server-side starter</li>
+<li><code>&lt; &gt;</code> conditional node</li>
+<li><code>[ ]</code> process concept</li>
+</ul>
+</div><div style='padding-left:10px'>
+<p><img src="../@assets/img/client-domain.png" alt="client-domain"></p>
+</div></aside>
+<p><img src="../@assets/img/server-domain.png" alt="client-domain"></p>
 
             
             <script async type="text/javascript">

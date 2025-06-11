@@ -1,0 +1,11 @@
+@import url('../@assets/css/index.css');
+
+li {
+   margin-left: 20px;
+   list-style: none;
+}
+
+code {
+   font-weight: 900;
+   color: white;
+}
