@@ -1,9 +1,4 @@
 <style>@import url(routing.css);</style>
-<style>@import url(../@assets/css/index.css);</style> 
-<style>
-   table { margin: 0px 30px !important; zoom:0.95; }
-   table th { font-weight:700; border-bottom-style: dashed }
-</style> 
 
 # Routing
 

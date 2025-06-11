@@ -66,6 +66,7 @@ function select(label) {
    
    if (label == 'index') return
    const child = document.querySelector(`#${label}`)
+   if (!child?.classList) return
    child.classList.add('active')
 } 
 

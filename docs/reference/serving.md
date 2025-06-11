@@ -1,5 +1,3 @@
-<script src='../js/index.js'></script>
-<style>@import url(../@assets/css/index.css);</style> 
 <style>@import url(serving.css);</style> 
 
 # Serving

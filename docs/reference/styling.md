@@ -1,8 +1,4 @@
-<script src='../js/index.js'></script>
-<style>
-@import url(../@assets/css/index.css);
-[warning] { color:#9A9A9A; margin-top: 9px; font-size: 0.95rem; }
-</style> 
+<style>@import url(styling.css);</style> 
 
 # Styling
 
