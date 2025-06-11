@@ -10,11 +10,11 @@ Minimalist full-featured React meta-framework.
 
 |    D R Y     |      K I S S      |    Y A G N I    |
 | :----------: | :---------------: | :-------------: |
-| web standard | minimalist design | incremental jsx |
+| web standard | minimalist coding | incremental components |
 
 </div>
 
-<div why>
+<div why style='margin-bottom:15px'>
 
 | e x t e n s i v e | i n n o v a t i v e |
 |-:|:-|
@@ -22,8 +22,6 @@ Minimalist full-featured React meta-framework.
 
 </div>
 
-
-<b style='font-weight:bolder; font-size: 2.5rem'>. . .</b>
 
 </center>
 
@@ -61,5 +59,11 @@ export const Menu = props => <p>
 ```
 
 </aside>
+
+<br>
+
+---
+
+**WARNING!** The project is yet in alpha test, due its scope and ambitious, we looking for financial support or corporate sponsonship to finishing and turn it in a full open source project.
 
 
