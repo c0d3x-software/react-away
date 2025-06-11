@@ -27,36 +27,5 @@ const Hello = props => <>
 </>
 ```
 
-
-## Features
-
-React Away framework introduces those new features that enable its stateful approach and bring another React improvements, like CSS scoping. TODO: complete
-
-- **function decorators**: enable decorators with functions by transpiler.
-  
-- **reactive objects**: self-rendering states for hookless stateful handing.
-
-- **injectable props**: Angular-like attribute directive for props transformation.
-  
-- **modular CSS**: fixes the global CSS leakins during modular CSS imports.
-
-More details in site [documentation](https://c0d3x.github.io/react-away).
-
-## Architecture 
-
-<img src='./docs/@assets/img/domain.png' />
-
-
-## Modules
-
-|                      |                                                        |
-| -------------------: | ------------------------------------------------------ |
-| **kernel** | Core decorators, directives, constants, variables, etc |
-| **server** | Server transpilers, renders, routing, etc              |
-| **client** | Client data binding, routing and renderers             |
-| **create** | CLI tool to create an scaffold project with React Away   |
-| **script** | Bun TypeScripts for utilities in package.json          |
-
-
-##  Documnentation
-https://c0d3x-software.github.io/react-away
+##  Documentation
+More details in https://c0d3x-software.github.io/react-away
