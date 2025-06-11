@@ -56,3 +56,5 @@ h1 { margin-bottom: 7px; letter-spacing: 7px; font-size:3rem; }
 [dky] th { zoom: 1.3; font-weight: 900 !important; }
 
 [dky] td:not(:last-of-type), [dky] th:not(:last-of-type) { border:0 !important }
+
+[why] table { width: 544px; }

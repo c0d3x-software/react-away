@@ -6,10 +6,6 @@
 
 Minimalist full-featured React meta-framework.
 
-
-<style>
-</style>
-
 <center style='margin: 0 50px'>
 
 <div dky why>
