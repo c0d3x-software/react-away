@@ -60,7 +60,7 @@ function select(label) {
    document.querySelectorAll('.active')
       .forEach(x => x.classList.remove('active'))
    
-   if (label == 'index') return
+   if (label == 'index' || !child.classList) return
    const child = document.querySelector(`#${label}`)
    child.classList.add('active')
 } 
