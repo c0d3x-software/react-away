@@ -266,7 +266,7 @@ body.marp-vscode blockquote {
 </tbody>
 </table>
 <p>React Away uses <a href="https://github.com/c0d3x-software/syncher-api"><strong>syncher library</strong></a> (<code>experimental</code>), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs.</p>
-<h2 id="fetch-swr">FETCH+ SWR</h2>
+<h2 id="fetch-api">FETCH+ API</h2>
 <p>Fetch API gets a minimalist SWR polyfill extension for SWR, adding cache support to cache keys and timeout by milliseconds number ou time string format. Revalidation is done with fetch.clear.</p>
 <aside cols='2'>
 <pre><code class="language-ts"><span class="hljs-title function_">fetch</span>(url, { <span class="hljs-attr">cache</span>: <span class="hljs-string">&quot;7min30s&quot;</span> })
@@ -291,7 +291,7 @@ fetch.<span class="hljs-title function_">on</span>(<span class="hljs-string">&qu
 fetch.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;exception&quot;</span>, <span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> ...)
 </code></pre>
 </aside>
-<h2 id="event-api">EVENT API</h2>
+<h2 id="facade-event-api">FACADE EVENT API</h2>
 <p>HTML web stardard has an API for server-client communication with <code>EventSource</code> classe.</p>
 <aside>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> es = <span class="hljs-keyword">new</span> <span class="hljs-title class_">EventSource</span>(url, { <span class="hljs-attr">withCredentials</span>: <span class="hljs-literal">true</span> }) 
@@ -315,7 +315,7 @@ es.<span class="hljs-title function_">close</span>();
 es.<span class="hljs-title function_">close</span>() 
 </code></pre>
 </aside>
-<h2 id="syncher-api">SYNCHER API</h2>
+<h2 id="new-syncher-api">NEW SYNCHER API</h2>
 <p>Syncher API maps an object into a CRUD RESTful API, creating a function synchronizer object, that create in background by diff algorithm, all the necessary request call to bring the remote state .</p>
 <aside cols='2'> 
 <pre><code class="language-ts"><span class="hljs-comment">// basic RESTful user mapping</span>

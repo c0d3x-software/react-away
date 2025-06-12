@@ -15,7 +15,7 @@ Synchronization brings remote data into application, and could be in two ways:
 
 React Away uses [**syncher library**](https://github.com/c0d3x-software/syncher-api) (`experimental`), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs. 
 
-## FETCH+ SWR
+## FETCH+ API
 
 Fetch API gets a minimalist SWR polyfill extension for SWR, adding cache support to cache keys and timeout by milliseconds number ou time string format. Revalidation is done with fetch.clear.
 
@@ -57,7 +57,7 @@ fetch.on("exception", err => ...)
 
 </aside>
 
-## EVENT API
+## FACADE EVENT API 
 
 HTML web stardard has an API for server-client communication with `EventSource` classe.
 
@@ -90,8 +90,7 @@ es.close()
 
 </aside>
 
-
-## SYNCHER API
+## NEW SYNCHER API
 
 Syncher API maps an object into a CRUD RESTful API, creating a function synchronizer object, that create in background by diff algorithm, all the necessary request call to bring the remote state .
 
