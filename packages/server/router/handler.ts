@@ -12,6 +12,10 @@ export function handler(request: Request, routing: Delegate) {
    
    const href = request.url
    const path = new Path(href)
+   const model = new URL(request.url).searchParams.entries()
+   const query = Object.fromEntries(model);
+
+   global.ioc.query = query
 
    return routing(path.route)
 }

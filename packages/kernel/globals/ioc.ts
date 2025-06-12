@@ -4,6 +4,7 @@ export const ioc: IoC = {
    react: () => {},
    refer: undefined,
    await: false, 
+   query: {},
    fails: [], 
    store: {}, 
    param: {}, 

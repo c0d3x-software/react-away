@@ -31,8 +31,10 @@ export default const User = (props, feeds) =>
 
 ```tsx
 export default const Menu = props => <>
-   <div link='/main'>Main</div>     <!-- declarative router -->   
-   <main route='/main'>...</main>   <!-- conditional render -->
+   <div link='/main'>Main</div>    <!-- routing element -->
+   <div link='/hello'>Hello</div>  <!-- routing component -->
+   <main route='/main'>...</main>  <!-- conditional element -->
+   <Hello route='/hello'/>         <!-- conditional component -->
 </>
 ```
 

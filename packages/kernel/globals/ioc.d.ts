@@ -11,6 +11,9 @@ declare global {
       //** params from dynamic route using @route */
       param: P
 
+      //** query string in url */
+      query: record
+
       /** injected raw global state */
       store: S
       

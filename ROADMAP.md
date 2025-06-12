@@ -35,8 +35,8 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - **prefix_url context (tests)** | ◔
 - **SEO HTML metatags transfer (tests)** | ◔
 - **[auth]** + **@auth** | ◔ : [auth] authenticator + @auth authorizator
-- Zero bundle.js
-- iFrame merging
+- Zero bundle.js for full static content
+- server-side iFrame merging
 - performance: benchmarks and docs
 - preact support abstration
 - new template CLI
@@ -44,7 +44,6 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - template error default
 - outlet props
 - e2e test coverage 
-- queryString in feeds.params
 - JSON-LD design
 - kickistart | : proof of concept
 - presentation | : remake   
@@ -54,8 +53,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - validation form[data] only after first render
 - ambigous fragment children behavior: array x not-array
 - attribute styles (declare + params + props handler)
-- resumability
-- doc route dom element x route component
+- articles: reactive object, functional decorators, restful synchers
  
 ## △ | Warnings
 

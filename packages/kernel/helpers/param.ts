@@ -11,8 +11,8 @@ export function params(tag: string, own: string, uid: number, now?: object): Par
 export function dynamicRoute(route: RouteString) {
    route = removeLastBar(route)
 
-   global.ioc.route = route     // current route
-   global.ioc.param = {}  // clear params
+   global.ioc.route = route   // current route
+   global.ioc.param = {}      // clear params
 
    var newRoute = ''
 
@@ -23,6 +23,7 @@ export function dynamicRoute(route: RouteString) {
       .map(x => x as RouteDecoratorInfo)
       .filter(x => x.route == route)
    
+   // searching data to mount feeds.params (ioc.params)
    for (const decorator of routes) {
       const map = removeLastBar(decorator.route).split('/')
       const uri = removeLastBar(route).split('/')
@@ -45,6 +46,8 @@ export function dynamicRoute(route: RouteString) {
 
       return { url, jsx }
    }
+
+   // appending 
 
    return ignore
 }
