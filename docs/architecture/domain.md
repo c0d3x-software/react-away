@@ -8,7 +8,9 @@ Overview domain workflows
 <aside cols='4:5'>
 <div>
 
-It is very coloquial domain view of each client-side and server-side module with its basic workflow. The notation used here means:
+It is very coloquial domain view of each client-side and server-side module with its basic concentps and workflows.
+
+The notations used in models means:
 
 * `-->` implementation details
 * `──>` dependency workflow
@@ -25,7 +27,6 @@ It is very coloquial domain view of each client-side and server-side module with
 ![client-domain](../@assets/img/client-domain.png)
 
 </div></aside>
-
 
 
 ![client-domain](../@assets/img/server-domain.png)
