@@ -2,7 +2,7 @@
 
 # Styling
 
-> module-scoped CSS • component scope CSS • layout props • function decorator • SoC styling • vanilla-like CSS
+> modular CSS • component-scoped CSS • style props • function decorator • SoC styling • vanilla-like CSS
 
 ## CSS class
 
