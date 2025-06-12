@@ -59,7 +59,7 @@ fetch.on("exception", err => ...)
 
 ## EVENT API
 
-HTML web stardard has an API for server-client communication with EventSource classe.
+HTML web stardard has an API for server-client communication with `EventSource` classe.
 
 <aside>
 
@@ -67,11 +67,8 @@ HTML web stardard has an API for server-client communication with EventSource cl
 const es = new EventSource(url, { withCredentials: true }) 
 
 es.addEventListener('message', e => console.log('Message:', e.data))
-
-es.addEventListener('status', e => {
-    const data = JSON.parse(e.data)
-    console.log('progress:', data.progress + '%')
-});
+es.addEventListener('status', e => 
+    log('progress:', JSON.parse(e.data).progress))
 
 es.onopen = () => console.log('Open connection....')
 es.onerror = ex => console.error(ex)
