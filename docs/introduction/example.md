@@ -3,14 +3,6 @@
 # Example
 > A client-side Todo List component example
 
-<br/>
-
-<section style='margin-top: 10px' hidden>
-
-A **TodoList** component in root route `/` with modular CSS, reactive objects and dual binding. 
-
-</section>
-
 ##### /index.ts
 
 ```ts
