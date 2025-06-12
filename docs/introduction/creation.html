@@ -243,7 +243,7 @@ body.marp-vscode blockquote {
 <p>HTML | CSS | TypeScript | Bun</p>
 </blockquote>
 <p>New project with the template creator using <code>react-away/create@latest</code>.</p>
-<pre><code class="language-ps"><span class="hljs-variable">$</span> bunx react-away/create 
+<pre><code class="language-ps"><span class="hljs-variable">$</span> bunx react<span class="hljs-literal">-away</span>/create 
 </code></pre>
 <aside id='cli' cols='3:5'>
 <img src='../@assets/img/cli-tool-min.png'>
@@ -256,10 +256,10 @@ body.marp-vscode blockquote {
 <p>The minimal templates starts with index.html wrapper and index.ts boostrap.</p>
 <aside cols='2'>
 <pre><code class="language-typescript"><span class="hljs-comment">// index.ts</span>
-<span class="hljs-keyword">import</span> <span class="hljs-title class_">React Away</span> 
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">ReactAway</span> 
 <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away&#x27;</span>
 
-<span class="hljs-keyword">await</span> <span class="hljs-title class_">React Away</span>.<span class="hljs-title function_">launch</span>().<span class="hljs-title function_">server</span>()  
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">ReactAway</span>.<span class="hljs-title function_">launch</span>().<span class="hljs-title function_">server</span>()  
 </code></pre>
 <pre><code class="language-ts"><span class="hljs-comment">// routes/index.ts</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>

@@ -27,10 +27,10 @@ The minimal templates starts with index.html wrapper and index.ts boostrap.
 
 ```typescript
 // index.ts
-import React Away 
+import ReactAway 
 from 'react-away'
 
-await React Away.launch().server()  
+await ReactAway.launch().server()  
 ```
 
 ```ts
