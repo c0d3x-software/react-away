@@ -265,7 +265,7 @@ body.marp-vscode blockquote {
 </tr>
 </tbody>
 </table>
-<p>React Away uses <strong>syncher library</strong> (<code>experimental</code>), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs.</p>
+<p>React Away uses <a href="https://github.com/c0d3x-software/syncher-api"><strong>syncher library</strong></a> (<code>experimental</code>), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs.</p>
 <h2 id="fetch-swr">FETCH+ SWR</h2>
 <p>Fetch API gets a minimalist SWR polyfill extension for SWR, adding cache support to cache keys and timeout by milliseconds number ou time string format. Revalidation is done with fetch.clear.</p>
 <aside cols='2'>
@@ -352,7 +352,7 @@ es.<span class="hljs-title function_">close</span>()
 <span class="hljs-keyword">await</span> userApi.<span class="hljs-title function_">async</span>(<span class="hljs-literal">true</span>) 
 </code></pre>
 </aside>
-<p>It also support authentication (<code>experimental</code>) for JWT Bearer and oAuth authentication. So, instead of a synchronizer methods, it returns an object with login and logout methods.</p>
+<p>It also support authentication (<code>experimental</code>) for JWT Bearer and oAuth authentication. So, instead of a synchronizer methods, it returns an object with login and logout methods .</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> jwtAuth = syncher&lt;<span class="hljs-title class_">User</span>&gt;(<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>)
    .<span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;http://www.google.com/login&quot;</span>)
    .<span class="hljs-title function_">catch</span>(<span class="hljs-string">&quot;/login&quot;</span>, <span class="hljs-string">&quot;Login fails&quot;</span>)

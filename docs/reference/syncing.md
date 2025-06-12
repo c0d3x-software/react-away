@@ -13,7 +13,7 @@ Synchronization brings remote data into application, and could be in two ways:
 | fetching | client to server request-response | fetch API |
 | eventing | server to client request-response | EventSource class |
 
-React Away uses **syncher library** (`experimental`), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs. 
+React Away uses [**syncher library**](https://github.com/c0d3x-software/syncher-api) (`experimental`), that improves fetch with SWR support, brings a fluent facade to EventSource, and implements an object mapping to RESTful APIs. 
 
 ## FETCH+ SWR
 
