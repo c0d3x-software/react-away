@@ -79,7 +79,7 @@ The React Away follows web standard index semantics and vanilla React, with inde
 ```
 
 ```ts
-import ReactAway from 'react-away'
+import * as ReactAway from 'react-away'
 
 // customizing system folders
 const folders = { route: '/pages' }
