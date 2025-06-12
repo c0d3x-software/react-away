@@ -1,10 +1,10 @@
 pre {
-   zoom: 95%;
+   zoom: 99%;
    font-size:1rem;
    font-weight: 100;
    overflow: hidden !important;
    background-color: var(--darkest);
-   letter-spacing: -0.1;
+   letter-spacing: -0.1px;
 }
 
 p code { 
