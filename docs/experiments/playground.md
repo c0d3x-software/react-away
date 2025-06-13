@@ -1,6 +1,6 @@
 <style>
    
-   @import url(@assets/css/index.css);
+   @import url(../@assets/css/index.css);
    body { background: #333 !important; }
    code { font-family: agave !important; }
    

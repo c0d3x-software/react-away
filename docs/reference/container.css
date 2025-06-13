@@ -1,0 +1,17 @@
+@import url(../@assets/css/index.css);
+
+body { background: #333 !important; }
+code { font-family: agave !important; }
+li { margin-left: 30px; padding-bottom:0 }
+
+blockquote {
+   margin: 0;
+   padding: 0 70px;
+}
+
+h5 { margin-top:0 }
+
+img {
+   margin-top: -15px;
+   margin-bottom: 20px;
+}

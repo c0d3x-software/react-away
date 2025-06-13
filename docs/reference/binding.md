@@ -2,7 +2,7 @@
 
 # Binding
 
-> props binding • form binding • dual binding • action binding • validation • authentication
+> props binding  form binding • dual binding • action binding • validation • authentication
 
 ## Dual binding
 

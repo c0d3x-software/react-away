@@ -54,6 +54,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - ambigous fragment children behavior: array x not-array
 - attribute styles (declare + params + props handler)
 - articles: reactive object, functional decorators, restful synchers
+- container pages
  
 ## △ | Warnings
 
