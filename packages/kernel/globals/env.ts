@@ -12,5 +12,7 @@ export const env: Env = {
    load: () => load(this, () => Promise.resolve({})),
    ROBOT: [],
    SITEMAPS: [],
-   get SIDE(): "client" | "server" { return },
+   get SIDE(): "client" | "server" {
+      return !!globalThis.document ? "client" : "server"
+   },
 }

@@ -21,11 +21,7 @@ export function authenticate<T extends record = record>(props: ServerActionProps
       headers.set('Authorization', `Bearer ${token}`)
    }   
 
-   return {
-      body,
-      method,
-      headers,
-   }
+   return { body, method, headers, }
 }
 
 export async function authorize(response: Response, props?: ServerActionProps) {

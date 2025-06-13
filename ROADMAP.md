@@ -62,6 +62,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - custom decorators does not support import
 - inner component must preceed outer components
 - no intelissense for function decorators
+- form biding is coupled to dom
 
 ## @ | Want to contribute?
 

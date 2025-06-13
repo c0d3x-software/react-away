@@ -1,6 +1,6 @@
 import React from "react"
 
-export class React Away {
+export class ReactAway {
    public static createElement(tag: string, props: record)
    public static createElement(tag: string, props: record, children: any)
    public static createElement(tag: string, props: record, children?: any) {
