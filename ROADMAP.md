@@ -5,6 +5,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 ## ✓ | Milestones
 
 - **framework architecture**: monorepo repository structure  
+- **proof of concept**: feaseability of all features was tested
 - **hybrid rendering**: support to SSR, SSG and ISR 
 - **create CLI tool**: template generator with `create-react-away` 
 - **dependency injection**: IoC container resolved in 2nd component argument 
