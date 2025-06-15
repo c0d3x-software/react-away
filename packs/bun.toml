@@ -1,0 +1,5 @@
+[alias]
+"@kernel/*"="./kernel/*"
+
+[loader]
+".html" = "text"

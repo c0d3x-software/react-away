@@ -22,22 +22,21 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - **fallback routing**: retry not-found routing with upper route 
 - **partial hydration**: JS hydration only in interactive content 
 - **streaming SSR**: JSX is streamed with Suspense API support 
-- **extended HTML**: HTML is extended with link[type=react] to embed 
 - **route validator**: It prevents ambiguos like /about.jsx and /about.md 
 - **declarative routing**: Client-side prosp handler for routing as [route] and[link] 
+- **Validation API** | ◕ | ProblemDetails interface
 - **dommunication**: Documentation site, marp slides and youtube videos 
 
 ## ○◔◐◕  | Pendings 
-
-- **HTML Validation API** | ◕ | ProblemDetails interface, unit tests, etc
 - **zipped response** | ◕ | unit tests, client-side unzip
 - **GitHub Sponsors page launched** | ◔
 - **SEO sitemap + robot + .env (tests)**: | ◐
 - **prefix_url context (tests)** | ◔
 - **SEO HTML metatags transfer (tests)** | ◔
 - **[auth]** + **@auth** | ◔ : [auth] authenticator + @auth authorizator
+- **HTML+**: container page architecture | test
 - Zero bundle.js for full static content
-- server-side iFrame merging
+- html string import
 - performance: benchmarks and docs
 - preact support abstration
 - new template CLI
@@ -55,7 +54,9 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - ambigous fragment children behavior: array x not-array
 - attribute styles (declare + params + props handler)
 - articles: reactive object, functional decorators, restful synchers
-- container pages
+- page containers
+- tree shaking
+- hot reload
  
 ## △ | Warnings
 
