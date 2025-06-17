@@ -55,6 +55,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - attribute styles (declare + params + props handler)
 - articles: reactive object, functional decorators, restful synchers
 - breaking framework in micro-libs (reactive-obj, props-handlers, etc)
+- extracting reactive objects to a lib
 - tree shaking
 - hot reload
  

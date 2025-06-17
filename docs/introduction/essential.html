@@ -238,6 +238,7 @@ body.marp-vscode blockquote {
         <body class="vscode-body vscode-dark">
             <style>@import url(essential.css);</style> 
 <h1 id="essentials">Essentials</h1>
+<p>React Away is built with ultra-fast <strong>bun</strong> toolkit, supporting server rendering, static zero bundle, prefetch routing, partial hydration, streaming SSR and lazy loading.</p>
 <section style='margin:0 auto; display:flex; justify-self: center;'>
 <table>
 <thead>
@@ -278,10 +279,8 @@ body.marp-vscode blockquote {
 </tbody>
 </table>
 </section>
-<h2 id="performance">Performance</h2>
-<p>Reactful is built with ultra-fast <strong>bun</strong> toolkit, supporting server rendering, static zero bundle, prefetch routing, partial hydration, streaming SSR and lazy loading.</p>
 <h2 id="modular-css">Modular CSS</h2>
-<p>Fixed modular CSS imports with component-scoped style decorator.</p>
+<p>Fixed modular CSS imports and component-scoped style decorator.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;modular-css-only-applies-in-components-of-module.tss&#x27;</span>
 @<span class="hljs-title function_">style</span>(<span class="hljs-string">&#x27;./hello.css&#x27;</span>) <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 </code></pre>
@@ -330,7 +329,7 @@ body.marp-vscode blockquote {
 </code></pre>
 </aside>
 <h2 id="reactive-objects">Reactive objects</h2>
-<aside cols='4:5'>
+<aside cols='3:5'>
 <p>Reactive objects is a hookless stateful approach that encapsulates all state boilerplate codewith dual data binding props for clean minimalist components</p>
 <pre><code class="language-tsx">@<span class="hljs-title function_">client</span>(<span class="hljs-literal">true</span>)
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
@@ -340,7 +339,7 @@ body.marp-vscode blockquote {
 </code></pre>
 </aside>
 <h2 id="property-handlers">Property handlers</h2>
-<p>Built-in framework props that encapsulates props transformation.</p>
+<p>Built-in framework props that encapsulates behavior by props transformation.</p>
 <table>
 <thead>
 <tr>

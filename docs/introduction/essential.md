@@ -2,6 +2,8 @@
 
 # Essentials
 
+React Away is built with ultra-fast **bun** toolkit, supporting server rendering, static zero bundle, prefetch routing, partial hydration, streaming SSR and lazy loading.
+
 <section style='margin:0 auto; display:flex; justify-self: center;'>
 
 |                     |                                             |
@@ -17,13 +19,9 @@
 </section>
 
 
-## Performance
- 
-Reactful is built with ultra-fast **bun** toolkit, supporting server rendering, static zero bundle, prefetch routing, partial hydration, streaming SSR and lazy loading.
-
 ## Modular CSS
 
-Fixed modular CSS imports with component-scoped style decorator.
+Fixed modular CSS imports and component-scoped style decorator.
 
 ```tsx
 import 'modular-css-only-applies-in-components-of-module.tss'
@@ -70,7 +68,7 @@ export default const Menu = props => <>
 
 ## Reactive objects
 
-<aside cols='4:5'>
+<aside cols='3:5'>
 
 Reactive objects is a hookless stateful approach that encapsulates all state boilerplate codewith dual data binding props for clean minimalist components
 
@@ -86,7 +84,7 @@ const Hello = props => <>
 
 ## Property handlers
 
-Built-in framework props that encapsulates props transformation.
+Built-in framework props that encapsulates behavior by props transformation.
 
 | **[data]** |  **[bind]**  |     **[link]**     |    **[route]**    |    **[grid]**     |
 | :--------: | :----------: | :----------------: | :---------------: | :---------------: |
