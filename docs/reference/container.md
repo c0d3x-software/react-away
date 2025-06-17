@@ -1,41 +1,80 @@
 <style>@import url(container.css);</style> 
 
 # Container
-> JSX in HTML • code behind • reactive self • interpolation syntax • semantic attributes
+> JSX in HTML • code behind • reactive self • interpolation syntax • typed attributes • two way data binding
 
 ## Conception
 
-Container page is a low HTML+ extension design for YAGNI componentization with vanilla interpolation, JSX in HTML and semantic attributes. It enables a web standard approach to deal with pages, reserving components for its DRY proposal.
+Page container is a low HTML+ extension design for minimal componentization with JSX-in-HTML, data interpolation, typed attributes, metatags replacement and data binding. 
 
 <img src='../@assets/img/container-page.png'>
 
 ## HTML+ template
 
-HTML template is inner HTML with small extension to support JSX embedment. Script code behind is called by template, consuming its export members.
+HTML+ page container supports JSX component exported by `template[src]` script. 
+
+<aside cols='4:5' >
+
+```html
+<template src='index.ts'>
+   <Hello name='world'/>
+</template>
+```
+
+```ts
+export { Hello } from '../components'
+// code-behind script in template[src] where
+// exported members in visible in self object
+```
+
+</aside>
+
+## Typed attributes
+
+Typed attributes in component call with vanilla javascript syntax.
+ 
+```html 
+<Sample number=1 string='' boolean=true object={} array=[] reference=self.ref />
+```
+
+## Data binding
+
+Simple two-way data binding for interpolated data with micro Virtual DOM with self object changes.
+  
+```html
+<template src='index.ts'>
+   <label>My full name is ${ self.fullname }</label>   
+   <input oninput='self.fullname = event.target.value' />
+</template>
+```
+
+## Data interpolation
+
+HTML+ supports data interpolation with EcmaScript string literal syntax.
 
 <aside cols='4:5' >
 
 ```html
 <template src='index.ts'>
    <h1>${ self.title }</h1> 
-   <Hello name='world '/>
+   <h2>${ self.subtitle }</h2>
 </template>
 ```
 
 ```ts
-// template code-behind index.ts
-export { Hello } from '../components'
-export const title: string = 'title'
-const notVisibleInTemplate = 'private'
+export const title = 'HTML+' 
+export const subtitle = 'Minimalist SPA' 
+export const style = { color: 'whitesmoke' }
+const content = '...' // non-exported = private
 ```
 
 </aside>
 
 ## MetaTag transfers
 
-All metatags inside a template is realocated into HTML head.
+All metatags in template is realocated to HTML head for simple SEO.
 
-<aside cols='3:5'>
+<aside cols='4:5'>
 
 ```html
 <template>
@@ -45,7 +84,7 @@ All metatags inside a template is realocated into HTML head.
 ```
 
 ```html
-<html>
+<html lang='en-US'>
    <head><title>Title</title></head>
    <body><h1>Subtitle</h1></body>
 </html>
@@ -53,64 +92,20 @@ All metatags inside a template is realocated into HTML head.
 
 </aside>
 
-## Vanilla interpolation
-
-For interpoaltion, HTML+ uses just vanilla interpolation syntax.
-
-```html
-<template src='index.ts'>
-   <h1>${ self.title }</h1> 
-   <h2>${ self.subtitle }</h2>
-</template>
-```
-
 ## HTML merging
 
-Simple HTML merging with HTML exports and interpolation.
+HTML inclusive with server-side embed[src] for internal or external HTML URL.
 
 <aside cols='2'>
 
 ```html
 <template src='index.ts'>
-   ${ header } <br/> ${ footer } 
+   <embed src='./layouts/header.html' />
 </template>
 ```
 
-```ts
-export header from './header.html'
-export footer from './footer.html'
-```
-
-</aside>
-
-## Semantic attributes
-
-Attributes receives literals values and refererences, not just string, as a vanilla javascript semantics to interpolation syntax
-
-```html
+```html 
 <template src='index.ts'>
-   <!-- vanilla interpolation syntax -->
-   <Sample number=${1} string=${''} boolean=${true} 
-      object=${{}} array=${[]} reference=${self.test} />
-
-   <!-- semantic attribute alternative -->
-   <Sample number=1 string='' boolean=true 
-      object={} array=[] reference=self.test />
-</template>
-```
-
-## Two-Way data binding
-
-The self is a reactive object of all exported code-behind content. The template will render in every change, but only its value is read in template.
-
-```html
-<template src='index.ts'>
-   <h1>${ self.title }</h1>
-
-   <!-- this will trigger the container render -->
-   <input onchange='self.title=event.target.value' />
-
-   <!-- this will not trigger the container render -->
-   <input onchange='self.subtitle=event.target.value' />
+   <header>Sample Header<header>
 </template>
 ```

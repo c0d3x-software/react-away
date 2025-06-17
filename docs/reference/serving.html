@@ -116,7 +116,8 @@ body.marp-vscode blockquote {
 }
 
 </style>
-            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
@@ -242,34 +243,60 @@ body.marp-vscode blockquote {
 <p>hybrid render • server components • partial hydration • web apis • markdown • error handling • html+</p>
 </blockquote>
 <h2 id="server-launcher">Server launcher</h2>
-<p>Server launcher starting point allows some configurations.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> { launch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away/server&#x27;</span>
-
-<span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ <span class="hljs-attr">folders</span>:{ <span class="hljs-attr">routes</span>: <span class="hljs-string">&#x27;/pages&#x27;</span> }}).<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;#root&#x27;</span>)
+<p>Framweork launcher serves api, files and routes that supports markdown, html and jsx.</p>
+<aside cols='3:5'>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { launch } 
+<span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-away/server&#x27;</span>
+<span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ settings })
+     .<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;#root&#x27;</span>)
 </code></pre>
-<p>The React Away IoC supports injection stores (global states) and handlers.</p>
-<aside cols='5:4'>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> { error } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./components&#x27;</span>
-<span class="hljs-keyword">import</span> { myProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./props&#x27;</span>
-<span class="hljs-keyword">import</span> { pipe } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./middleware&#x27;</span>
-
-<span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ <span class="hljs-attr">store</span>: { <span class="hljs-attr">ok</span>:<span class="hljs-literal">true</span> } }) 
-     .<span class="hljs-title function_">inject</span>(myProps)
-     .<span class="hljs-title function_">inject</span>(error)
-     .<span class="hljs-title function_">inject</span>(pipe)
-     .<span class="hljs-title function_">server</span>(<span class="hljs-string">&quot;#root&quot;</span>)
+<pre><code class="language-ts"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Settings</span> {
+   store?: <span class="hljs-built_in">object</span>  <span class="hljs-comment">// injected global state</span>
+   paths?: <span class="hljs-title class_">Folders</span> <span class="hljs-comment">// custom system folders</span>
+}
 </code></pre>
-<ul>
-<li><strong>error handler</strong>: get the error and returns an component</li>
-<li><strong>request handler</strong>: it allows request and response interceptions</li>
-<li><strong>property handler</strong>: user custom property handler for props transformation</li>
-</ul>
 </aside>
 <h2 id="restful-server">RESTful server</h2>
 <p>Fullstack support with RESTFul api in <code>/apis</code> folder, it maps each function by its HTTP verb name, exposing the directory structure with <code>/api</code> prefix URL.</p>
 <pre><code class="language-ts"><span class="hljs-comment">// /apis/sample.ts  -&gt;  http://localhost:3000/api/sample</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">get</span> = request =&gt; <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>)
 </code></pre>
+<h2 id="launch-injections">Launch injections</h2>
+<p>The React Away IoC supports store injection for SSOT global states and multiple handlers.</p>
+<aside cols='3:5'>
+<section>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./store&#x27;</span>
+<span class="hljs-keyword">import</span> { pipe, fail, prop } 
+<span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./handlers&#x27;</span>
+
+<span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ store }) 
+     .<span class="hljs-title function_">inject</span>(prop)
+     .<span class="hljs-title function_">inject</span>(pipe)
+     .<span class="hljs-title function_">inject</span>(fail)
+     .<span class="hljs-title function_">server</span>()
+</code></pre>
+</section>
+<section handlers><div>
+<ul>
+<li><strong>error handler</strong>: catch error and returns JSX</li>
+</ul>
+<pre><code class="language-ts"><span class="hljs-keyword">function</span>(<span class="hljs-params">e: <span class="hljs-built_in">Error</span></span>): <span class="hljs-title class_">ReactElement</span>
+</code></pre>
+</div><div>
+<ul>
+<li><strong>request handler</strong>: catch request for middleware</li>
+</ul>
+<pre><code class="language-ts"><span class="hljs-keyword">function</span>(<span class="hljs-params">r:Request</span>): <span class="hljs-title class_">Response</span>|<span class="hljs-built_in">void</span>
+</code></pre>
+</div><div>
+<ul>
+<li><strong>request handler</strong>: catch request for middleware</li>
+</ul>
+<pre><code class="language-ts"><span class="hljs-keyword">function</span>(<span class="hljs-params">props: Props, param: Feeds</span>): <span class="hljs-title class_">Props</span>
+</code></pre>
+</div>
+</section>
+</aside>
 <h2 id="decorator-renders">Decorator renders</h2>
 <p>Rendering mode with 'use' directives and component-scoped metadata decorators.</p>
 <pre><code class="language-tsx">@<span class="hljs-title function_">client</span>(<span class="hljs-literal">true</span>) <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Client</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
@@ -315,18 +342,41 @@ body.marp-vscode blockquote {
 <pre><code class="language-ts"><span class="hljs-meta">@seo</span>(<span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-function"><span class="hljs-params">params</span> =&gt;</span> ({ <span class="hljs-attr">description</span>: params.<span class="hljs-property">details</span> }))
 <span class="hljs-keyword">const</span> <span class="hljs-title class_">Hello</span> =&gt; <span class="hljs-function">(<span class="hljs-params">props, feeds</span>) =&gt;</span> &lt;h1&gt;{ feeds.<span class="hljs-property">params</span>.<span class="hljs-property">details</span> }/&lt;h1&gt;
 </code></pre>
-<h2 id="markdown-and-html">Markdown and HTML+</h2>
-<p>React Away supports markdown rendering with Marko lib and extends HTML to allow JSX in HTML, enabling micro component tree and container page design, breaking a monolith component tree in micro-component threes (still in experimental stage).</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;jsx&#x27;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;./components/sample.jsx&#x27;</span> /&gt;</span><span class="language-handlebars"><span class="language-xml">      
-   <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;tsx&#x27;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;./components/example.tsx&#x27;</span> /&gt;</span><span class="language-handlebars"><span class="language-xml">
+<h2 id="html-containers">HTML+ containers</h2>
+<p>React Away uses html-container lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.</p>
+<aside cols='5:4'>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;code-behind.ts&#x27;</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>${ self.title }<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
-   <span class="hljs-tag">&lt;<span class="hljs-name">Sample</span> /&gt;</span>  <span class="hljs-comment">&lt;!-- only works with default exports --&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">Example</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;ok&#x27;</span> /&gt;</span>   <span class="hljs-comment">&lt;!-- supports parameters --&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-</span></span></span></span></code></pre>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Sample</span> <span class="hljs-attr">caption</span>=<span class="hljs-string">&#x27;ok&#x27;</span> <span class="hljs-attr">person</span>=<span class="hljs-string">{</span> <span class="hljs-attr">name:</span>&#x27;<span class="hljs-attr">john</span>&#x27; } 
+      <span class="hljs-attr">enable</span>=<span class="hljs-string">true</span> <span class="hljs-attr">list</span>=<span class="hljs-string">[1,2,3,4,5]</span> <span class="hljs-attr">value</span>=<span class="hljs-string">123</span> /&gt;</span>
 
-            
+   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&#x27;self.onClick()&#x27;</span>&gt;</span>Ok<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> 
+
+   <span class="hljs-comment">&lt;!-- template metatag overrides  --&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;description&#x27;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&#x27;...&#x27;</span>&gt;</span>
+   
+   <span class="hljs-comment">&lt;!-- html includes with embed --&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">embed</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;./layouts/footer.html&#x27;</span>&gt;</span>    
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<pre><code class="language-ts"><span class="hljs-comment">// code-behind stript </span>
+<span class="hljs-comment">// loaded by template[src]</span>
+
+<span class="hljs-comment">// component for JSX-in-HTML</span>
+<span class="hljs-keyword">export</span> <span class="hljs-title class_">Sample</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./components&#x27;</span>
+
+<span class="hljs-comment">// variable for interpolation</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> title = <span class="hljs-string">&#x27;HTML+&#x27;</span>
+
+<span class="hljs-comment">// function with client-side call</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">onClick</span>(<span class="hljs-params"></span>) {
+   <span class="hljs-title function_">alert</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span>)
+}
+</code></pre>
+</aside>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
             <script async type="text/javascript">
 /* From extension marp-team.marp-vscode */
 (()=>{var W=Object.defineProperty;var K=(w,h,x)=>h in w?W(w,h,{enumerable:!0,configurable:!0,writable:!0,value:x}):w[h]=x;var o=(w,h)=>W(w,"name",{value:h,configurable:!0});var v=(w,h,x)=>K(w,typeof h!="symbol"?h+"":h,x);(()=>{var w={32:(y,S,g)=>{y.exports=g(924)},924:(y,S)=>{"use strict";var g;g={value:!0};const E={h1:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:o(()=>HTMLSpanElement,"proto")},pre:{proto:o(()=>HTMLElement,"proto"),style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},A="data-marp-auto-scaling-wrapper",p="data-marp-auto-scaling-svg",c="data-marp-auto-scaling-container",T=class T extends HTMLElement{constructor(){super();v(this,"container");v(this,"containerSize");v(this,"containerObserver");v(this,"svg");v(this,"svgComputedStyle");v(this,"svgPreserveAspectRatio","xMinYMid meet");v(this,"wrapper");v(this,"wrapperSize");v(this,"wrapperObserver");const s=o(t=>([e])=>{const{width:n,height:r}=e.contentRect;this[t]={width:n,height:r},this.updateSVGRect()},"e");this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(s("containerSize")),this.wrapperObserver=new ResizeObserver((...t)=>{s("wrapperSize")(...t),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`

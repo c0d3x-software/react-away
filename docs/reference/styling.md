@@ -4,7 +4,11 @@
 
 > modular CSS • component-scoped CSS • style props • function decorator • SoC styling • vanilla-like CSS
 
-## CSS class
+## Classless CSS
+
+React Way comes with minimal.css library, a classless CSS based in pico.css and semantic web. Enabling ready-to-use styled HTML with no CSS inside JSX.
+
+## CSS className
 
 React Away support the attribute class as alias for CSS className.
 
@@ -77,6 +81,30 @@ React Away reserves a CSS class .routed for toggled state in component using `[l
 
 ```css
 a.routed { filter:invert(1) }
+```
+
+</aside>
+
+## CSS components
+
+React Away enables vanilla CSS components with HTML+ including `page-container` lib.
+
+<aside cols='2'>
+
+```css
+grid(cols, gap) {
+   gap: ${gap};
+   display: grid;
+   grid-template-columns: ${cols};
+}
+```
+
+```html
+<template css='./styles.css'>
+   <grid cols='1fr 1fr' gap='10px'>
+      <p>column 1<p><p>column 2<p>
+   </grid>
+</template>
 ```
 
 </aside>

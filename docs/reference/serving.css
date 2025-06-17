@@ -4,6 +4,12 @@ ul {
    margin-left: 20px;   
 }
 
-ul li {
-   margin-top: 10px;
+
+[handlers] div { margin-bottom: 15px; }
+[handlers] {
+   pre { 
+      margin: 0; 
+      padding: 5px;
+      margin-top: -15px;
+      margin-left: 10px; }
 }

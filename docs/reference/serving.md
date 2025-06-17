@@ -7,32 +7,24 @@
 
 ## Server launcher
 
-Server launcher starting point allows some configurations.
-```ts
-import { launch } from 'react-away/server'
+Framweork launcher serves api, files and routes that supports markdown, html and jsx.
 
-await launch({ folders:{ routes: '/pages' }}).server('#root')
-```
-
-The React Away IoC supports injection stores (global states) and handlers.
-
-<aside cols='5:4'>
+<aside cols='3:5'>
 
 ```ts
-import { error } from './components'
-import { myProps } from './props'
-import { pipe } from './middleware'
-
-await launch({ store: { ok:true } }) 
-     .inject(myProps)
-     .inject(error)
-     .inject(pipe)
-     .server("#root")
+import { launch } 
+from 'react-away/server'
+await launch({ settings })
+     .server('#root')
 ```
 
-* **error handler**: get the error and returns an component
-* **request handler**: it allows request and response interceptions
-* **property handler**: user custom property handler for props transformation
+
+```ts
+interface Settings {
+   store?: object  // injected global state
+   paths?: Folders // custom system folders
+}
+```
 
 </aside>
 
@@ -44,6 +36,54 @@ Fullstack support with RESTFul api in `/apis` folder, it maps each function by i
 // /apis/sample.ts  ->  http://localhost:3000/api/sample
 export const get = request => new Response('Hello World!')
 ```
+
+## Launch injections
+
+The React Away IoC supports store injection for SSOT global states and multiple handlers.
+
+<aside cols='3:5'>
+<section>
+
+```ts
+import store from './store'
+import { pipe, fail, prop } 
+from './handlers'
+
+await launch({ store }) 
+     .inject(prop)
+     .inject(pipe)
+     .inject(fail)
+     .server()
+```
+
+</section>
+<section handlers><div>
+
+* **error handler**: catch error and returns JSX
+
+```ts
+function(e: Error): ReactElement
+```
+
+</div><div>
+
+* **request handler**: catch request for middleware
+
+```ts
+function(r:Request): Response|void
+```
+
+</div><div>
+
+* **request handler**: catch request for middleware
+
+```ts
+function(props: Props, param: Feeds): Props
+```
+
+</div>
+</section>
+</aside>
 
 ## Decorator renders
 
@@ -110,16 +150,43 @@ const Hello => (props, feeds) => <h1>{ feeds.params.details }/<h1>
 ```
 
 
-## Markdown and HTML+
+## HTML+ containers
 
-React Away supports markdown rendering with Marko lib and extends HTML to allow JSX in HTML, enabling micro component tree and container page design, breaking a monolith component tree in micro-component threes (still in experimental stage).
+React Away uses html-container lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.
+
+<aside cols='5:4'>
 
 ```html
-<section>
-   <script type='jsx' src='./components/sample.jsx' />      
-   <script type='tsx' src='./components/example.tsx' />
+<template src='code-behind.ts'>
+   <h1>${ self.title }</h1>
 
-   <Sample />  <!-- only works with default exports -->
-   <Example name='ok' />   <!-- supports parameters -->
-</section>
+   <Sample caption='ok' person={ name:'john' } 
+      enable=true list=[1,2,3,4,5] value=123 />
+
+   <button onclick='self.onClick()'>Ok</button> 
+
+   <!-- template metatag overrides  -->
+   <meta name='description' content='...'>
+   
+   <!-- html includes with embed -->
+   <embed src='./layouts/footer.html'>    
+</template>
 ```
+
+```ts
+// code-behind stript 
+// loaded by template[src]
+
+// component for JSX-in-HTML
+export Sample from './components'
+
+// variable for interpolation
+export const title = 'HTML+'
+
+// function with client-side call
+export function onClick() {
+   alert(document.title)
+}
+```
+
+</aside>

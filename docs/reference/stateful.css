@@ -3,18 +3,3 @@
 table { 
    margin-top: -15px;
 }
-
-[diagram] img {
-   margin:0;
-   padding:0;
-   padding-left: 10px;
-}
-
-[diagram] pre + p {
-   margin:0;
-   padding:0;
-}
-
-#local-state img { height: 130px; }
-#global-state img { height: 190px; }
-#partial-state img { height: 230px; } 

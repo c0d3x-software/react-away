@@ -5,16 +5,26 @@ body {
       var(--darkest) 0%, 
       var(--darkest) 20%,
       var(--inverse) 20%,
-      var(--inverse) 100%);
+      var(--inverse) 100%) !important;
 }
 
-@media (min-width: 90rem) {
+@media (max-width: 1100px) {
+   body {
+      background: linear-gradient(to right,
+         var(--darkest) 0%, 
+         var(--darkest) 10%,
+         var(--inverse) 10%,
+         var(--inverse) 100%) !important;
+   }
+}
+
+@media (min-width: 1500px) {
    body {
       background: linear-gradient(to right,
          var(--darkest) 0%, 
          var(--darkest) 30%,
          var(--inverse) 30%,
-         var(--inverse) 100%);
+         var(--inverse) 100%) !important;
    }
 }
 
