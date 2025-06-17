@@ -152,7 +152,7 @@ const Hello => (props, feeds) => <h1>{ feeds.params.details }/<h1>
 
 ## HTML+ containers
 
-React Away uses html-container lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.
+React Away uses [html-container](https://github.com/c0d3x-software/html-container) lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.
 
 <aside cols='5:4'>
 
@@ -160,10 +160,10 @@ React Away uses html-container lib for micro-component architeture for JSX-in-HT
 <template src='code-behind.ts'>
    <h1>${ self.title }</h1>
 
-   <Sample caption='ok' person={ name:'john' } 
-      enable=true list=[1,2,3,4,5] value=123 />
+   <Sample caption='ok' list=[1,2,3] 
+      person={ name:'john' } value=1 />
 
-   <button onclick='self.onClick()'>Ok</button> 
+   <a onclick='self.onClick()'>Ok</a> 
 
    <!-- template metatag overrides  -->
    <meta name='description' content='...'>

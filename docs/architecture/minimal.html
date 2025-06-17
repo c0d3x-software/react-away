@@ -2,7 +2,7 @@
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>Stateful</title>
+            <title>MINIMALISM</title>
             <style>
 /* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
@@ -116,8 +116,7 @@ body.marp-vscode blockquote {
 }
 
 </style>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+            
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
@@ -237,182 +236,24 @@ body.marp-vscode blockquote {
         
         </head>
         <body class="vscode-body vscode-dark">
-            <style>@import url(stateful.css);</style> 
-<h1 id="stateful">Stateful</h1>
-<blockquote>
-<p>reactive object • stateful props • modular state • global state • self-rendering state • dependency injection</p>
-</blockquote>
-<h2 id="reactive-objects">Reactive objects</h2>
-<p>Reactive object is a self-rendering state that encapsulates the state handling boilerplate code. When a reactive objct is changed, it call the render of its hosted component.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:right"></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">local</td>
-<td>props</td>
-<td>all props is meade reactive</td>
-</tr>
-<tr>
-<td style="text-align:right">global</td>
-<td>store + DI</td>
-<td>object injected component root</td>
-</tr>
-<tr>
-<td style="text-align:right">partial</td>
-<td>stores + decorator</td>
-<td>shared states between components</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Local state props</li>
-</ul>
-<p>Props and states are merged in reactive object for imediate local state handling.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
-    Hello { props.name } !
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{props.name}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> props.name = e.target.value} /&gt;
-<span class="hljs-tag">&lt;/&gt;</span></span>
-</code></pre>
-<ul>
-<li>Injectable Global state</li>
-</ul>
-<p>Store is an injectable global state, following the Single Source of Truth (SSoT) pattern.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ <span class="hljs-attr">store</span>:{ <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;world&#x27;</span> }}).<span class="hljs-title function_">server</span>()  <span class="hljs-comment">// store injection in launch</span>
+            <style>@import url(minimal.css);</style> 
+<h1 id="minimalism">MINIMALISM</h1>
+<h2 id="design-principles">Design principles</h2>
+<h3 id="dry-dont-repeat-itself">DRY: DON'T REPEAT ITSELF</h3>
+<p>DRY is in core web standard approach in React Away design. With web standards, vendor-lock in features and concept is avoided. So, decorators replaces React Hooks, because, even in its special adaptation to work with functions, it is yet a decorator semantics and syntax.</p>
+<p>If there is a web standard way to do it, the React Way enforce and fix any challenge to make the solution more vanilla-like possible. Objects are stateful per definition, so stateful handling in React Away are just OOP. If there is decorators for metadata, React Away solves its lack of function support, instead of a broad convention overheads.</p>
+<h3 id="kiss-keep-it-simple-stupid">KISS: Keep it simple, stupid!</h3>
+<p>KISS in one of major goals in a minimalist design. Web standard approach reduces learning curve, reactive object drops all stateful boilerplate code, props handlers solves with simple attributes problems what would need a new component.</p>
+<p>All design choices was driven to keep it low code, vanilla-like and technologically agnostic, following popular patterns and just adding new overhead when reduces the existing design. All React Away hookless approach turns React more web standard, but keeping React support to hookful world if need it. Its classless CSS design and its fixed modular CSS encourages SoC (separation of concerts) between scripting and styling, as we have in standard HTML.</p>
+<h3 id="yagni-you-aint-gonna-need-it">YAGNI: You Ain't Gonna Need It</h3>
+<p>YAGNI is followed with minimal componentization approach using CSS components and HTML containers. This avoid over-engineering of a component semantics that a just visual component does not need or a a page component that is just a wrapper of components.</p>
+<p>This YAGNI componentization with page components breaks monolith component tree in multiple micro-component trees with reduced rendering time, bundle size and design cost.</p>
+<h2 id="clasless-css-design">Clasless CSS design</h2>
+<p>Classless CSS is a CSS approach that avoid ou mitigate the use of CSS classes, mitigating the styling pollution in JSX code, it is a direct oposition to tailwind design, but following web standard approach, where style is separated from script.</p>
+<p>Property handlers and CSS components are classless CSS resources that enforce low styling code in JSX using props transformations (property handlers) or just CSS design with function support.</p>
+<p>working in progress...</p>
 
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params">props: Props, feeds: Feeds</span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>   <span class="hljs-comment">&lt;!-- DI resolution in feeds --&gt;</span>
-   Hello { feeds.store.name || &#x27;World&#x27; } !
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{feeds.store.name}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> props.name = e.target.value} /&gt;
-<span class="hljs-tag">&lt;/&gt;</span></span>
-</code></pre>
-<ul>
-<li>Modular Partial states</li>
-</ul>
-<p>Partial states are modular state alterantive to deal with large monolith component tree.</p>
-<aside id='partial-state' diagram cols='1:auto'>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> person = <span class="hljs-title function_">useStore</span>({ <span class="hljs-attr">guid</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;john&#x27;</span> })
-
-<span class="hljs-meta">@client</span>(<span class="hljs-literal">true</span>, person)
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span> 
-   Hello { person.name } !
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{person.name}</span> 
-       <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> person.name = e.target.value} /&gt;
-<span class="hljs-tag">&lt;/&gt;</span></span>
-
-<span class="hljs-meta">@client</span>(<span class="hljs-literal">true</span>, person) 
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">Hi</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>  Hi { person.name } !<span class="hljs-tag">&lt;/&gt;</span></span>
-</code></pre>
-<img src='../@assets/img/partial-state-tree.png' />
-</aside>
-<style>
-   ul li { 
-      font-weight:700; 
-      margin-top: 20px;
-      margin-left: 15px; 
-      margin-bottom: -20px;
-      text-transform:uppercase 
-   }
-
-   img:last-of-type { 
-      width: 190px;
-      padding: 20px; 
-      height: 250px;
-      margin-bottom: -20px;
-      background: var(--darkest);
-   }
-</style>
-<h2 id="remote-states">Remote states</h2>
-<p>Remote states could be handled by client to server (fetching) and server to client (eventing). React Away uses <a href="https://github.com/c0d3x-software/syncher-api"><strong>asynchronouts-api</strong></a> library to deal with remote states.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fetching</td>
-<td>client to server request-response</td>
-</tr>
-<tr>
-<td>eventing</td>
-<td>server to client request-response</td>
-</tr>
-<tr>
-<td>asyncing</td>
-<td>dual asynchronous synchornization</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>FETCH+ API</li>
-</ul>
-<p>Fetch SWR polyfills with cache keys and timeout with revalidation in fetch.clear</p>
-<aside cols='2'>
-<pre><code class="language-ts"><span class="hljs-title function_">fetch</span>(url, { <span class="hljs-attr">cache</span>: <span class="hljs-string">&quot;7min30s&quot;</span> })
-<span class="hljs-title function_">fetch</span>(url, { <span class="hljs-attr">cacheKeys</span>: [<span class="hljs-string">&#x27;todos&#x27;</span>] })   
-</code></pre>
-<pre><code class="language-ts">fetch.<span class="hljs-title function_">clear</span>(cacheKeys)
-fetch.<span class="hljs-title function_">clear</span>() <span class="hljs-comment">// invalidate all</span>
-</code></pre>
-</aside>
-<p>Adds  <code>retry</code> and <code>reget</code> settings, <code>fetch.on</code> interceptions and <code>fetch.token</code> state.</p>
-<aside cols='5:4'> 
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> retry = { <span class="hljs-attr">repeat</span>:<span class="hljs-number">3</span>, <span class="hljs-attr">interval</span>:<span class="hljs-number">1000</span> }
-<span class="hljs-keyword">const</span> reget = { <span class="hljs-attr">interval</span>:<span class="hljs-number">1000</span>, callback }
-
-<span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url, { retry })
-<span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url, { reget })
-</code></pre>
-<pre><code class="language-ts">fetch.<span class="hljs-property">token</span> = <span class="hljs-string">`Bearer <span class="hljs-subst">${token}</span>`</span>
-
-fetch.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;request&quot;</span>, <span class="hljs-function"><span class="hljs-params">req</span> =&gt;</span> ...)
-fetch.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;response&quot;</span>, <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> ...)
-fetch.<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;exception&quot;</span>, <span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> ...)
-</code></pre>
-</aside>
-<ul>
-<li>EVENT API</li>
-</ul>
-<p>Event API is a fluent facade (similar to fetch) for web standard <strong>EventSource</strong> class .</p>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> es = <span class="hljs-title function_">event</span>(url, { <span class="hljs-attr">withCredentials</span>: <span class="hljs-literal">true</span> })
-   .<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Open connection...&#x27;</span>))
-   .<span class="hljs-title function_">then</span>(<span class="hljs-string">&#x27;message&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message&#x27;</span>, e.<span class="hljs-property">text</span>))
-   .<span class="hljs-title function_">then</span>(<span class="hljs-string">&#x27;status&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message&#x27;</span>, e.<span class="hljs-property">json</span>.<span class="hljs-property">progress</span> + <span class="hljs-string">&#x27;%&#x27;</span>))
-   .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">ex</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(ex))
-   .<span class="hljs-title function_">finnaly</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;close&#x27;</span>))
-
-es.<span class="hljs-title function_">close</span>() 
-</code></pre>
-<ul>
-<li>SYNCING API</li>
-</ul>
-<p>Syncher API maps RESTful APIs for high abstract remote state handling (similar to an ORM).</p>
-<aside cols='5:4'> 
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> userApi = syncher&lt;<span class="hljs-title class_">User</span>&gt;(<span class="hljs-literal">true</span>)
-   .<span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;http://api.com/users&quot;</span>)
-   .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-string">&quot;not found...&quot;</span>)
-   .<span class="hljs-title function_">match</span>(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x, <span class="hljs-string">&quot;id&quot;</span>)  
-   
-<span class="hljs-keyword">await</span> userApi.<span class="hljs-title function_">async</span>(<span class="hljs-literal">true</span>)  <span class="hljs-comment">// get </span>
-<span class="hljs-keyword">await</span> userApi.<span class="hljs-title function_">async</span>() <span class="hljs-comment">// post, put, delete</span>
-</code></pre>
-<pre><code class="language-ts"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">ISync</span>&lt;T,E&gt; {   
-   <span class="hljs-attr">value</span>: T       <span class="hljs-comment">// state</span>
-   <span class="hljs-attr">await</span>: <span class="hljs-built_in">boolean</span> <span class="hljs-comment">// pending</span>
-   <span class="hljs-attr">heads</span>: <span class="hljs-title class_">Headers</span> <span class="hljs-comment">// headers</span>
-   <span class="hljs-attr">error</span>: E|nyll  <span class="hljs-comment">// exception</span>
-   <span class="hljs-title function_">async</span>(query?)  <span class="hljs-comment">// syncing </span>
-}
-</code></pre>
-</aside>
-            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
             <script async type="text/javascript">
 /* From extension marp-team.marp-vscode */
 (()=>{var W=Object.defineProperty;var K=(w,h,x)=>h in w?W(w,h,{enumerable:!0,configurable:!0,writable:!0,value:x}):w[h]=x;var o=(w,h)=>W(w,"name",{value:h,configurable:!0});var v=(w,h,x)=>K(w,typeof h!="symbol"?h+"":h,x);(()=>{var w={32:(y,S,g)=>{y.exports=g(924)},924:(y,S)=>{"use strict";var g;g={value:!0};const E={h1:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:o(()=>HTMLHeadingElement,"proto"),attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:o(()=>HTMLSpanElement,"proto")},pre:{proto:o(()=>HTMLElement,"proto"),style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},A="data-marp-auto-scaling-wrapper",p="data-marp-auto-scaling-svg",c="data-marp-auto-scaling-container",T=class T extends HTMLElement{constructor(){super();v(this,"container");v(this,"containerSize");v(this,"containerObserver");v(this,"svg");v(this,"svgComputedStyle");v(this,"svgPreserveAspectRatio","xMinYMid meet");v(this,"wrapper");v(this,"wrapperSize");v(this,"wrapperObserver");const s=o(t=>([e])=>{const{width:n,height:r}=e.contentRect;this[t]={width:n,height:r},this.updateSVGRect()},"e");this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(s("containerSize")),this.wrapperObserver=new ResizeObserver((...t)=>{s("wrapperSize")(...t),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`

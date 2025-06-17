@@ -343,15 +343,15 @@ body.marp-vscode blockquote {
 <span class="hljs-keyword">const</span> <span class="hljs-title class_">Hello</span> =&gt; <span class="hljs-function">(<span class="hljs-params">props, feeds</span>) =&gt;</span> &lt;h1&gt;{ feeds.<span class="hljs-property">params</span>.<span class="hljs-property">details</span> }/&lt;h1&gt;
 </code></pre>
 <h2 id="html-containers">HTML+ containers</h2>
-<p>React Away uses html-container lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.</p>
+<p>React Away uses <a href="https://github.com/c0d3x-software/html-container">html-container</a> lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.</p>
 <aside cols='5:4'>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;code-behind.ts&#x27;</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>${ self.title }<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
-   <span class="hljs-tag">&lt;<span class="hljs-name">Sample</span> <span class="hljs-attr">caption</span>=<span class="hljs-string">&#x27;ok&#x27;</span> <span class="hljs-attr">person</span>=<span class="hljs-string">{</span> <span class="hljs-attr">name:</span>&#x27;<span class="hljs-attr">john</span>&#x27; } 
-      <span class="hljs-attr">enable</span>=<span class="hljs-string">true</span> <span class="hljs-attr">list</span>=<span class="hljs-string">[1,2,3,4,5]</span> <span class="hljs-attr">value</span>=<span class="hljs-string">123</span> /&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Sample</span> <span class="hljs-attr">caption</span>=<span class="hljs-string">&#x27;ok&#x27;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">[1,2,3]</span> 
+      <span class="hljs-attr">person</span>=<span class="hljs-string">{</span> <span class="hljs-attr">name:</span>&#x27;<span class="hljs-attr">john</span>&#x27; } <span class="hljs-attr">value</span>=<span class="hljs-string">1</span> /&gt;</span>
 
-   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&#x27;self.onClick()&#x27;</span>&gt;</span>Ok<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> 
+   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&#x27;self.onClick()&#x27;</span>&gt;</span>Ok<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> 
 
    <span class="hljs-comment">&lt;!-- template metatag overrides  --&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&#x27;description&#x27;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&#x27;...&#x27;</span>&gt;</span>

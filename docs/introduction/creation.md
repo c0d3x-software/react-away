@@ -21,6 +21,16 @@ $ bunx react-away/create
 
 </aside>
 
+React Away is debug-ready configuration for Vs Code and with package.json scripts:
+
+<section style='margin-left: 30px; zoom: 95%'>
+
+| `bun run start` | `bun run debug` |  `bun run build`  | `bun run clear`    |
+| --------------: | :-------------: | :---------------: | :----------------- |
+|   build and run | vscode debugger | build the project | clear build folder |
+
+</section>
+
 The minimal templates starts with index.html wrapper and index.ts boostrap.
 
 <aside cols='2'>
@@ -43,12 +53,3 @@ export default props => <>
 
 </aside>
 
-React Away is debug-ready configuration for Vs Code and with package.json scripts:
-
-<section style='margin-left: 30px; zoom: 95%'>
-
-| `bun run start` | `bun run debug` |  `bun run build`  | `bun run clear`    |
-| --------------: | :-------------: | :---------------: | :----------------- |
-|   build and run | vscode debugger | build the project | clear build folder |
-
-</section>

@@ -1,8 +1,8 @@
-<style>@import url(stateful.css);</style> 
+<style>@import url(storing.css);</style> 
 
-# Stateful
+# Storing
 
-> reactive object • stateful props • modular state • global state • self-rendering state • dependency injection
+> reactive object • self-rendering state • dependency injection • SWR fetching • ORM synchornizer
 
 ## Reactive objects 
 
@@ -14,7 +14,7 @@ Reactive object is a self-rendering state that encapsulates the state handling b
 | global | store + DI | object injected component root |
 | partial | stores + decorator  | shared states between components |
 
-* Local state props 
+### Local state props 
 
 Props and states are merged in reactive object for imediate local state handling.
 
@@ -25,7 +25,7 @@ const Hello = props => <>
 </>
 ```
 
-* Injectable Global state
+### Injectable Global state
 
 Store is an injectable global state, following the Single Source of Truth (SSoT) pattern.
 
@@ -38,7 +38,7 @@ const Hello = (props: Props, feeds: Feeds) => <>   <!-- DI resolution in feeds -
 </>
 ```
 
-* Modular Partial states
+### Modular Partial states
 
 Partial states are modular state alterantive to deal with large monolith component tree.
 
@@ -91,7 +91,7 @@ Remote states could be handled by client to server (fetching) and server to clie
 | asyncing | dual asynchronous synchornization | 
 
 
-* FETCH+ API
+### FETCH+ API
 
 Fetch SWR polyfills with cache keys and timeout with revalidation in fetch.clear
 
@@ -133,9 +133,9 @@ fetch.on("exception", err => ...)
 
 </aside>
 
-* EVENT API 
+### EVENT API 
 
-Event API is a fluent facade (similar to fetch) for web standard **EventSource** class .
+Event API is a fluent facade (similar to fetch) for web standard **EventSource*### class .
 
 ```js
 const es = event(url, { withCredentials: true })
@@ -148,7 +148,7 @@ const es = event(url, { withCredentials: true })
 es.close() 
 ```
 
-* SYNCING API
+### SYNCING API
 
 Syncher API maps RESTful APIs for high abstract remote state handling (similar to an ORM).
 
