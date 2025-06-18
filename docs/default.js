@@ -30,7 +30,7 @@ function resize(iframe, remake) {
    if (equals) return
    else if (!height || !iframe) return
    else iframe.style.height = height
-   if (!remake) setTimeout(repeat, 333)
+   if (!remake) setTimeout(repeat, 555)
 }
  
 function createLinks(group) {
