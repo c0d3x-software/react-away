@@ -31,10 +31,10 @@ export default const User = (props, feeds) =>
 
 ```tsx
 export default const Menu = props => <>
-   <div link='/main'>Main</div>    <!-- routing element -->
-   <div link='/hello'>Hello</div>  <!-- routing component -->
-   <main route='/main'>...</main>  <!-- conditional element -->
-   <Hello route='/hello'/>         <!-- conditional component -->
+   <div link='/main'>Main</div>    
+   <div link='/hello'>Hello</div>  
+   <main route='/main'>...</main>  
+   <Hello route='/hello'/>         
 </>
 ```
 
@@ -56,7 +56,7 @@ export default const Menu = props => <>
 Fallback routing retries not found routes, going up until the root (/), avoiding not found error (as a fault tolerance pattern for routing for certain scenarios).
 
 ```ts
-@route('/path/to/:id', true) // true = enabling fallback routing
+@route('/path/to/:id', true) // enabled fallback routing
 ```
 
 

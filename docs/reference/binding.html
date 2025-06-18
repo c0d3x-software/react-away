@@ -239,7 +239,7 @@ body.marp-vscode blockquote {
             <style>@import url(binding.css);</style> 
 <h1 id="binding">Binding</h1>
 <blockquote>
-<p>props binding • form binding • dual binding • action binding • validation • authentication</p>
+<p>props binding  form binding • dual binding • action binding • validation • authentication</p>
 </blockquote>
 <h2 id="dual-binding">Dual binding</h2>
 <p>Dual binding is a two-way data binding design for React one-way data flow, with new <code>[data]</code> and <code>[bind]</code> props handlers, mapping attributes to each specific input type.</p>
@@ -268,14 +268,14 @@ body.marp-vscode blockquote {
 </table>
 </section>
 <h2 id="data-binding">Data binding</h2>
-<p>Data binding receives a reactive object in <code>[data]</code> props and its fields in <code>[bind]</code> props. When the input make any change, it sets the object field, triggering its reactive self-rendering behavior.</p>
+<p>Data binding receives a reactive object in <code>[data]</code> props and its fields in <code>[bind]</code> props. When the input makes any change, it sets the object field, triggering its reactive self-rendering behavior.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> Hello { props.name || &#x27;World&#x27; }!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{object}</span> <span class="hljs-attr">bind</span>=<span class="hljs-string">&#x27;field&#x27;</span> /&gt;</span>  
 <span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
 <h2 id="form-binding">Form binding</h2>
-<p>Form binding is a reactive form for uncontrolled componen, as <code>form[data]</code> with <code>input[bind]</code>. It does not require reactive object, since the rendering is here controlled by submit event.</p>
+<p>Form binding is a reactive form for uncontrolled components, as <code>form[data]</code> with <code>input[bind]</code>. It does not require a reactive object, since the rendering is controlled by the submit event.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Form</span> = (<span class="hljs-params">props, feeds</span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{props}</span>&gt;</span> 
       Name: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bind</span>=<span class="hljs-string">&#x27;name&#x27;</span> <span class="hljs-attr">required</span> /&gt;</span>
@@ -312,14 +312,14 @@ body.marp-vscode blockquote {
    { feeds.fails.map(x =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{ x.message }<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>) }
 <span class="hljs-tag">&lt;/&gt;</span></span>
 
-<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">onPost</span>(<span class="hljs-params">response: Response</span>) { <span class="hljs-comment">/* something... */</span> }
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">onPost</span>(<span class="hljs-params">response: Response</span>) { ... }
 </code></pre>
 <p>The <code>form[action]</code> also supports JWT authentication with <code>form[bearer]</code> props, this feature is yet in experimental stage. Here a preview algorithm and code example with authentication binding.</p>
 <aside auth cols='5:3'>
 <pre><code class="language-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Login</span> = (<span class="hljs-params">props, { fails }</span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&#x27;https://localhost/api/auth&#x27;</span>
          <span class="hljs-attr">method</span>=<span class="hljs-string">&#x27;POST&#x27;</span> <span class="hljs-attr">bearer</span>=<span class="hljs-string">&#x27;access_token&#x27;</span>
-         <span class="hljs-attr">data</span>=<span class="hljs-string">{props}</span>&gt;</span> 
+         <span class="hljs-attr">data</span>=<span class="hljs-string">{props}</span>&gt;</span>  
 
       username: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bind</span>=<span class="hljs-string">&#x27;username&#x27;</span> /&gt;</span>
       password: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bind</span>=<span class="hljs-string">&#x27;password&#x27;</span> /&gt;</span>

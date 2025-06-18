@@ -90,10 +90,10 @@ function(props: Props, param: Feeds): Props
 Rendering mode with 'use' directives and component-scoped metadata decorators.
 
 ```tsx
-@client(true) export default const Client = props => <>...</>
-@server('static') export default const Static = props => <>...</>
-@server('dynamic') export default cont Dynamic = props => <>...</>
-@server('periodic', "36h")  export default const Periodic = props => <>...</>
+@client(true) const CSR = props => <>...</>
+@server('static') const SSG = props => <>...</>
+@server('dynamic') const SSR = props => <>...</>
+@server('periodic', "36h") const ISR = props => <>...</>
 ```
 
 It server component and suspense API for server-side rendering.

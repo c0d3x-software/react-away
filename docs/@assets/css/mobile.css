@@ -4,12 +4,10 @@
       background: unset !important;
       background: none;
       background: var(--inverse) !important;
-      font-size: 1.2rem;
    }
 
    pre {
-      zoom: 1.1;
-      letter-spacing: -0.9px;
+      letter-spacing: -0.7px;
    }
 
    nav#menu {
@@ -21,7 +19,7 @@
    }
 
    #main {
-      zoom: 1.1 !important;
+      zoom: 1.3 !important;
       padding: 0 !important;
       margin-left: 0 !important;
       width: unset !important;
@@ -84,12 +82,20 @@
    }
 
    footer {
+      margin-left: 0 !important;
       width: 300px !important;
       & b { padding: 0 !important; }
    }
 
-   blockquote {
+   blockquote, html {
       padding:0
+   }   
+
+   [scripts] {
+      padding: 0;
+      margin-left: 0 !important;
    }
+
+   #c-tree { display: none; }
 }
 

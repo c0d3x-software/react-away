@@ -63,7 +63,7 @@ function createMenuHamburguer() {
 function onMenu(e) {
    const check = document.querySelector('#menu-toggle')
    const hmenu = document.querySelector('.menu-show-hamburguer')
-   hmenu.style.display = check.checked ? 'block' : 'none'
+   hmenu.style.display = check.checked ? 'none' : 'block'
 }
 
 async function goto(address, manual) {   

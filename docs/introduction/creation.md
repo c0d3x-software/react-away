@@ -23,7 +23,7 @@ $ bunx react-away/create
 
 React Away is debug-ready configuration for Vs Code and with package.json scripts:
 
-<section style='margin-left: 30px; zoom: 95%'>
+<section scripts>
 
 | `bun run start` | `bun run debug` |  `bun run build`  | `bun run clear`    |
 | --------------: | :-------------: | :---------------: | :----------------- |

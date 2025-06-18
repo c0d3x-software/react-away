@@ -274,16 +274,18 @@ body.marp-vscode blockquote {
 <p>Props and states are merged in reactive object for imediate local state handling.</p>
 <pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
     Hello { props.name } !
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{props.name}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> props.name = e.target.value} /&gt;
+   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{props.name}</span> 
+      <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> props.name = e.target.value} /&gt;
 <span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
 <h3 id="injectable-global-state">Injectable Global state</h3>
 <p>Store is an injectable global state, following the Single Source of Truth (SSoT) pattern.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ <span class="hljs-attr">store</span>:{ <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;world&#x27;</span> }}).<span class="hljs-title function_">server</span>()  <span class="hljs-comment">// store injection in launch</span>
+<pre><code class="language-tsx"><span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>({ <span class="hljs-attr">store</span>:{ <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;world&#x27;</span> }}).<span class="hljs-title function_">server</span>()  
 
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params">props: Props, feeds: Feeds</span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>   <span class="hljs-comment">&lt;!-- DI resolution in feeds --&gt;</span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params">props: Props, feeds: Feeds</span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>   
    Hello { feeds.store.name || &#x27;World&#x27; } !
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{feeds.store.name}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> props.name = e.target.value} /&gt;
+   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{feeds.store.name}</span> 
+      <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span> =&gt;</span> props.name = e.target.value} /&gt;
 <span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
 <h3 id="modular-partial-states">Modular Partial states</h3>
@@ -301,7 +303,7 @@ body.marp-vscode blockquote {
 <span class="hljs-meta">@client</span>(<span class="hljs-literal">true</span>, person) 
 <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hi</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>  Hi { person.name } !<span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
-<img src='../@assets/img/partial-state-tree.png' />
+<img id='c-tree' src='../@assets/img/partial-state-tree.png' />
 </aside>
 <style>
    ul li { 

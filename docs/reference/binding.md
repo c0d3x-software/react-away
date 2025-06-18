@@ -81,7 +81,7 @@ export const Form = (props, feeds) => <>
    { feeds.fails.map(x => <li>{ x.message }</li>) }
 </>
 
-async function onPost(response: Response) { /* something... */ }
+async function onPost(response: Response) { ... }
 ```
 
 

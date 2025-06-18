@@ -21,7 +21,8 @@ Props and states are merged in reactive object for imediate local state handling
 ```tsx
 const Hello = props => <>
     Hello { props.name } !
-   <input value={props.name} onChange={e => props.name = e.target.value} />
+   <input value={props.name} 
+      onChange={e => props.name = e.target.value} />
 </>
 ```
 
@@ -30,11 +31,12 @@ const Hello = props => <>
 Store is an injectable global state, following the Single Source of Truth (SSoT) pattern.
 
 ```tsx
-await launch({ store:{ name: 'world' }}).server()  // store injection in launch
+await launch({ store:{ name: 'world' }}).server()  
 
-const Hello = (props: Props, feeds: Feeds) => <>   <!-- DI resolution in feeds -->
+const Hello = (props: Props, feeds: Feeds) => <>   
    Hello { feeds.store.name || 'World' } !
-   <input value={feeds.store.name} onChange={e => props.name = e.target.value} />
+   <input value={feeds.store.name} 
+      onChange={e => props.name = e.target.value} />
 </>
 ```
 
@@ -58,7 +60,7 @@ const Hello = props => <>
 const Hi = props => <>  Hi { person.name } !</>
 ```
 
-<img src='../@assets/img/partial-state-tree.png' />
+<img id='c-tree' src='../@assets/img/partial-state-tree.png' />
 
 </aside>
 

@@ -13,7 +13,7 @@ React Way comes with minimal.css library, a classless CSS based in pico.css and 
 React Away support the attribute class as alias for CSS className.
 
 ```tsx
-export const Hello = () => <h1 class='hello'>Hello World!</h1>
+const Hello = () => <h1 class='hello'>Hi!</h1>
 ```
 
 ## Modular CSS
