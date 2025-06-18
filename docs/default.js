@@ -26,8 +26,9 @@ function resize(iframe, remake) {
    const target = iframe.contentWindow.document.body
    const height = (target?.scrollHeight + 15)+ 'px'
    const equals = iframe?.style?.height == height
+   const failed = iframe?.style?.height > height
 
-   if (equals) return
+   if (equals || failed) return
    else if (!height || !iframe) return
    else iframe.style.height = height
    if (!remake) setTimeout(repeat, 555)
