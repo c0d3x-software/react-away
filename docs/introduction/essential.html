@@ -370,9 +370,9 @@ body.marp-vscode blockquote {
 </tr>
 </tbody>
 </table>
-<pre><code class="language-tsx"><span class="hljs-comment">// custom property handlers using depedency injection.</span>
-<span class="hljs-keyword">const</span> <span class="hljs-title function_">shown</span> = props =&gt; ({ ...props, <span class="hljs-attr">hidden</span>: !props.<span class="hljs-property">shown</span> })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Ok</span> = prop =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">shown</span>=<span class="hljs-string">{true}</span>&gt;</span>Show me!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code class="language-tsx"><span class="hljs-comment">// custom property handlers with DI.</span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">shown</span> = p =&gt; ({ ...p, <span class="hljs-attr">hidden</span>: !props.<span class="hljs-property">shown</span> })
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Ok</span> = prop =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">shown</span>=<span class="hljs-string">{true}</span>&gt;</span>Show me!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
 <span class="hljs-keyword">await</span> <span class="hljs-title function_">launch</span>(<span class="hljs-string">&quot;/routes&quot;</span>).<span class="hljs-title function_">inject</span>(shown).<span class="hljs-title function_">server</span>(<span class="hljs-string">&quot;#root&quot;</span>)
 </code></pre>
 <h2 id="dependency-injection">Dependency injection</h2>
@@ -396,7 +396,6 @@ body.marp-vscode blockquote {
 <h2 id="function-decorators">Function decorators</h2>
 <p>Function decorator as currying suggar syntax and function metadata.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-title function_">example</span> = (<span class="hljs-params">args</span>) =&gt; <span class="hljs-function">(<span class="hljs-params">meta, call</span>) =&gt;</span> call    
-
 <span class="hljs-meta">@example</span>(<span class="hljs-string">&#x27;testing&#x27;</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">someFunction</span> = (<span class="hljs-params"></span>) =&gt; { }
 </code></pre>
 

@@ -258,8 +258,8 @@ body.marp-vscode blockquote {
 </aside>
 <h2 id="restful-server">RESTful server</h2>
 <p>Fullstack support with RESTFul api in <code>/apis</code> folder, it maps each function by its HTTP verb name, exposing the directory structure with <code>/api</code> prefix URL.</p>
-<pre><code class="language-ts"><span class="hljs-comment">// /apis/sample.ts  -&gt;  http://localhost:3000/api/sample</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">get</span> = request =&gt; <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>)
+<pre><code class="language-ts"><span class="hljs-comment">//  http://localhost:3000/api/sample</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">get</span> = req =&gt; <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(<span class="hljs-string">&#x27;Hi!&#x27;</span>)
 </code></pre>
 <h2 id="launch-injections">Launch injections</h2>
 <p>The React Away IoC supports store injection for SSOT global states and multiple handlers.</p>
@@ -339,8 +339,10 @@ body.marp-vscode blockquote {
 </code></pre>
 </aside>
 <p>It also supports dynamic SEO for dynamic routing with high-order functions.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@seo</span>(<span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-function"><span class="hljs-params">params</span> =&gt;</span> ({ <span class="hljs-attr">description</span>: params.<span class="hljs-property">details</span> }))
-<span class="hljs-keyword">const</span> <span class="hljs-title class_">Hello</span> =&gt; <span class="hljs-function">(<span class="hljs-params">props, feeds</span>) =&gt;</span> &lt;h1&gt;{ feeds.<span class="hljs-property">params</span>.<span class="hljs-property">details</span> }/&lt;h1&gt;
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-title function_">apply</span> = params =&gt; ({ <span class="hljs-attr">description</span>: params.<span class="hljs-property">details</span> })
+
+<span class="hljs-meta">@seo</span>(<span class="hljs-string">&#x27;title&#x27;</span>, apply)
+<span class="hljs-keyword">const</span> <span class="hljs-title class_">Hi</span> =&gt; <span class="hljs-function">(<span class="hljs-params">props, { params }</span>) =&gt;</span> &lt;p&gt;{ params.<span class="hljs-property">details</span> }/&lt;p&gt;
 </code></pre>
 <h2 id="html-containers">HTML+ containers</h2>
 <p>React Away uses <a href="https://github.com/c0d3x-software/html-container">html-container</a> lib for micro-component architeture for JSX-in-HTML using .html+ extension and self object as template script context.</p>

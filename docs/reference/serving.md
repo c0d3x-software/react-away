@@ -33,8 +33,8 @@ interface Settings {
 Fullstack support with RESTFul api in `/apis` folder, it maps each function by its HTTP verb name, exposing the directory structure with `/api` prefix URL.
 
 ```ts
-// /apis/sample.ts  ->  http://localhost:3000/api/sample
-export const get = request => new Response('Hello World!')
+//  http://localhost:3000/api/sample
+export const get = req => new Response('Hi!')
 ```
 
 ## Launch injections
@@ -145,8 +145,10 @@ ROBOT=[{
 It also supports dynamic SEO for dynamic routing with high-order functions.
 
 ```ts
-@seo('title', params => ({ description: params.details }))
-const Hello => (props, feeds) => <h1>{ feeds.params.details }/<h1>
+const apply = params => ({ description: params.details })
+
+@seo('title', apply)
+const Hi => (props, { params }) => <p>{ params.details }/<p>
 ```
 
 

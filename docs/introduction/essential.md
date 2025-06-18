@@ -102,9 +102,9 @@ Built-in framework props that encapsulates behavior by props transformation.
 | data bound | data binding | declarative router | conditional route | grid layout props |
 
 ```tsx
-// custom property handlers using depedency injection.
-const shown = props => ({ ...props, hidden: !props.shown })
-export const Ok = prop => <div shown={true}>Show me!</div>
+// custom property handlers with DI.
+const shown = p => ({ ...p, hidden: !props.shown })
+export const Ok = prop => <p shown={true}>Show me!</p>
 await launch("/routes").inject(shown).server("#root")
 ```
 
@@ -140,6 +140,5 @@ Function decorator as currying suggar syntax and function metadata.
 
 ```ts
 const example = (args) => (meta, call) => call    
-
 @example('testing') const someFunction = () => { }
 ````
