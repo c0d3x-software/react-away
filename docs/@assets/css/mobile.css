@@ -88,7 +88,8 @@
    }
 
    footer a {
-      font-size: 1.5rem !important;
+      font-size: 1.2rem !important;
+      text-transform: uppercase !important;
       font-family: economica !important;
       & b { font-size: 1.5rem !important; }
    }
