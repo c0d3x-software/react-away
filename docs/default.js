@@ -21,17 +21,21 @@ function startup() {
       goto(`research/review.html?name=${name}&mail=${mail}`)
 }
 
+function compare(old, NEW) {
+   const x = parseInt((old || '0').replace('px', ''))
+   const y = parseInt((NEW || '0').replace('px', ''))
+   return x - y
+}
+
 function resize(iframe, remake) {
    const repeat = () => resize(iframe, true)   
    const target = iframe.contentWindow.document.body
    const height = (target?.scrollHeight + 15)+ 'px'
-   const equals = iframe?.style?.height == height
-   const failed = iframe?.style?.height > height
+   const equals = compare(iframe?.style?.height, height) == 0
 
-   if (equals || failed) return
-   else if (!height || !iframe) return
+   if (!iframe || equals) return
    else iframe.style.height = height
-   if (!remake) setTimeout(repeat, 555)
+   if (!remake) setTimeout(repeat, 999)
 }
  
 function createLinks(group) {
