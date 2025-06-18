@@ -56,7 +56,7 @@ export default const Menu = props => <>
 Fallback routing retries not found routes, going up until the root (/), avoiding not found error (as a fault tolerance pattern for routing for certain scenarios).
 
 ```ts
-@route('/path/to/:id', true) // enabled fallback routing
+@route('/path/to/:id', true) // true = fallback routing
 ```
 
 

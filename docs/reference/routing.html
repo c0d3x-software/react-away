@@ -299,7 +299,7 @@ body.marp-vscode blockquote {
 </code></pre>
 <h2 id="fallback-routing">Fallback routing</h2>
 <p>Fallback routing retries not found routes, going up until the root (/), avoiding not found error (as a fault tolerance pattern for routing for certain scenarios).</p>
-<pre><code class="language-ts"><span class="hljs-meta">@route</span>(<span class="hljs-string">&#x27;/path/to/:id&#x27;</span>, <span class="hljs-literal">true</span>) <span class="hljs-comment">// enabled fallback routing</span>
+<pre><code class="language-ts"><span class="hljs-meta">@route</span>(<span class="hljs-string">&#x27;/path/to/:id&#x27;</span>, <span class="hljs-literal">true</span>) <span class="hljs-comment">// true = fallback routing</span>
 </code></pre>
 <h2 id="authorization-roles">Authorization roles</h2>
 <p>Function decorator for role authorization based on <code>feeds.logon.role</code> (experimental).</p>

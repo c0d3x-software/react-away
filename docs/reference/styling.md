@@ -48,7 +48,7 @@ Style decorator enables a component-scoped CSS styling.
 
 ```tsx
 @style('../styles/hello.css')
-export default const Hello = () => <h1>Hello World!</h1>
+export default const Hello = () => <h1>Hello!</h1>
 ```
 
 ## ClassName tag

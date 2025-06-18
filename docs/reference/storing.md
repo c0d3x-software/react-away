@@ -142,8 +142,8 @@ Event API is a fluent facade (similar to fetch) for web standard **EventSource**
 ```js
 const es = event(url, { withCredentials: true })
    .then(() => console.log('Open connection...'))
-   .then('message', e => console.log('Message', e.text))
-   .then('status', e => console.log('Message', e.json.progress + '%'))
+   .then('message', e => console.log(e.text))
+   .then('status', e => console.log(e.json.progress))
    .catch(ex => console.error(ex))
    .finnaly(() => console.log('close'))
 
