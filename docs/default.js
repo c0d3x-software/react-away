@@ -89,7 +89,7 @@ async function goto(address, manual) {
    main.style.height = 'auto'
 
    wait(333, () => resize(main))
-   wait(555, () => loading(false))
+   wait(777, () => loading(false))
 
    if (manual) return
    if (address.split('#').length < 2) return 
