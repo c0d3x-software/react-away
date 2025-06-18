@@ -1,4 +1,8 @@
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+   [cols] { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 850px) {
    h1 { letter-spacing: 3px !important; }
    body {
       background: unset !important;
@@ -12,10 +16,6 @@
 
    nav#menu {
       display: none;
-   }
-
-   [cols] {
-      grid-template-columns: 1fr;
    }
 
    #main {
