@@ -64,6 +64,6 @@ export const Menu = props => <p>
 
 ---
 
-**WARNING!** The project is yet in alpha test, due its scope and ambitious, we looking for financial support or corporate sponsonship to finishing and turn it in a full open source project.
+**WARNING!** The project is still in alpha test. Due to its scope and ambition, we are looking for financial support or corporate sponsorship to finish and turn it into a fully open source project.
 
 

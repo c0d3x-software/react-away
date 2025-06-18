@@ -370,7 +370,7 @@ fetch.<span class="hljs-title function_">on</span>(<span class="hljs-string">&qu
 </code></pre>
 </aside>
 <h3 id="event-api">EVENT API</h3>
-<p>Event API is a fluent facade (similar to fetch) for web standard *<em>EventSource</em>### class .</p>
+<p>Event API is a fluent facade (similar to fetch) for web standard <strong>EventSource</strong> class .</p>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> es = <span class="hljs-title function_">event</span>(url, { <span class="hljs-attr">withCredentials</span>: <span class="hljs-literal">true</span> })
    .<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Open connection...&#x27;</span>))
    .<span class="hljs-title function_">then</span>(<span class="hljs-string">&#x27;message&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message&#x27;</span>, e.<span class="hljs-property">text</span>))

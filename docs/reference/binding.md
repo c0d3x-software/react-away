@@ -21,7 +21,7 @@ Dual binding is a two-way data binding design for React one-way data flow, with 
 
 ## Data binding
 
-Data binding receives a reactive object in `[data]` props and its fields in `[bind]` props. When the input make any change, it sets the object field, triggering its reactive self-rendering behavior. 
+Data binding receives a reactive object in `[data]` props and its fields in `[bind]` props. When the input makes any change, it sets the object field, triggering its reactive self-rendering behavior. 
 
 ```tsx
 export const Hello = props => <>
@@ -32,7 +32,7 @@ export const Hello = props => <>
 
 ## Form binding 
 
-Form binding is a reactive form for uncontrolled componen, as `form[data]` with `input[bind]`. It does not require reactive object, since the rendering is here controlled by submit event.
+Form binding is a reactive form for uncontrolled components, as `form[data]` with `input[bind]`. It does not require a reactive object, since the rendering is controlled by the submit event.
 
 ```tsx
 export const Form = (props, feeds) => <>

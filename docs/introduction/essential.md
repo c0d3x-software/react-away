@@ -16,6 +16,17 @@ React Away is built with ultra-fast **bun** toolkit, supporting server rendering
 |   enhanced fetching | fetch API with with agnostic SWR extensions |
 |      reactive forms | uncontrolled component as data binding      |
 
+<!-- |                     |                                                              |
+| ------------------: | ------------------------------------------------------------ |
+|         modular CSS | modular CSS imports for standard SoC                         |
+|    reactive objects | classess and hookless stateful handling design               |
+|   properly handlers | injectable custom props transformation algorithm             |
+|   dual data binding | two way data binding design using props handlers             |
+| function decorators | decorator plugin to enable support decorators with functions |
+|  object RESTful map | RESTful API mapping that abstracts fetching details          |
+|     HTML+ container | lightweight HTML extension for micro-component tree          |
+|      reactive forms | dual data binding for uncontrolled components                | -->
+
 </section>
 
 

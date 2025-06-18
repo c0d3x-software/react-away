@@ -1,0 +1,9 @@
+- none
+- modular CSS
+- reactive objects
+- property handlers
+- dual data binding
+- function decorators
+- object RESTful map
+- HTML+ container
+- overall design

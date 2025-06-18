@@ -135,7 +135,7 @@ fetch.on("exception", err => ...)
 
 ### EVENT API 
 
-Event API is a fluent facade (similar to fetch) for web standard **EventSource*### class .
+Event API is a fluent facade (similar to fetch) for web standard **EventSource** class .
 
 ```js
 const es = event(url, { withCredentials: true })

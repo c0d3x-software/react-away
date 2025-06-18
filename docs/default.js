@@ -1,14 +1,13 @@
 const wait = (timeout, action) => setTimeout(action, timeout)
 
+const groups = ['introduction', 'reference', 'architecture']
+const menus = []
+const names = {}
+
 function startup() {
    const frame = document.querySelector("iframe")
-
-   createLinks('introduction')
-   createLinks('reference')
-   createLinks('architecture')
-   
+   groups.forEach(g => createLinks(g))   
    resize(frame)
-
    createLogo(document)
 }
 
@@ -24,21 +23,29 @@ function resize(iframe, remake) {
    if (!remake) setTimeout(repeat, 333)
 }
  
-function createLinks(where) {
-   const mount = uid => `${where}/${uid}.html`
-   const click = elm => goto(mount(elm.id), true)  
-   const links = document.querySelectorAll(`#${where} a`)
+function createLinks(group) {
+   function forEachLink(a) {
+      const address = `${group}/${a.id}.html`
+      a.onclick = () => goto(address, true)
+      menus.push(address)
+      names[address] = capitalizeFirst(a.innerText)
+   }
 
-   links.forEach(a => a.onclick = () => click(a))
+   document
+      .querySelectorAll(`#${group} a`)
+      .forEach(forEachLink)
 
    clearHash()
 }
 
 async function goto(address, manual) {   
    loading(true)
-
+   footer(address)
+   
    const menu = address.split('/').at(-1).split('.')[0]
    const main = document.querySelector('iframe')
+
+   select(menu)
 
    main.src = address
    main.style.height = 'auto'
@@ -81,8 +88,38 @@ function clearHash() {
    const value = route + query
    const clear = () => history.replaceState(null, '', value)
 
-   wait(999, clear)   
+   wait(999, clear)    
 }
+
+function footer(address) {
+   if (!address) return location.reload()
+
+   const index = menus.indexOf(address)
+   const last = index == menus.length - 1
+   const previousUrl = index > 0 && menus[index - 1]
+   const nextUrl = !last && menus[index + 1]
+   
+   document.querySelector('footer').style.visibility = 'visible'
+
+   const preivousB = `<b>< </b>`
+   const nextB = `<b> ></b>`
+   
+   const previousLnk = document.getElementById('previous')
+   const nextLnk = document.getElementById('next')
+   
+   previousLnk.innerHTML = preivousB + (names[previousUrl] || 'Home')
+   nextLnk.innerHTML = (names[nextUrl] || 'Home') + nextB
+   
+   previousLnk.onclick = () => goto(previousUrl || '')
+   nextLnk.onclick = () => goto(nextUrl || '')
+
+   console.log({ previousUrl, previous: names[previousLnk]})
+}
+
+function capitalizeFirst(str) {
+   if (typeof str !== 'string' || str.length === 0)  return ''
+   return str[0].toUpperCase() + str.slice(1).toLowerCase();
+ }
 
 window.addEventListener("popstate", function (event) {
    console.log("popstate", window.history) 
@@ -102,3 +139,4 @@ window.addEventListener('message', function(event) {
    resize(node)
    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+

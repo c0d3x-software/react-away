@@ -72,7 +72,7 @@ const content = '...' // non-exported = private
 
 ## MetaTag transfers
 
-All metatags in template is realocated to HTML head for simple SEO.
+All metatags in the template are relocated to the HTML head for simple SEO.
 
 <aside cols='4:5'>
 

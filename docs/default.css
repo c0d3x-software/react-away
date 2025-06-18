@@ -112,3 +112,42 @@ pre+pre { margin-top: 20px; }
 #contacts li a {
    letter-spacing: -0.05px;
 }
+
+footer {
+   width: 500px;
+   display: grid;
+   padding: 10px 0;
+   margin-left: -40px;
+   grid-template-columns: 1fr 1fr;
+   background: transparent;
+   border-top: dashed 0 #555; 
+   padding-top: 15px;
+   margin-top: 20px;
+}
+
+footer a {
+   color: silver;
+   font-family: geist;
+   font-size: 0.9rem;
+   text-transform: capitalize;
+}
+
+footer a:hover {
+   color: wheat;
+   cursor: pointer; 
+   font-weight: 500 !important; 
+}
+
+footer b {
+   padding: 0 10px;
+   font-weight: 900;
+   font-size: 1.1rem;
+}
+
+footer a:first-of-type {
+   text-align: left;
+}
+
+footer a:last-of-type {
+   text-align: right;
+}

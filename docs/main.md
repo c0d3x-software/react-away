@@ -54,6 +54,6 @@ export const Menu = props => <p>
 
 ---
 
-**WARNING!** The project is yet in alpha test, due its scope and ambitious, we looking for financial support or corporate sponsonship to finishing and turn it in a full open source project.
+Leave your design review and first impressions <a onclick='window.parent.goto("research/review.html")' >here</a>!
 
 
