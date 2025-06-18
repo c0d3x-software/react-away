@@ -87,6 +87,11 @@
       & b { padding: 0 !important; }
    }
 
+   footer a {
+      padding: 5px 25px;
+      border: solid 1px #555 !important; 
+   }
+
    blockquote, html {
       padding:0
    }   

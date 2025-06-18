@@ -73,8 +73,10 @@ async function goto(address, manual) {
    const menu = address.split('/').at(-1).split('.')[0]
    const main = document.querySelector('iframe')
 
-   if (document.querySelector('.menu-show-hamburguer'))
+   if (document.querySelector('.menu-show-hamburguer')) {
+      document.querySelector('#menu-toggle').checked = false
       document.querySelector('.menu-show-hamburguer').style.display = 'none'
+   }
 
    select(menu)
 
