@@ -35,8 +35,8 @@ React Away is built with ultra-fast **bun** toolkit, supporting server rendering
 Fixed modular CSS imports and component-scoped style decorator.
 
 ```tsx
-import 'modular-css-only-applies-in-components-of-module.tss'
-@style('./hello.css') export const Hello = () => <h1>Hello!</h1>
+import 'modular-css-for-components-in-module.tss'
+@style('./hello.css') const Hello = () => <h1>Hi!</h1>
 ```
 
 ## Hybrid renders
@@ -44,10 +44,10 @@ import 'modular-css-only-applies-in-components-of-module.tss'
 Full rendering with SSR, SSG and ISR with 'use' directives and function decorators.
 
 ```tsx
-@client(true) export default const Client = props => <>...</>
-@server('static') export default const Static = props => <>...</>
-@server('dynamic') export default cont Dynamic = props => <>...</>
-@server('periodic', "36h")  export default const Periodic = props => <>...</>
+@client(true) const CSR = () => <>...</>
+@server('static') const SSG = () => <>...</>
+@server('dynamic') const SSR = () => <>...</>
+@server('periodic', "36h")  const ISR = () => <>...</>
 ```
 
 ## Clean routing
@@ -139,7 +139,7 @@ await launch({ store })
 Function decorator as currying suggar syntax and function metadata.
 
 ```ts
-const example = (args) => (meta, call) => call     // <-- definition 
-@example('testing') const someFunction = () => { } // <-- consumption
-example('testing')(import.meta, someFunction)      // <-- transpilation
+const example = (args) => (meta, call) => call    
+
+@example('testing') const someFunction = () => { }
 ````

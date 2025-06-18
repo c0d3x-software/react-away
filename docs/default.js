@@ -4,11 +4,21 @@ const groups = ['introduction', 'reference', 'architecture']
 const menus = []
 const names = {}
 
+var menuHamburguer = {}
+
 function startup() {
    const frame = document.querySelector("iframe")
    groups.forEach(g => createLinks(g))   
    resize(frame)
    createLogo(document)
+   createMenuHamburguer()
+
+   const args = new URLSearchParams(location.search)
+   const name = args.get('name')
+   const mail = args.get('mail')
+
+   if (name && mail)
+      goto(`research/review.html?name=${name}&mail=${mail}`)
 }
 
 function resize(iframe, remake) {
@@ -38,12 +48,33 @@ function createLinks(group) {
    clearHash()
 }
 
+function createMenuHamburguer() {
+   const template = m => `<a onclick='goto("${m}")'>${names[m]}</a><br>`
+   const div = document.createElement('div')   
+   
+   div.className = 'menu-show-hamburguer'   
+   div.style.display = 'none'
+   menus.forEach(m => div.innerHTML += template(m))
+
+   document.body.append(div)
+}
+
+
+function onMenu(e) {
+   const check = document.querySelector('#menu-toggle')
+   const hmenu = document.querySelector('.menu-show-hamburguer')
+   hmenu.style.display = check.checked ? 'block' : 'none'
+}
+
 async function goto(address, manual) {   
    loading(true)
    footer(address)
    
    const menu = address.split('/').at(-1).split('.')[0]
    const main = document.querySelector('iframe')
+
+   if (document.querySelector('.menu-show-hamburguer'))
+      document.querySelector('.menu-show-hamburguer').style.display = 'none'
 
    select(menu)
 
@@ -119,7 +150,7 @@ function footer(address) {
 function capitalizeFirst(str) {
    if (typeof str !== 'string' || str.length === 0)  return ''
    return str[0].toUpperCase() + str.slice(1).toLowerCase();
- }
+}
 
 window.addEventListener("popstate", function (event) {
    console.log("popstate", window.history) 

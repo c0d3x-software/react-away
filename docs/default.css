@@ -5,7 +5,7 @@ body {
       var(--darkest) 0%, 
       var(--darkest) 20%,
       var(--inverse) 20%,
-      var(--inverse) 100%) !important;
+      var(--inverse) 100%);
 }
 
 @media (max-width: 1100px) {
@@ -14,7 +14,7 @@ body {
          var(--darkest) 0%, 
          var(--darkest) 10%,
          var(--inverse) 10%,
-         var(--inverse) 100%) !important;
+         var(--inverse) 100%);
    }
 }
 
@@ -24,7 +24,7 @@ body {
          var(--darkest) 0%, 
          var(--darkest) 30%,
          var(--inverse) 30%,
-         var(--inverse) 100%) !important;
+         var(--inverse) 100%);
    }
 }
 

@@ -17,12 +17,14 @@ function startup() {
    const nameInput = identity.querySelector('#name')
    const mailInput = identity.querySelector('#mail')
 
-   const params = new URLSearchParams(window.location.search);
-   const name = params.get('fname')
-   const mail = params.get('email')
+   const params = new URLSearchParams(window.parent.location.search);
+   const name = params.get('name')
+   const mail = params.get('mail')
 
    nameInput.value = name || ''
    mailInput.value = mail || ''
+
+   console.log(0, nameInput.value)
 
    listingQuestions()
 

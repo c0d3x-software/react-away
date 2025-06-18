@@ -15,6 +15,15 @@
 </head>
 
 <body onload="startup()">
+   <section id="menu-hamburger" hidden>
+      <img src="./@assets/img/favicon.ico">
+      <label>| React Away framework</label>
+      <section>
+         <input type="checkbox" id="menu-toggle" hidden checked />
+         <label onclick="onMenu(event)" for="menu-toggle" id="hamburger">☰</label>
+      </section>
+   </section>
+
    <section id="fading" class="loading"></section>
    <section id="loading" class="loading" >
       <span class="loader"></span>

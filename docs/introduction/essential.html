@@ -278,18 +278,28 @@ body.marp-vscode blockquote {
 </tr>
 </tbody>
 </table>
+<!-- |                     |                                                              |
+| ------------------: | ------------------------------------------------------------ |
+|         modular CSS | modular CSS imports for standard SoC                         |
+|    reactive objects | classess and hookless stateful handling design               |
+|   properly handlers | injectable custom props transformation algorithm             |
+|   dual data binding | two way data binding design using props handlers             |
+| function decorators | decorator plugin to enable support decorators with functions |
+|  object RESTful map | RESTful API mapping that abstracts fetching details          |
+|     HTML+ container | lightweight HTML extension for micro-component tree          |
+|      reactive forms | dual data binding for uncontrolled components                | -->
 </section>
 <h2 id="modular-css">Modular CSS</h2>
 <p>Fixed modular CSS imports and component-scoped style decorator.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;modular-css-only-applies-in-components-of-module.tss&#x27;</span>
-@<span class="hljs-title function_">style</span>(<span class="hljs-string">&#x27;./hello.css&#x27;</span>) <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+<pre><code class="language-tsx"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;modular-css-for-components-in-module.tss&#x27;</span>
+@<span class="hljs-title function_">style</span>(<span class="hljs-string">&#x27;./hello.css&#x27;</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">Hello</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hi!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 </code></pre>
 <h2 id="hybrid-renders">Hybrid renders</h2>
 <p>Full rendering with SSR, SSG and ISR with 'use' directives and function decorators.</p>
-<pre><code class="language-tsx">@<span class="hljs-title function_">client</span>(<span class="hljs-literal">true</span>) <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Client</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
-@<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;static&#x27;</span>) <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Static</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
-@<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;dynamic&#x27;</span>) <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> cont <span class="hljs-title class_">Dynamic</span> = <span class="hljs-function"><span class="hljs-params">props</span> =&gt;</span> <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
-@<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;periodic&#x27;</span>, <span class="hljs-string">&quot;36h&quot;</span>)  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Periodic</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
+<pre><code class="language-tsx">@<span class="hljs-title function_">client</span>(<span class="hljs-literal">true</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">CSR</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
+@<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;static&#x27;</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">SSG</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
+@<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;dynamic&#x27;</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">SSR</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
+@<span class="hljs-title function_">server</span>(<span class="hljs-string">&#x27;periodic&#x27;</span>, <span class="hljs-string">&quot;36h&quot;</span>)  <span class="hljs-keyword">const</span> <span class="hljs-title function_">ISR</span> = (<span class="hljs-params"></span>) =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>...<span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
 <h2 id="clean-routing">Clean routing</h2>
 <p>Server with <strong>/apis</strong>, <strong>/assets</strong> and <strong>/routes</strong> with zero conventions.</p>
@@ -385,9 +395,9 @@ body.marp-vscode blockquote {
 </aside>
 <h2 id="function-decorators">Function decorators</h2>
 <p>Function decorator as currying suggar syntax and function metadata.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-title function_">example</span> = (<span class="hljs-params">args</span>) =&gt; <span class="hljs-function">(<span class="hljs-params">meta, call</span>) =&gt;</span> call     <span class="hljs-comment">// &lt;-- definition </span>
-<span class="hljs-meta">@example</span>(<span class="hljs-string">&#x27;testing&#x27;</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">someFunction</span> = (<span class="hljs-params"></span>) =&gt; { } <span class="hljs-comment">// &lt;-- consumption</span>
-<span class="hljs-title function_">example</span>(<span class="hljs-string">&#x27;testing&#x27;</span>)(<span class="hljs-keyword">import</span>.<span class="hljs-property">meta</span>, someFunction)      <span class="hljs-comment">// &lt;-- transpilation</span>
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-title function_">example</span> = (<span class="hljs-params">args</span>) =&gt; <span class="hljs-function">(<span class="hljs-params">meta, call</span>) =&gt;</span> call    
+
+<span class="hljs-meta">@example</span>(<span class="hljs-string">&#x27;testing&#x27;</span>) <span class="hljs-keyword">const</span> <span class="hljs-title function_">someFunction</span> = (<span class="hljs-params"></span>) =&gt; { }
 </code></pre>
 
             
