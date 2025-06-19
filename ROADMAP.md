@@ -36,7 +36,6 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - **[auth]** + **@auth** | ◔ : [auth] authenticator + @auth authorizator
 - **HTML+**: container page architecture | test
 - Zero bundle.js for full static content
-- html string import
 - performance: benchmarks and docs
 - preact support abstration
 - new template CLI
@@ -45,10 +44,9 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - outlet props
 - e2e test coverage 
 - JSON-LD design
-- kickistart | : proof of concept
+- kickistart movie | : proof of concept
 - presentation | : remake   
 - support to React native
-- class + style binding support
 - syncher lib for syncing features
 - validation form[data] only after first render
 - ambigous fragment children behavior: array x not-array
@@ -56,6 +54,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - articles: reactive object, functional decorators, restful synchers
 - breaking framework in micro-libs (reactive-obj, props-handlers, etc)
 - extracting reactive objects to a lib
+- cross-platform: browser, desktop, mobile, server, kernel, etc
 - tree shaking
 - hot reload
  

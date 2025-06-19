@@ -5,6 +5,7 @@ import "./render";
 import "./module";
 import "./aliases";
 import "./strings";
+import "./numbers";
 import "./handlers";
 import "./function";
 import "./interfaces";

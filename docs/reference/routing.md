@@ -21,35 +21,54 @@ Dynamic route decorator has priority over directory routing.
 
 ```tsx
 @route('/profile/:id')
-export default const User = (props, feeds) =>
+export default const User = (p, feeds) =>
    <h1>User id: { feeds.param.id }</h1>
 ```
 
 ## Props routing
 
-<a onclick='goto("review/structure.html#props-routing")'>Route directives</a> with conditional `[route]` and clickable router `[link]`.
+<a onclick='goto("review/structure.html#props-routing")'>Route directives</a> with conditional `[route]` and clickable router `[link]`. Outlet and mappings is replaced in a more transparent way by route props.
+
+<aside cols='2'>
 
 ```tsx
-export default const Menu = props => <>
+const Menu = props => <>
    <div link='/main'>Main</div>    
-   <div link='/hello'>Hello</div>  
-   <main route='/main'>...</main>  
-   <Hello route='/hello'/>         
+   <div link='/hello'>Hello</div>     
 </>
 ```
+
+```tsx
+const Main = props => <>
+   <Hello route='/hello'/>         
+   <p route='/main'>Main...</p>  
+</>
+```
+
+</aside>
+
 
 ## Lazy loading
 
 <a onclick='goto("review/structure.html#lazy-loading")'>Lazy routing</a> using `asLazyComponent` promise extension. 
 
-```tsx
-const Main = import('./main').asLazyComponent('Sample')
+<aside cols='2'>
 
-export default const Menu = props => <>
+```tsx
+// a non-default lazy component
+// named Sample (code splitting)
+const Sample = import('./main')
+   .asLazyComponent('Sample')
+```
+
+```tsx
+const Menu = props => <>
    <a link='/sample'>Sample</a>
-   <Main route='/lazy' />
+   <Sample route='/sample' />
 </>
 ```
+
+</aside>
 
 ## Fallback routing
 
@@ -66,5 +85,47 @@ Function decorator for role authorization based on `feeds.logon.role` (experimen
 
 ```tsx
 @auth(['manager','admin'])
-export default const Admin = props => <h1>Admin...</h1>
+const Admin = props => <h1>Admin...</h1>
 ```
+
+## imperative routing
+
+Abstract router object for cross-platform routing (browser, desktop, etc).
+
+<aside cols='2'>
+
+```ts
+router.go('/about')    // route
+router.is('/tag/:id')  // check
+router.on('/go', call) // event
+```
+
+```ts
+router.undo(n=1)  // back
+router.redo(n=1)  // next
+router.todo(n|-n) // both
+```
+
+</aside>
+
+```ts
+router.current // route | param | state
+router.address // hast | host | home (base dir)
+router.history // list of routes
+```
+
+Is possible to pass state between routes.
+
+<aside cols='2'>
+
+```ts
+// state into /aid route
+router.go('/aid', { ok:true }) 
+```
+
+```ts
+// get the route state
+router.current.state 
+```
+
+</aside>

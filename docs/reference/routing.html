@@ -276,27 +276,37 @@ body.marp-vscode blockquote {
 <h2 id="dynamic-routes">Dynamic routes</h2>
 <p>Dynamic route decorator has priority over directory routing.</p>
 <pre><code class="language-tsx">@<span class="hljs-title function_">route</span>(<span class="hljs-string">&#x27;/profile/:id&#x27;</span>)
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">User</span> = (<span class="hljs-params">props, feeds</span>) =&gt;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">User</span> = (<span class="hljs-params">p, feeds</span>) =&gt;
    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>User id: { feeds.param.id }<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 </code></pre>
 <h2 id="props-routing">Props routing</h2>
-<p><a onclick='goto("review/structure.html#props-routing")'>Route directives</a> with conditional <code>[route]</code> and clickable router <code>[link]</code>.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Menu</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+<p><a onclick='goto("review/structure.html#props-routing")'>Route directives</a> with conditional <code>[route]</code> and clickable router <code>[link]</code>. Outlet and mappings is replaced in a more transparent way by route props.</p>
+<aside cols='2'>
+<pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Menu</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/main&#x27;</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
-   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/hello&#x27;</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
-   <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/main&#x27;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>  
-   <span class="hljs-tag">&lt;<span class="hljs-name">Hello</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/hello&#x27;</span>/&gt;</span>         
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/hello&#x27;</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>     
 <span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
+<pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Main</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Hello</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/hello&#x27;</span>/&gt;</span>         
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/main&#x27;</span>&gt;</span>Main...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  
+<span class="hljs-tag">&lt;/&gt;</span></span>
+</code></pre>
+</aside>
 <h2 id="lazy-loading">Lazy loading</h2>
 <p><a onclick='goto("review/structure.html#lazy-loading")'>Lazy routing</a> using <code>asLazyComponent</code> promise extension.</p>
-<pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title class_">Main</span> = <span class="hljs-title function_">import</span>(<span class="hljs-string">&#x27;./main&#x27;</span>).<span class="hljs-title function_">asLazyComponent</span>(<span class="hljs-string">&#x27;Sample&#x27;</span>)
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Menu</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+<aside cols='2'>
+<pre><code class="language-tsx"><span class="hljs-comment">// a non-default lazy component</span>
+<span class="hljs-comment">// named Sample (code splitting)</span>
+<span class="hljs-keyword">const</span> <span class="hljs-title class_">Sample</span> = <span class="hljs-title function_">import</span>(<span class="hljs-string">&#x27;./main&#x27;</span>)
+   .<span class="hljs-title function_">asLazyComponent</span>(<span class="hljs-string">&#x27;Sample&#x27;</span>)
+</code></pre>
+<pre><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Menu</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">link</span>=<span class="hljs-string">&#x27;/sample&#x27;</span>&gt;</span>Sample<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">Main</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/lazy&#x27;</span> /&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">Sample</span> <span class="hljs-attr">route</span>=<span class="hljs-string">&#x27;/sample&#x27;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/&gt;</span></span>
 </code></pre>
+</aside>
 <h2 id="fallback-routing">Fallback routing</h2>
 <p>Fallback routing retries not found routes, going up until the root (/), avoiding not found error (as a fault tolerance pattern for routing for certain scenarios).</p>
 <pre><code class="language-ts"><span class="hljs-meta">@route</span>(<span class="hljs-string">&#x27;/path/to/:id&#x27;</span>, <span class="hljs-literal">true</span>) <span class="hljs-comment">// true = fallback routing</span>
@@ -304,9 +314,33 @@ body.marp-vscode blockquote {
 <h2 id="authorization-roles">Authorization roles</h2>
 <p>Function decorator for role authorization based on <code>feeds.logon.role</code> (experimental).</p>
 <pre><code class="language-tsx">@<span class="hljs-title function_">auth</span>([<span class="hljs-string">&#x27;manager&#x27;</span>,<span class="hljs-string">&#x27;admin&#x27;</span>])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">Admin</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Admin...<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Admin</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Admin...<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
 </code></pre>
-
+<h2 id="imperative-routing">imperative routing</h2>
+<p>Abstract router object for cross-platform routing (browser, desktop, etc).</p>
+<aside cols='2'>
+<pre><code class="language-ts">router.<span class="hljs-title function_">go</span>(<span class="hljs-string">&#x27;/about&#x27;</span>)    <span class="hljs-comment">// route</span>
+router.<span class="hljs-title function_">is</span>(<span class="hljs-string">&#x27;/tag/:id&#x27;</span>)  <span class="hljs-comment">// check</span>
+router.<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;/go&#x27;</span>, call) <span class="hljs-comment">// event</span>
+</code></pre>
+<pre><code class="language-ts">router.<span class="hljs-title function_">undo</span>(n=<span class="hljs-number">1</span>)  <span class="hljs-comment">// back</span>
+router.<span class="hljs-title function_">redo</span>(n=<span class="hljs-number">1</span>)  <span class="hljs-comment">// next</span>
+router.<span class="hljs-title function_">todo</span>(n|-n) <span class="hljs-comment">// both</span>
+</code></pre>
+</aside>
+<pre><code class="language-ts">router.<span class="hljs-property">current</span> <span class="hljs-comment">// route | param | state</span>
+router.<span class="hljs-property">address</span> <span class="hljs-comment">// hast | host | home (base dir)</span>
+router.<span class="hljs-property">history</span> <span class="hljs-comment">// list of routes</span>
+</code></pre>
+<p>Is possible to pass state between routes.</p>
+<aside cols='2'>
+<pre><code class="language-ts"><span class="hljs-comment">// state into /aid route</span>
+router.<span class="hljs-title function_">go</span>(<span class="hljs-string">&#x27;/aid&#x27;</span>, { <span class="hljs-attr">ok</span>:<span class="hljs-literal">true</span> }) 
+</code></pre>
+<pre><code class="language-ts"><span class="hljs-comment">// get the route state</span>
+router.<span class="hljs-property">current</span>.<span class="hljs-property">state</span> 
+</code></pre>
+</aside>
             
             <script async type="text/javascript">
 /* From extension marp-team.marp-vscode */

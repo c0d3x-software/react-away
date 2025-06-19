@@ -27,7 +27,7 @@ async function onRoute(url: string){
       entry.innerHTML = await streamJSX(route)
    }   
    else if (inner) entry.innerHTML = inner   
-   else return router.goto(route, true)
+   else return router.go(route, true)
 
    document.title = infor.metas?.title || global.ioc.title
    
@@ -44,7 +44,7 @@ function onClick(e: any) {
    const fixed = decodeURI(e.target.href)
    const route = fixed.replace(begin, '').replaceAll('`','').replace(/\/\//, '/')
    
-   router.goto(route)
+   router.go(route)
    onRoute(route)
 }
 

@@ -5,6 +5,6 @@ export function fallbackRoute() {
 
    if (fallback) {
       console.error(`Not found server-side route for ${fallback.try}`)
-      router.goto(fallback.fix)
+      router.go(fallback.fix)
    }
 }

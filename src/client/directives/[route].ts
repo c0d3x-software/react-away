@@ -21,12 +21,12 @@ export const routeProps: PropertyHandler= function(props: Props, params: Params)
       : { ...props, onClick }   
 
    const route = context.route[props.link]
-      ||= router.current.replace(/\/$/, '')
+      ||= router.current.route.replace(/\/$/, '')
 
    function onClick() {
       if (!props.link) return
       const link = props.link.replace(/^\./, route)
-      router.goto(link)
+      router.go(link)
       global.ioc.react()
    }      
 
