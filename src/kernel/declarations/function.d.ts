@@ -1,6 +1,3 @@
-import { DecoratorList } from '../decorators/index'
-import '../decorators/@seo'
-
 declare global {
    interface Function {
       /** unique identifier in render call order */

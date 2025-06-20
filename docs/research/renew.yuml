@@ -1,0 +1,28 @@
+// {type:class}
+// {direction:topDown}
+// {generate:true}
+
+
+[launch]->[inject]
+[inject]->[server]
+[inject]-.->[IHandler]
+
+[IHandler]^-.-[ILoadHandler]
+[IHandler]^-.-[IErrorHandler]
+[IHandler]^-.-[IRenderHandler]
+[IHandler]^-.-[IRequestHandler]
+
+[IRequestHandler]^-[/apis]
+[IRequestHandler]^-[/assets]
+[IRequestHandler]^-[/routes]
+
+[IRenderHandler]^-[bound]
+[IRenderHandler]^-[style]
+[IRenderHandler]^-[route]
+[IRenderHandler]^-[state]
+
+[ILoadHandler]^-[decorator]
+[ILoadHandler]^-[metadata]
+[ILoadHandler]^-[css]
+
+[server]-.->[IServer]

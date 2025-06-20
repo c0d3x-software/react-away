@@ -1,4 +1,4 @@
 import { UpdateArgs } from '../typings';
-/** Action binding transform [action] url into a RESTful request
- * with form authentication binding support */
+/** Action binding sets [action] as RESTful request */
 export declare function action(args: UpdateArgs): Promise<void>;
+export declare const getDefaultError: (code: number) => "Invalid request" | "URL not found" | "Error" | "Internal serve error...";

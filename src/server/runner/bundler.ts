@@ -1,11 +1,11 @@
 "use server"
 
-import { folder } from './folder'
+import { folder } from './browse'
 import { File, Path, logger } from  '../shared'
 import { validateConflictRoutes } from './validate'
 import { ServerDecoratorInfo, throws } from '../../kernel';
 import { createBundleScript } from './scripts';
-import { createHTML, createJSX, createMD } from '../parser'
+import { createHTML, createJSX, createMD } from './creator'
 import plugins from '../loader'
 import Zlib from "zlib";
 import fs from 'fs'
@@ -66,20 +66,20 @@ async function loadIndexHTML() {
 }
 
 /** iterates each file to specific build */
-async function build(wrapper: HTMLString, content, route) {
+async function build(html, data, path) {
    try {
       
-      if (typeof content == "function")
-         await createJSX(content, wrapper, route)
+      if (typeof data == "function")
+         await createJSX(data, html, path)
 
-      else if (route.endsWith(".md"))
-         await createMD(route, content, wrapper)
+      else if (path.endsWith(".md"))
+         await createMD(path, data, html)
 
-      else await createHTML(route, content, wrapper)
+      else await createHTML(path, data, html)
 
    } catch (error) {
       throw <BuildError>{
-         args: { html: wrapper, data: content, path: route},
+         args: { html, data, path},
          function: loadIndexHTML.name,
          module: 'bundler.ts',
          exception: error,

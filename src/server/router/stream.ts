@@ -3,7 +3,7 @@
 import { JSXON } from "../../kernel"
 import { Path, File, queriefy, response } from "../shared"
 import { fallbackHTML, hasFallbackRouting } from "./fallback"
-import { inject } from "../broker"
+import { mounter } from "../runner"
 import  { render } from '../render'
 
 type ImportType = "component"|"stream"|"html"
@@ -50,7 +50,7 @@ async function streamByArgument(args: StreamArgs) {
    if (!path) return response(404, 'not found: ' + args)
 
    const mergingHTML = ([ jsx, html ]) => 
-      path ? inject(jsx, path, html) : ''
+      path ? mounter(jsx, path, html) : ''
    
    const importComponent = x => x
       .then(x => x[args.name || 'default'])

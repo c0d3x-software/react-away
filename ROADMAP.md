@@ -55,6 +55,7 @@ Welcome to the roadmap of **React Away**, a fullstack React meta-framework.
 - breaking framework in micro-libs (reactive-obj, props-handlers, etc)
 - extracting reactive objects to a lib
 - cross-platform: browser, desktop, mobile, server, kernel, etc
+- create src/launch as an agnostic lib
 - tree shaking
 - hot reload
  

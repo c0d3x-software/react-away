@@ -1,6 +1,7 @@
 
 
 const ioc: IoC = {
+   query: { },
    await: false,
    refer: undefined,
    logon: undefined,

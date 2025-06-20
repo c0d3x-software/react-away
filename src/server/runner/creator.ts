@@ -8,7 +8,7 @@ import { renderToString } from 'react-dom/server'
 import { throws } from '../../kernel'
 import { JSX_IN_HTML } from './regex'
 import { render } from '../render' 
-import { inject } from './inject'
+import { mounter } from './mount'
 import React from 'react'
 
 export function createMD(route: RouteString, md: string, html: string): Promise<HTMLString>
@@ -32,7 +32,7 @@ export async function createJSX(component, path, html?, done = []) {
       const url = `${Path.builds}${route}.html`
       const jsx = await render(component, route)
       const jms = jsx ? JSXON.htmlfy(jsx) : ''
-      const htm = await inject(jsx, route, jms, html)
+      const htm = await mounter(jsx, route, jms, html)
       const out = jms.replaceAll("'", '"')
       const err = htm.match(error)
       const get = global.own.routes[path]
@@ -68,7 +68,7 @@ export async function createHTML(href, innerHTML, outerHTML, done = []) {
    if (title) info.metas['title'] = title
 
    const inner = body.innerHTML.replaceAll("'", '"')
-   const outer = await inject(null, route, inner, outerHTML)
+   const outer = await mounter(null, route, inner, outerHTML)
 
    info.cache = encodeURI(inner) as HTMLString
 

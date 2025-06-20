@@ -3,7 +3,7 @@
 import { fallbackHTML, hasFallbackRouting } from "./fallback"
 import { JSXON, ServerDecoratorInfo, dynamicRoute } from "../../kernel"
 import { stream } from "./stream"
-import { inject } from "../broker"
+import { mounter } from "../runner"
 import { render } from "../render"
 import { handler } from "./handler"
 import { isRoute } from "./is-route"
@@ -28,7 +28,7 @@ export async function routing(href: Request|RouteString, last = '') {
 async function ssrDecorator(node, path, href, last) {
    const fall = hasFallbackRouting(href) || hasFallbackRouting(path)
    const text = node && await renderizer(node, path)
-   const html = text && await inject(node, path, text)
+   const html = text && await mounter(node, path, text)
 
    if (html) return fall
       ? fallbackHTML(html, last, href)

@@ -1,4 +1,4 @@
-import { bundler } from '../broker'
+import { bundler } from '../runner'
 import { Path, logger } from '../shared'
 import { SERVING } from '../../kernel'
 import { fetcher } from "../router"

@@ -2,15 +2,15 @@
 
 import { JSDOM } from 'jsdom'
 import { SeoDecoratorInfo, throws } from "../../kernel"
-import { METAS_REGEX, TITLE_REGEX } from './regex'
+import { TITLE_REGEX, METAS_REGEX } from "./regex"
 import { Path, File } from '../shared'
-import { pd } from 'pretty-data'
+import { pd } from 'pretty-data';
 
 const NOT_FOUND_ROOT = `not fould <root> tag in index.html`
 const INDEX_NOT_FOUND = `not fould index.html in routes`
 
 /** injectin into HTML s modified HTML, SEO algorithm and JavaScript script tags */
-export async function inject(jsx: RFC|null, route: string, inner: string, outer?: string) {
+export async function mounter(jsx: RFC|null, route: string, inner: string, outer?: string) {
    outer ||= (await new File(`${Path.cwd}/index.html`).load(INDEX_NOT_FOUND) || '')
 
    const oldHTML = await injectInHTML(inner, outer!)

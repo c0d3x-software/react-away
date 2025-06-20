@@ -13,7 +13,7 @@
       "devDependencies": {
         "@types/react": "latest",
         "bun-types": "latest",
-        "typescript": "^5.8.3",
+        "typescript": "latest",
       },
       "peerDependencies": {
         "react": "latest",
