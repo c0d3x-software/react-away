@@ -113,4 +113,82 @@ const Component = props => <>
 ```
 
 
+```css
+/* styles/hello.module.css */ 
+
+.hello {
+  color: whitesmoke;
+  background: dimgrey;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+```
+
+---
+
+
+```tsx
+/* components/hello.tsx */
+
+import css from './hi.module.css'
+
+export const Hello = () => <>
+   <h1 className={css.hi}>
+      Hello World!
+   </h1>
+</>
+```
+
+---
+
+
+```tsx
+const Title = styled.h1`
+  color: whitesmoke;
+  background: dimgrey;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+`;
+
+export const Hello = () => <>
+   <Title>Hello World!</Title>
+</>
+```
+
+---
+
+```tsx
+export const Hello = () => (
+  <h1 className="font-bold
+      text-[whitesmoke] mt-4
+      bg-[dimgrey] rounded-lg 
+      shadow-md px-4 py-2">
+    Hello World!
+  </h1>
+);
+
+```
+
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+---
+
+```js
+module.exports = {
+  content: [ "**/*.{js,jsx}" ],
+  theme: { extend: {}, },
+  plugins: [],
+}
+```
+
+
 <br/><br/><br/>

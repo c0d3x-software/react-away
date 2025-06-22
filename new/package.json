@@ -33,6 +33,7 @@
       "sitemap": "^8.0.0"
    },
    "devDependencies": {
+      "@types/node": "lastest",
       "@types/react": "latest",
       "bun-types": "latest",
       "typescript": "latest"

@@ -11,7 +11,13 @@ declare global {
       settings: Settings
       functions: Function[]
       hydrations: Hydration[]
-      directories: Record<string, RouteString>
+      directories: {
+         assets: RouteString
+         routes: RouteString
+         builds: RouteString         
+      },
+
+      getHandlers<T extends HandlerType>(): IHandler<T>
    }
 
    interface Status {

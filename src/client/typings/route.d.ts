@@ -18,8 +18,7 @@ export interface IRouter {
    undo(): boolean
 
    /** go to the counted next route */
-   undo(count: natural): boolean
-   
+   undo(count: natural): boolean   
    
    /** go back or next, depending if
     * count is positive or negative */

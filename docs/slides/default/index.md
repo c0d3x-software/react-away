@@ -365,7 +365,7 @@ Static route with nested route syntax and decorator for dynamic routes.
 
 ```tsx
 @route('/profile/:id')
-function Profile(props, feeds) { 
+async function Profile(props, feeds) { 
    const id = feeds.param.id
    ...etc
 }

@@ -5,6 +5,7 @@
       "builds/"
    ],
    "compilerOptions": {
+      "baseUrl": ".",
       "jsx": "react-jsx",
       "types": ["bun-types"],
       "target": "esnext",
@@ -25,5 +26,8 @@
       "downlevelIteration": true,
       "allowSyntheticDefaultImports": true,
       "forceConsistentCasingInFileNames": true
+   },
+   "paths": {
+      "@kernel/*": ["kernel"]
    }
 }

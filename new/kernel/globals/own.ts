@@ -17,5 +17,9 @@ export const own: Own = {
    settings: {},
    functions: [],
    hydrations: [],
-   directories: {}
+   directories: {
+      assets: '/assets',
+      builds: '/builds',
+      routes: '/routes'
+   }
 }
