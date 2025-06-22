@@ -75,7 +75,7 @@ history.<span class="hljs-title function_">pushState</span>({}, <span class="hlj
    <span class="hljs-attr">now</span>: <span class="hljs-built_in">string</span>             <span class="hljs-comment">// window.location.pathname </span>
    <span class="hljs-title function_">goto</span>(<span class="hljs-attr">steps</span>: <span class="hljs-built_in">number</span>)     <span class="hljs-comment">// undo or redo history steps</span>
    <span class="hljs-title function_">goto</span>(<span class="hljs-attr">route</span>: <span class="hljs-built_in">string</span>)     <span class="hljs-comment">// window.history.pusthState(...) </span>
-   <span class="hljs-attr">query</span>: <span class="hljs-built_in">string</span>           <span class="hljs-comment">// URLSearchParams -&gt; object</span>
+   <span class="hljs-attr">query</span>: <span class="hljs-built_in">object</span>           <span class="hljs-comment">// URLSearchParams -&gt; object</span>
    <span class="hljs-title function_">params</span>(<span class="hljs-attr">pattern</span>: <span class="hljs-built_in">string</span>) <span class="hljs-comment">// extract dynamic route params</span>
    <span class="hljs-attr">history</span>: <span class="hljs-built_in">string</span>[]       <span class="hljs-comment">// history of routes</span>
 }
@@ -114,7 +114,7 @@ es.<span class="hljs-title function_">close</span>()
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-theme="uncover" lang="pt-BR" class="invert" data-marpit-pagination="10" style="--class:invert;--paginate:true;--theme:uncover;" data-marpit-pagination-total="32">
 <h2 id="sync-api">sync api</h2>
-<h2 id="object-restful-map">object RESTful map</h2>
+<h3 id="object-restful-map">object RESTful map</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-ts"><span class="hljs-keyword">const</span> userApi = syncher&lt;<span class="hljs-title class_">User</span>&gt;(<span class="hljs-literal">true</span>)
    .<span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;http://api.com/users&quot;</span>)
    .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-string">&quot;not found...&quot;</span>)
@@ -213,25 +213,18 @@ es.<span class="hljs-title function_">close</span>()
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="invert" data-paginate="true" data-theme="uncover" lang="pt-BR" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--theme:uncover;" data-marpit-pagination-total="32">
 <h2 id="architecture-1">Architecture</h2>
 <h3 id="spa--mpa--spa">spa | mpa | spa+</h3>
-<aside cols='*:1'>
-<div>
-<p><strong>legend</strong></p>
-<ul>
-<li>[ ] page</li>
-<li>( ) component</li>
-<li>-- page container</li>
-</ul>
-<br />
-<p><strong>SPA+</strong></p>
+<aside cols='*:1'><div>
+   <img src='img/m-spa-comparing.png' />
+<p><strong>[ ]</strong> page      <strong>( )</strong> component     <strong>[-]</strong> page container</p>
+</div>
+<div left>
+<p><strong>Advantages</strong></p>
 <ul>
 <li>server-side first</li>
 <li>html container</li>
 <li>same context</li>
 <li>stateful</li>
 </ul>
-</div><div>
-   <img src='img/m-spa-comparing.png' />
-<p><strong>[ ]</strong> page      <strong>( )</strong> component     <strong>[-]</strong> page container</p>
 </div>
 </aside>
 </section>
@@ -274,7 +267,6 @@ es.<span class="hljs-title function_">close</span>()
 <li>also another jsx libs, like preact.js</li>
 <li>template -&gt; script inversion</li>
 <li>easy, lite and flex design</li>
-<li>stateful component</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Component</span> = props =&gt; <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -302,11 +294,11 @@ es.<span class="hljs-title function_">close</span>()
 </tr>
 <tr>
 <td style="text-align:right">verbose states</td>
-<td style="text-align:left">highly complexy and verbose stateful component design</td>
+<td style="text-align:left">highly complex and verbose stateful component design</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:right">opaque routing</td>
+<td style="text-align:right">opaque routes</td>
 <td style="text-align:left">component as function, function has no metadata syntax</td>
 <td></td>
 </tr>

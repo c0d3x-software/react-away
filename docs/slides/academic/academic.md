@@ -88,7 +88,7 @@ export interface IRouter {
    now: string             // window.location.pathname 
    goto(steps: number)     // undo or redo history steps
    goto(route: string)     // window.history.pusthState(...) 
-   query: string           // URLSearchParams -> object
+   query: object           // URLSearchParams -> object
    params(pattern: string) // extract dynamic route params
    history: string[]       // history of routes
 }
@@ -139,7 +139,7 @@ es.close()
 ---
 
 ## sync api
-## object RESTful map
+### object RESTful map
 
 ```ts
 const userApi = syncher<User>(true)
@@ -239,26 +239,19 @@ full routing | html merging | metatags transfers | size < 1kb
 ## Architecture
 ### spa | mpa | spa+
 
-<aside cols='*:1'>
-<div>
+<aside cols='*:1'><div>
+   <img src='img/m-spa-comparing.png' >
 
-**legend**
-- [ ] page
-- ( ) component
-- -- page container
+   **[ ]** page  &nbsp;&nbsp;  **( )** component  &nbsp;&nbsp; **[-]** page container
 
-<br/>
+</div>
+<div left>
 
-**SPA+**
+**Advantages**
 - server-side first
 - html container
 - same context
 - stateful
-
-</div><div>
-   <img src='img/m-spa-comparing.png' >
-
-   **[ ]** page  &nbsp;&nbsp;  **( )** component  &nbsp;&nbsp; **[-]** page container
 
 </div>
 </aside>
@@ -309,7 +302,6 @@ full routing | html merging | metatags transfers | size < 1kb
 - also another jsx libs, like preact.js
 - template -> script inversion
 - easy, lite and flex design
-- stateful component
 
 ```tsx
 const Component = props => <>
@@ -328,8 +320,8 @@ const Component = props => <>
 |                |                                                        |     |
 | -------------: | :----------------------------------------------------- | --- |
 |  scopeless CSS | importing CSS leaks to global scope, making it useless |
-| verbose states | highly complexy and verbose stateful component design  |
-| opaque routing | component as function, function has no metadata syntax |
+| verbose states | highly complex and verbose stateful component design  |
+| opaque routes | component as function, function has no metadata syntax |
 
 ---
 
