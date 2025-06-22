@@ -15,10 +15,10 @@ paginate: true
 ## Schedule
 
 - **router-api**: unified router dom facade api
-- **multi-spa**: liteweight micro-frontend library
+- **multi-spa**: liteweight microfrontend library
 - **restful-sync**: advanced fetching abstraction
 - **html-container**: new micro-component architecture
-- **jsx-pro**: improved JSX componentization
+- **jsx-pro**: fixed JSX issues with a react metaframework 
 
 ---
 
@@ -167,7 +167,7 @@ await userApi.async(true)  // writing sync (diff)
 **CHARACTERISTICS**
 
 - micro-services advantages in frontends
-- break monoliths into micro-frontends
+- break monoliths into microfrontends
 - small, independent and interoperative
 - by page route or page slice
 
@@ -602,11 +602,11 @@ const Profile = (props, feeds) => <>
 
 | | |
 |-:|:-|
-| router-api | facade api for routing unifying location + history + URLSearchParams |
-| multi-spa | low coupling web-standard approach for easy micro-frontend shell |
-| html-container | new micro-component architecture for low code and fast rendering |
-| restful-sync | extended fetch api, with event api facade and RESTful mapping |
-| jsx-pro | fix the 3 main flaws in jsx components |
+| router-api | facade api for unified routing dom |
+| restful-sync | fetch+ api, event api facade and RESTful mapping |
+| multi-spa | low coupling web-standard microfrontend shell |
+| html-container | performatic micro-component architecture |
+| jsx-pro | modular CSS, clean states and easy routing |
 
 ---
 
@@ -614,11 +614,11 @@ const Profile = (props, feeds) => <>
 
 | | |
 |-:|:-|
-| non-cohesive routing dom api | unified routing facade with router api |
-| coupled or limited microfrontend shell | lite, declarative and web standard slot extension |
-| heavyweight monolith component | html containers that enable micro-components |
-| non-SWR outdated fetching api | extended fetch api with sync mapping |
-| jsx componentization flaws | fixed the 3 main jsx developement |
+| tangled routing dom | unified routing facade with router api |
+| microfrontend unfitness | lite, declarative and web standard slot extension |
+| monolith component | html containers that enable micro-components |
+| outdated fetch api | extended fetch api with sync mapping |
+| jsx problems | fixed the 3 main jsx difficulties |
 
 
 ---
@@ -628,7 +628,7 @@ const Profile = (props, feeds) => <>
 | | |
 |-:|:-|
 | patterns | restful map, reactive objects, props handlers, function decorators |
-| architectures | micro-component architectural style, page container architectural pattern |
+| architectures | micro-component (style), page container (pattern) |
 | specifications | route api, fetch+ api, event api, CSS loader |
 
 ---
